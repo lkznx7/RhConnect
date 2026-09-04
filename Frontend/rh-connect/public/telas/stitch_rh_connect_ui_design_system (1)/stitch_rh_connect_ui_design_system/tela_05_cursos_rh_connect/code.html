@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"on-primary-fixed-variant":"#004f51","outline-variant":"#bcc9c9","inverse-primary":"#6bd7da","on-primary-fixed":"#002021","outline":"#6d7979","surface-container":"#eceef0","surface-dim":"#d8dadc","on-primary":"#ffffff","tertiary-fixed":"#cee5ff","on-secondary-fixed-variant":"#334766","on-secondary-container":"#4a5e7e","surface-tint":"#00696c","inverse-on-surface":"#eff1f3","secondary-container":"#c3d8fe","secondary-fixed-dim":"#b3c7ec","on-tertiary":"#ffffff","primary-container":"#008285","surface-container-low":"#f2f4f6","on-secondary":"#ffffff","on-error":"#ffffff","on-error-container":"#93000a","surface-variant":"#e0e3e5","background":"#f7f9fb","tertiary-container":"#5c7792","on-tertiary-container":"#fdfcff","surface-container-high":"#e6e8ea","inverse-surface":"#2d3133","on-surface-variant":"#3d4949","on-secondary-fixed":"#031c38","secondary-fixed":"#d5e3ff","tertiary":"#445e78","on-surface":"#191c1e","primary":"#006769","on-tertiary-fixed":"#001d32","surface":"#f7f9fb","surface-bright":"#f7f9fb","surface-container-highest":"#e0e3e5","primary-fixed-dim":"#6bd7da","error":"#ba1a1a","tertiary-fixed-dim":"#aec9e7","on-background":"#191c1e","primary-fixed":"#89f3f6","secondary":"#4b5f7f","error-container":"#ffdad6","on-primary-container":"#f3ffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#2e4962"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"3rem","space-lg":"1.5rem","space-2xl":"3rem","gutter-mobile":"1rem","margin-tablet":"2rem","space-3xl":"4rem","space-sm":"0.75rem","space-xs":"0.5rem","gutter-desktop":"1.5rem","space-xxs":"0.25rem","space-md":"1rem","space-xl":"2rem","margin-mobile":"1rem"},"fontFamily":{"title-md":["DM Sans"],"headline-lg":["Hanken Grotesk"],"label-sm":["DM Sans"],"headline-lg-mobile":["Hanken Grotesk"],"body-sm":["DM Sans"],"body-lg":["DM Sans"],"body-md":["DM Sans"],"label-md":["DM Sans"],"headline-sm":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"title-lg":["DM Sans"],"display":["Hanken Grotesk"]},"fontSize":{"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs" data-path="inicio" href="#"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-[0_1px_3px_0_rgba(16,42,67,0.04)]"><span class="material-symbols-outlined text-2xl">diversity_3</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">RH<span class="text-primary">Connect</span></span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase leading-none mt-1">Portal de Pessoas</span></div></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-title-md"><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-o-rh" href="#">Sobre o RH</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="oportunidades" href="#">Oportunidades</a><a aria-current="page" class="transition-colors text-primary font-title-md" data-path="cursos" href="#">Cursos</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="noticias" href="#">Notícias</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#">Banco de Talentos</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center font-label-md text-label-md px-space-md py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" data-path="cadastrar-curriculo" href="#">Cadastrar Currículo</a><a class="inline-flex items-center justify-center font-label-md text-label-md px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary transition-all shadow-[0_1px_3px_0_rgba(16,42,67,0.04)]" data-path="acessar-portal" href="#">Acessar Portal</a><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/></div></div></div></header><main class="w-full pt-20 bg-background flex-grow"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Bar Utility -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-lg pb-space-xs">
+<nav aria-label="Navegação Estruturada" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="inicio" href="#">
+<span class="material-symbols-outlined text-base">home</span>
+        Início
+      </a>
+<span class="text-outline-variant select-none">/</span>
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-primary">school</span>
+        Cursos &amp; Capacitações
+      </span>
+</nav>
+</section>
+<!-- Header Institucional com Mosaico Analítico -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl md:p-space-2xl shadow-sm relative overflow-hidden">
+<!-- Decorative Organic Radial Glow -->
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-gradient-to-br from-primary-fixed-dim/20 via-tertiary-fixed/10 to-transparent blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-space-xl">
+<div class="max-w-3xl space-y-space-xs">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Ciclo de Aprendizado Continuado 2024.2
+          </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Universidade Corporativa &amp; Capacitação
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Desenvolva novas competências com trilhas orientadas ao futuro organizacional. Programas homologados, corpo docente de referência e certificações com validade curricular e funcional.
+          </p>
+</div>
+<!-- Badges de Resumo em Cartão Elevado -->
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm self-start lg:self-auto">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-xl">auto_stories</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">38 Cursos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Disponíveis</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">12 Gratuitos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Certificações</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-primary text-xl">workspace_premium</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Horas Válidas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Para Progressão</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filtros e Barra de Busca Unificada -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md md:p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Search Input Primário -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-2xl">
+          search
+        </span>
+<input class="w-full h-12 pl-12 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/70 outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006769] transition-all" id="courseSearchInput" placeholder="Buscar por tema, competência, instrutor ou código do curso..." type="text"/>
+<button class="absolute right-2.5 top-1/2 -translate-y-1/2 px-space-md py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm">
+          Buscar
+        </button>
+</div>
+<!-- Barra de Filtros Drops -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm items-center">
+<!-- Filtro Área -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="filterArea">Área de Conhecimento</label>
+<div class="relative">
+<select class="w-full h-10 px-space-sm pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006769] transition-all cursor-pointer" id="filterArea">
+<option value="todas">Todas as Áreas</option>
+<option value="gestao">Gestão &amp; Liderança</option>
+<option value="tecnologia">Tecnologia &amp; Dados</option>
+<option value="comunicacao">Comunicação &amp; Negociação</option>
+<option value="compliance">Compliance &amp; ESG Corporativo</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">
+              expand_more
+            </span>
+</div>
+</div>
+<!-- Filtro Modalidade -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="filterModalidade">Modalidade</label>
+<div class="relative">
+<select class="w-full h-10 px-space-sm pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006769] transition-all cursor-pointer" id="filterModalidade">
+<option value="todas">Todas as Modalidades</option>
+<option value="ead-sincrono">EAD Síncrono (Ao Vivo)</option>
+<option value="presencial">Presencial (Sede Corporativa)</option>
+<option value="hibrido">Híbrido Flex</option>
+<option value="gravado">Autoinstrucional (Gravado)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">
+              expand_more
+            </span>
+</div>
+</div>
+<!-- Filtro Nível -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="filterNivel">Nível de Proficiência</label>
+<div class="relative">
+<select class="w-full h-10 px-space-sm pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006769] transition-all cursor-pointer" id="filterNivel">
+<option value="todos">Todos os Níveis</option>
+<option value="iniciante">Iniciante / Fundamentos</option>
+<option value="intermediario">Intermediário</option>
+<option value="avancado">Avançado / Executivo</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">
+              expand_more
+            </span>
+</div>
+</div>
+<!-- Ordenação -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="filterOrdem">Classificar Por</label>
+<div class="relative">
+<select class="w-full h-10 px-space-sm pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006769] transition-all cursor-pointer" id="filterOrdem">
+<option value="recentes">Data de Início (Mais Próxima)</option>
+<option value="populares">Mais Populares</option>
+<option value="carga-maior">Maior Carga Horária</option>
+<option value="carga-menor">Menor Carga Horária</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-lg">
+              sort
+            </span>
+</div>
+</div>
+</div>
+<!-- Quick Chips Filtros Ativos -->
+<div class="flex items-center flex-wrap gap-space-xs pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Filtros sugeridos:</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors">
+          Certificação Gratuita
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors">
+          Inscrições Encerram Esta Semana
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors">
+          Trilha Liderança 2024
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors">
+          EAD 100% Gravado
+        </button>
+</div>
+</div>
+</section>
+<!-- Conteúdo Principal: Grade de Cursos + Sidebar Lateral de Destaque -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Listagem Principal de Cursos (8 Colunas) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Cursos com Inscrições Disponíveis</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">6 turmas abertas</span>
+</div>
+<span class="text-on-surface-variant font-label-md text-label-md hidden sm:inline">Exibindo 1–6 de 38</span>
+</div>
+<!-- Grade com Cartões Modernos de Cursos -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Card 1: Liderança Contemporânea -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern professional executive meeting room where a female Brazilian leader facilitates a strategic design workshop with diverse team members, warm morning daylight, corporate teal accents, documentary photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6FlSYJip4ozzz5QK-DZ9UCWkawLSl0-5ye9qc9g6S7rScXg7cdRrl87R95QjDkNlXoyA8SbYAy1ajYPHVfSseElRj_qveAUFRAR0Q8gMrAdxgLFxaKla9Rs9rToDWRnAINDA7akOyBKW4rbRVy98McbbgUEzXZ9MClrKMUQHhUtiVrcgBzJDo0ad8e2OG_eRBx5eEnxEwUWxQkFRB5D1h2ejYTYWtF3m0yCQBfSUmJJfcX8_x_ynx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<!-- Badges de Status Sobrepostos -->
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Inscrições Abertas
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between text-on-primary font-label-sm text-label-sm">
+<span class="bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">Gestão &amp; Liderança</span>
+<span class="flex items-center gap-1 bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                  48h Certificadas
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">psychology</span>
+<span>Prof. Dr. Marcelo Gusmão • Fundação Dom Cabral</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Liderança Adaptativa e Governança de Equipes Ágeis
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Metodologias práticas para gestão situacional de pessoas, resolução de conflitos, tomada de decisão com dados e rituais de engajamento continuado.
+                </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="grid grid-cols-2 gap-2 p-space-xs rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Modalidade</span>
+<span class="font-semibold text-on-surface">EAD Síncrono</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Período</span>
+<span class="font-semibold text-on-surface">02 Out a 18 Nov</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xxs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vagas</span>
+<span class="font-title-md text-title-md text-primary">14 restantes</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1 px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm">
+                    Ver Detalhes
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: ESG e Compliance -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Clean architectural setting showing corporate sustainability professionals reviewing environmental compliance documentation with tablet interfaces in an airy eco-certified office with lush indoor plants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGjC_GWlXcVBXhbP6FcIn8UIzHOXJN8jcD9bK91pAdHpTxeYU1vR-jvVJB307PcqKfbiKB2H4_UV95qpZ8NO3F0Oal-wz6Fz1VRIF2lM5RiWMWKTmlO0a8v9t1CzuEH--wV_79Mq15J8rH8SUNV74eeFH-4SNXp_J8y4s56LnMHebeakp04bAb3vq2ihCkUmKFWPXdVK4gLt__TkO4Hrlv5q_GJfbqDTgGYpwFJvmsmpJtpWnLLXkd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Turma Confirmada
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between text-on-primary font-label-sm text-label-sm">
+<span class="bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">Compliance &amp; ESG</span>
+<span class="flex items-center gap-1 bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                  32h Certificadas
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">verified_user</span>
+<span>Dra. Bianca Penteado • Inst. Compliance Brasil</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Gestão Integrada de ESG e Conformidade Regulatória
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Fundamentos de auditoria interna, canal de denúncias, mitigação de riscos socioambientais e diretrizes para relatório corporativo GRI.
+                </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="grid grid-cols-2 gap-2 p-space-xs rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Modalidade</span>
+<span class="font-semibold text-on-surface">Híbrido Flex</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Período</span>
+<span class="font-semibold text-on-surface">15 Out a 28 Nov</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xxs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vagas</span>
+<span class="font-title-md text-title-md text-primary">09 restantes</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1 px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm">
+                    Ver Detalhes
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: Análise de Dados e People Analytics -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Analytical data workstation with dual monitors displaying human resources metrics dashboards, heatmaps, and employee turnover graphs, illuminated by soft blue and teal task lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPgbIgNLJxlIMY1xQfzQThBU9z7__P0pYcodQk1eE-Qcy8DRkds3ru_zpbRN3bm8s0XCgLyAd1ey6nXNH3nL0mcExI4aswceaD7An5CdCXjM9L4vaZjwsVn1BLN5mz6csPBN0V-3nuX9l0TrT43oMxh_zBHJMOMXMt2vRPIsGvMfwnUkUMlMIGvXonx3WcFblftOvl3AwrdCnCR38io57Wer6bcI08oXaj-fTHEvoE29MWWmo16QU1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Vagas Limitadas
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between text-on-primary font-label-sm text-label-sm">
+<span class="bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">Tecnologia &amp; Dados</span>
+<span class="flex items-center gap-1 bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                  60h Certificadas
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">insights</span>
+<span>Rodrigo Caldas • Data Science Academy</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  People Analytics &amp; Inteligência Preditiva em RH
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Métricas de retenção, predição de turnover, modelagem de competências e visualização analítica com Power BI aplicado ao ecossistema corporativo.
+                </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="grid grid-cols-2 gap-2 p-space-xs rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Modalidade</span>
+<span class="font-semibold text-on-surface">EAD Síncrono</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Período</span>
+<span class="font-semibold text-on-surface">22 Out a 10 Dez</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xxs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vagas</span>
+<span class="font-title-md text-title-md text-error">Últimas 3 vagas</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1 px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm">
+                    Ver Detalhes
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4: Comunicação Não Violenta e Negociação -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Collaborative round table discussion in a modern Scandinavian-inspired corporate atrium, showing mixed professionals conversing empathetically with note pads and high-end digital styluses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbjvWRIR7ygUA93ZlsCzwOAjkZUpI1mvtbDf8251idezeDU0xU0qcC2CDk05QO2Zj1r7YlY_yCLXRhoVsUpaM38PY6AlJGiuita0JQGQXH8zqsKy35pkfGzOd_L4_CYlEiMUp0cdBXFftgARnENJHgpKIVE3KX8o54m1YdxK9gpQO4Y060tfZizHXoAWJPnXEbEd_9d8A8NzW0zaY-V45I2FS9B7LEZNgf5Dt11mvTOC0xJ6ph_D96"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Inscrições Abertas
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between text-on-primary font-label-sm text-label-sm">
+<span class="bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">Comunicação</span>
+<span class="flex items-center gap-1 bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                  24h Certificadas
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">record_voice_over</span>
+<span>Helena Fontes • Consultoria Diálogos</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  Comunicação Assertiva, Feedback e Gestão de Conflitos
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Princípios da CNV (Comunicação Não-Violenta), alinhamento de expectativas corporativas, reuniões produtivas e negociação cooperativa em projetos complexos.
+                </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="grid grid-cols-2 gap-2 p-space-xs rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Modalidade</span>
+<span class="font-semibold text-on-surface">Presencial (Sede)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Período</span>
+<span class="font-semibold text-on-surface">05 Nov a 26 Nov</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xxs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vagas</span>
+<span class="font-title-md text-title-md text-primary">22 restantes</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1 px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm">
+                    Ver Detalhes
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 5: LGPD e Segurança da Informação -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-tech corporate cybersecurity operations room, glass screens with encryption protocol diagrams, professional analysts collaborating under modern refined lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_1SP2c3lSYyF7Vdr9SE6U6bA5lqXk1HKlCOlJXpSR0tbt4JSihyPxDISTrQlnplQJzKn5WIJkqPDZrX2hn-YrDB4yejlx9hrj2txeGa_RGTOnWzeQISnJdM-Dm3qiDxoGU7O7xXwsgrMxBnB3NT54WskohT9Up0VLS5gy4TCJhp-gKrVg0NEdf2zdGBybM_9V__Wd6zwpkJIQfA9cj17El6tdfZe4o-SxyyMeOpdefEFxR9bh4sAS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Autoinstrucional
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between text-on-primary font-label-sm text-label-sm">
+<span class="bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">Compliance &amp; ESG</span>
+<span class="flex items-center gap-1 bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                  20h Certificadas
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">security</span>
+<span>Comitê de DPO &amp; Jurídico Corporativo</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  LGPD na Prática: Proteção de Dados e Sigilo Funcional
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Tratamento de dados pessoais de funcionários e clientes, consentimento, políticas de retenção e procedimentos para mitigação de incidentes.
+                </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="grid grid-cols-2 gap-2 p-space-xs rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Modalidade</span>
+<span class="font-semibold text-on-surface">100% Gravado</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Início</span>
+<span class="font-semibold text-on-surface">Imediato</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xxs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vagas</span>
+<span class="font-title-md text-title-md text-primary">Ilimitadas</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1 px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm">
+                    Ver Detalhes
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 6: Inteligência Artificial nos Negócios -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Young Brazilian tech specialist interacting with an artificial intelligence productivity workflow on an ultra-wide curved screen in a minimalist creative studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxLBitqcrrc6S-G06WrlKrrVOQOOqVo0LmMw_CIvnbG0g3vpGalfUonGykHzcE3yG_otfWIWPBA1UCHjwsxDs7Imak0XjjMQJ5490VIdjgLW6gMX3DUAXQafY8enFtVpkzajPb5glZ2c5VZyjp_G_Q_NejIHe__mjCCYgF2QOqHpDBH9cE-3-IA1FeVtyab9D7UXtDZRFeze304GEffUTfNtGwSVNsVdsrwoJRfT1Fw1VImumP0nn2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm flex flex-wrap gap-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Inscrições Abertas
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-center justify-between text-on-primary font-label-sm text-label-sm">
+<span class="bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">Tecnologia</span>
+<span class="flex items-center gap-1 bg-inverse-surface/60 backdrop-blur-sm px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                  40h Certificadas
+                </span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">smart_toy</span>
+<span>Prof. Fernando Prado • Inovação Digital</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                  IA Generativa Aplicada à Produtividade Corporativa
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                  Uso ético de ferramentas de IA (LLMs, automação de fluxos, análise documental e sumarização executiva) sem ferir normas de compliance.
+                </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="grid grid-cols-2 gap-2 p-space-xs rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Modalidade</span>
+<span class="font-semibold text-on-surface">EAD Síncrono</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Período</span>
+<span class="font-semibold text-on-surface">11 Nov a 16 Dez</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xxs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vagas</span>
+<span class="font-title-md text-title-md text-primary">18 restantes</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1 px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm">
+                    Ver Detalhes
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Paginação Estilizada -->
+<nav aria-label="Navegação entre páginas" class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Página <span class="font-semibold text-on-surface">1</span> de <span class="font-semibold text-on-surface">7</span> páginas
+          </div>
+<div class="flex items-center gap-1.5">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant disabled:opacity-40 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">
+              1
+            </button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+              2
+            </button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+              3
+            </button>
+<span class="px-1 text-outline">...</span>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+              7
+            </button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</nav>
+</div>
+<!-- Sidebar Lateral com Módulos de Suporte & Trilhas (4 Colunas) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Bloco 1: Card Destaque de Trilhas Corporativas -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">route</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Trilhas de Carreira</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Oficiais</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Jornadas estruturadas de ponta a ponta com múltiplos módulos interligados para evolução vertical no plano de cargos.
+          </p>
+<!-- Itens de Trilha -->
+<div class="space-y-space-xs">
+<!-- Trilha Item A -->
+<a class="block p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all group" href="#">
+<div class="flex items-center justify-between mb-1">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors text-sm">
+                  Liderança do Amanhã (Fast-Track)
+                </span>
+<span class="material-symbols-outlined text-base text-outline group-hover:translate-x-1 group-hover:text-primary transition-all">
+                  arrow_forward
+                </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>4 Cursos</span>
+<span>•</span>
+<span>120 Horas</span>
+<span>•</span>
+<span class="text-primary font-semibold">Início Imediato</span>
+</div>
+<!-- Mini Progress Bar de Cohort -->
+<div class="w-full bg-surface-variant h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-3/4"></div>
+</div>
+</a>
+<!-- Trilha Item B -->
+<a class="block p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all group" href="#">
+<div class="flex items-center justify-between mb-1">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors text-sm">
+                  Cultura de Dados &amp; BI Corporativo
+                </span>
+<span class="material-symbols-outlined text-base text-outline group-hover:translate-x-1 group-hover:text-primary transition-all">
+                  arrow_forward
+                </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>5 Cursos</span>
+<span>•</span>
+<span>180 Horas</span>
+<span>•</span>
+<span class="text-primary font-semibold">Intermediário</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-1/2"></div>
+</div>
+</a>
+<!-- Trilha Item C -->
+<a class="block p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all group" href="#">
+<div class="flex items-center justify-between mb-1">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors text-sm">
+                  Excelência Operacional &amp; Lean
+                </span>
+<span class="material-symbols-outlined text-base text-outline group-hover:translate-x-1 group-hover:text-primary transition-all">
+                  arrow_forward
+                </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>3 Cursos</span>
+<span>•</span>
+<span>90 Horas</span>
+<span>•</span>
+<span class="text-primary font-semibold">Avançado</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-4/5"></div>
+</div>
+</a>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1">
+            Explorar Todas as Trilhas
+            <span class="material-symbols-outlined text-base">east</span>
+</button>
+</div>
+<!-- Bloco 2: Métrica de Engajamento Corporativo (Inline SVG Chart) -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Horas Concluídas</span>
+<span class="text-primary font-title-md text-title-md font-bold">2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Volume de capacitação acumulado pela empresa nos últimos 4 trimestres:
+          </p>
+<!-- Inline Sparkline/Bar Visual Minimalista -->
+<div class="pt-2">
+<svg class="w-full h-24 overflow-visible" fill="none" viewbox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Lines -->
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="2 2" x1="0" x2="300" y1="20" y2="20"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="2 2" x1="0" x2="300" y1="50" y2="50"></line>
+<line class="text-surface-container" stroke="currentColor" x1="0" x2="300" y1="78" y2="78"></line>
+<!-- Sparkline Area & Path -->
+<path class="text-primary/10" d="M 10 65 Q 60 45, 100 50 T 190 25 T 290 12 L 290 78 L 10 78 Z" fill="currentColor"></path>
+<path class="text-primary" d="M 10 65 Q 60 45, 100 50 T 190 25 T 290 12" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<!-- Points -->
+<circle class="fill-surface-container-lowest text-primary stroke-current" cx="10" cy="65" r="4" stroke-width="2"></circle>
+<circle class="fill-surface-container-lowest text-primary stroke-current" cx="100" cy="50" r="4" stroke-width="2"></circle>
+<circle class="fill-surface-container-lowest text-primary stroke-current" cx="190" cy="25" r="4" stroke-width="2"></circle>
+<circle class="fill-primary" cx="290" cy="12" r="5"></circle>
+</svg>
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm pt-2">
+<span>Q1: 1.4k h</span>
+<span>Q2: 2.1k h</span>
+<span>Q3: 3.8k h</span>
+<span class="font-bold text-primary">Q4: 5.2k h</span>
+</div>
+</div>
+</div>
+<!-- Bloco 3: Card de Dúvidas, Suporte & Certificados -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">help_outline</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Dúvidas Frequentes</h2>
+</div>
+<div class="space-y-space-xs">
+<details class="group p-space-xs rounded-xl bg-surface-container-low cursor-pointer">
+<summary class="font-title-md text-title-md text-sm text-on-surface list-none flex items-center justify-between">
+<span>Como emitir meu certificado?</span>
+<span class="material-symbols-outlined text-base group-open:rotate-180 transition-transform text-outline">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2 leading-relaxed">
+                Ao completar no mínimo 75% da frequência e atingir nota 7.0 nas avaliações práticas, o documento é emitido em PDF com hash de autenticidade no Portal do Aluno.
+              </p>
+</details>
+<details class="group p-space-xs rounded-xl bg-surface-container-low cursor-pointer">
+<summary class="font-title-md text-title-md text-sm text-on-surface list-none flex items-center justify-between">
+<span>As horas contam para o PDI?</span>
+<span class="material-symbols-outlined text-base group-open:rotate-180 transition-transform text-outline">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2 leading-relaxed">
+                Sim. Todos os cursos concluídos são averbados automaticamente em sua ficha funcional e contam como horas para a progressão funcional do ciclo anual.
+              </p>
+</details>
+<details class="group p-space-xs rounded-xl bg-surface-container-low cursor-pointer">
+<summary class="font-title-md text-title-md text-sm text-on-surface list-none flex items-center justify-between">
+<span>Posso cancelar uma inscrição?</span>
+<span class="material-symbols-outlined text-base group-open:rotate-180 transition-transform text-outline">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2 leading-relaxed">
+                O cancelamento pode ser efetuado com até 48 horas antes do início da primeira aula diretamente pelo menu do colaborador para liberação de vaga em fila.
+              </p>
+</details>
+</div>
+<!-- Banner Informativo da Central do Aluno -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">contact_support</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-md text-title-md text-sm text-on-surface">Precisa de apoio pedagógico?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Entre em contato com o núcleo educacional pelo ramal <strong>#4200</strong> ou canal corporativo.
+              </span>
+<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1 mt-1" href="#">
+                Falar com consultor de ensino
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Banner de Inscrição Comunitária / Parcerias Educacionais -->
+<section class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="bg-gradient-to-r from-on-secondary-fixed via-on-secondary-fixed-variant to-secondary rounded-2xl p-space-xl md:p-space-2xl text-on-primary shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-xl relative overflow-hidden">
+<!-- Background SVG Lines -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="24" id="dotPattern" patternunits="userSpaceOnUse" width="24" x="0" y="0">
+<circle cx="2" cy="2" fill="currentColor" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#dotPattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 max-w-2xl space-y-space-xs">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider font-semibold">
+          Extensão Universitária &amp; Impacto Social
+        </span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight">
+          Cursos Abertos à Comunidade Externa
+        </h2>
+<p class="font-body-md text-body-md text-on-primary/80 leading-relaxed">
+          O RH Connect disponibiliza 25% de todas as vagas para membros da comunidade local e familiares de colaboradores, fomentando inclusão produtiva e empregabilidade regional.
+        </p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row items-center gap-space-sm w-full md:w-auto">
+<a class="w-full sm:w-auto text-center px-space-lg py-3 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all shadow-md" href="#">
+          Ver Editais Comunitários
+        </a>
+<a class="w-full sm:w-auto text-center px-space-lg py-3 rounded-xl bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-on-primary font-label-md text-label-md transition-all" href="#">
+          Regulamento Geral
+        </a>
+</div>
+</div>
+</section>
+<!-- Micro-Interação Script para Filtros Dinâmicos Simulados -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('courseSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase();
+          const articles = document.querySelectorAll('article');
+          articles.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            if (text.includes(query)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl mb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-xl">diversity_3</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">RH<span class="text-primary">Connect</span></span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Plataforma integrada de governança de pessoas, atração de talentos e desenvolvimento organizacional. Estimulando conexões sólidas e humanizadas.</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="w-3 h-3 rounded-full bg-primary"></span><span class="font-label-md text-label-md text-on-surface-variant">Sistemas Operacionais • 100% Conformes</span></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Links Rápidos</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-o-rh" href="#">Sobre o RH</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="oportunidades" href="#">Oportunidades</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="cursos" href="#">Cursos &amp; Treinamentos</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#">Banco de Talentos</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Governança &amp; Apoio</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ouvidoria" href="#">Canal de Ouvidoria</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="codigo-de-etica" href="#">Código de Ética</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="politica-lgpd" href="#">Privacidade &amp; LGPD</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contato" href="#">Fale com o RH</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Central de Atendimento</h3><div class="flex flex-col gap-space-xs"><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">support_agent</span><div class="flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold">Atendimento ao Colaborador</span><span class="font-body-sm text-body-sm">0800 724 5000</span></div></div><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">mail</span><div class="flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold">E-mail Institucional</span><span class="font-body-sm text-body-sm">atendimento.rh@connect.corp</span></div></div><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">schedule</span><div class="flex flex-col"><span class="font-body-sm text-body-sm">Seg a Sex: 08h às 18h</span></div></div></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant bg-surface-container-high/40 rounded-xl p-space-lg"><div class="font-body-sm text-body-sm">© 2024 Portal RH Connect. Todos os direitos reservados. Conformidade Geral de Proteção de Dados (Lei nº 13.709/2018).</div><div class="flex items-center gap-space-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="termos-de-uso" href="#">Termos de Uso</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="politica-lgpd" href="#">Segurança LGPD</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ouvidoria" href="#">Ouvidoria Anônima</a></div></div></div></footer></body></html>

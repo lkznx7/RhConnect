@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#bcc9c9", "on-secondary-fixed-variant": "#334766", "on-tertiary-fixed-variant": "#2e4962", "on-background": "#191c1e", "on-primary-container": "#f3ffff", "primary-fixed-dim": "#6bd7da", "on-secondary-container": "#4a5e7e", "on-primary": "#ffffff", "secondary-container": "#c3d8fe", "on-tertiary-container": "#fdfcff", "surface": "#f7f9fb", "inverse-surface": "#2d3133", "error-container": "#ffdad6", "inverse-on-surface": "#eff1f3", "background": "#f7f9fb", "on-secondary": "#ffffff", "on-surface-variant": "#3d4949", "outline": "#6d7979", "surface-dim": "#d8dadc", "surface-container": "#eceef0", "primary-container": "#008285", "on-tertiary": "#ffffff", "on-secondary-fixed": "#031c38", "on-error-container": "#93000a", "surface-container-high": "#e6e8ea", "on-primary-fixed": "#002021", "tertiary": "#445e78", "on-surface": "#191c1e", "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f4f6", "error": "#ba1a1a", "tertiary-fixed-dim": "#aec9e7", "secondary-fixed-dim": "#b3c7ec", "on-error": "#ffffff", "inverse-primary": "#6bd7da", "primary-fixed": "#89f3f6", "surface-container-highest": "#e0e3e5", "surface-tint": "#00696c", "primary": "#006769", "secondary": "#4b5f7f", "on-primary-fixed-variant": "#004f51", "tertiary-container": "#5c7792", "on-tertiary-fixed": "#001d32", "secondary-fixed": "#d5e3ff", "surface-bright": "#f7f9fb", "tertiary-fixed": "#cee5ff", "surface-variant": "#e0e3e5" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-3xl": "4rem", "margin-tablet": "2rem", "space-2xl": "3rem", "margin-mobile": "1rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-xxs": "0.25rem", "margin-desktop": "3rem", "space-sm": "0.75rem" }, "fontFamily": { "label-md": [ "DM Sans" ], "display": [ "Hanken Grotesk" ], "body-sm": [ "DM Sans" ], "headline-lg": [ "Hanken Grotesk" ], "title-md": [ "DM Sans" ], "title-lg": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "headline-lg-mobile": [ "Hanken Grotesk" ], "body-md": [ "DM Sans" ], "headline-sm": [ "Hanken Grotesk" ], "headline-md": [ "Hanken Grotesk" ], "label-sm": [ "DM Sans" ] }, "fontSize": { "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(16,42,67,0.05)]"><div class="h-28 w-full px-space-lg lg:px-margin-desktop flex flex-col justify-between"><div class="h-16 flex items-center justify-between"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold shadow-[0_2px_4px_rgba(0,103,105,0.2)]">RC</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">RH Connect</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Portal do Candidato</span></div></div><nav class="hidden md:flex items-center gap-space-lg pl-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="vagas-abertas" href="#">Vagas</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalogo-cursos" href="#">Cursos</a></nav></div><div class="flex items-center gap-space-md"><button aria-label="Notificações" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-8 w-[1px] bg-surface-container-high hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">Lucas Mendes</span><span class="font-label-sm text-label-sm text-primary leading-tight font-medium">Candidato / Aluno</span></div><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-fixed-dim ring-2 ring-surface-container-lowest"></span></div></div></div></div><div class="h-12 flex items-center justify-between overflow-x-auto"><nav class="flex items-center gap-space-xs pb-space-xxs" data-active-classes="bg-primary-container text-on-primary-container font-medium"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="visao-geral" href="#">Visão Geral</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="meu-perfil" href="#">Meu Perfil</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="meu-curriculo" href="#">Meu Currículo</a><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-all whitespace-nowrap bg-primary-container text-on-primary-container font-medium" data-path="minhas-candidaturas" href="#">Minhas Candidaturas</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="minhas-inscricoes" href="#">Minhas Inscrições</a></nav></div></div></header><main class="w-full pt-28 bg-surface min-h-[calc(100vh-140px)] px-space-lg lg:px-margin-desktop py-space-xl"><div class="flex flex-col w-full">
+<!-- Top Stat Metrics Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-xl">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-center justify-between relative overflow-hidden group">
+<div class="flex flex-col z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Candidaturas Ativas</span>
+<div class="flex items-baseline gap-space-xs mt-space-xxs">
+<span class="font-display text-display text-primary leading-none">03</span>
+<span class="font-body-sm text-body-sm text-primary font-medium flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-0.5">trending_up</span>Em curso
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">2 processos com avanço esta semana</span>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed/50 flex items-center justify-center text-primary z-10">
+<span class="material-symbols-outlined text-[28px]">folder_shared</span>
+</div>
+<div class="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-primary-fixed/20 pointer-events-none transition-transform duration-500 group-hover:scale-125"></div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-center justify-between relative overflow-hidden group">
+<div class="flex flex-col z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Entrevista Agendada</span>
+<div class="flex items-baseline gap-space-xs mt-space-xxs">
+<span class="font-display text-display text-primary-container leading-none">01</span>
+<span class="font-body-sm text-body-sm text-primary-container font-medium flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-0.5">schedule</span>Próxima em 3d
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">28/10 às 14h30 via MS Teams</span>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed/40 flex items-center justify-center text-primary-container z-10">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">video_camera_front</span>
+</div>
+<div class="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-primary-container/10 pointer-events-none transition-transform duration-500 group-hover:scale-125"></div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-center justify-between relative overflow-hidden group">
+<div class="flex flex-col z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Processos Concluídos</span>
+<div class="flex items-baseline gap-space-xs mt-space-xxs">
+<span class="font-display text-display text-secondary leading-none">02</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-0.5">archive</span>Histórico
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Arquivados em conformidade LGPD</span>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary z-10">
+<span class="material-symbols-outlined text-[28px]">inventory_2</span>
+</div>
+<div class="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-surface-container-highest pointer-events-none transition-transform duration-500 group-hover:scale-125"></div>
+</div>
+</div>
+<!-- Search and Dynamic Filters Bar -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm mb-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto w-full lg:w-auto pb-space-xxs lg:pb-0 scrollbar-none">
+<button class="filter-tab px-space-md py-space-xs rounded-full font-label-md text-label-md bg-primary text-on-primary transition-all shadow-sm flex items-center gap-space-xs whitespace-nowrap" type="button">
+<span>Todas</span>
+<span class="bg-on-primary/20 text-on-primary px-1.5 py-0.5 rounded-full text-label-sm font-semibold">5</span>
+</button>
+<button class="filter-tab px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs whitespace-nowrap" type="button">
+<span>Em Andamento</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full text-label-sm font-semibold">3</span>
+</button>
+<button class="filter-tab px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs whitespace-nowrap" type="button">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span>
+<span>Entrevista Agendada</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded-full text-label-sm font-semibold">1</span>
+</button>
+<button class="filter-tab px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center gap-space-xs whitespace-nowrap" type="button">
+<span>Encerradas</span>
+<span class="bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded-full text-label-sm font-semibold">2</span>
+</button>
+</div>
+<div class="w-full lg:w-96 relative">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-space-md bg-surface-container-low rounded-xl font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="job-search" placeholder="Buscar por edital (#2026...) ou cargo..." type="text"/>
+</div>
+</div>
+<!-- Content Grid: Cards List + Sidebar Panel -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl">
+<!-- Main Applications Flow -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- CARD 1: Analista de Recursos Humanos Pleno (DHO) -->
+<article class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm transition-all duration-300 hover:shadow-md relative overflow-hidden">
+<div class="w-2 bg-primary absolute top-0 left-0 bottom-0"></div>
+<div class="pl-space-sm flex flex-col gap-space-md">
+<!-- Card Header Info -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xxs flex-wrap">
+<span class="px-2.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold rounded-md">Edital #2026-RH04</span>
+<span class="px-2.5 py-0.5 bg-primary-fixed/40 text-primary font-label-sm text-label-sm font-semibold rounded-md">CLT Full-Time</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1">business</span>RH Corporativo / DHO
+                </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+                Analista de Recursos Humanos Pleno (DHO)
+              </h2>
+</div>
+<div class="flex items-center gap-space-xs self-start">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary font-semibold">Em Análise pela Liderança</span>
+</div>
+</div>
+<!-- Stepper Visualization -->
+<div class="bg-surface-container-low rounded-2xl p-space-md my-space-xs">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Evolução do Processo Seletivo</span>
+<span class="font-label-md text-label-md text-primary font-bold">Etapa 4 de 5</span>
+</div>
+<!-- Visual Stepper Progress -->
+<div class="relative flex items-center justify-between w-full py-space-xs">
+<!-- Background connecting track -->
+<div class="absolute left-4 right-4 h-1 bg-surface-container-high -translate-y-1/2 top-1/2 z-0"></div>
+<!-- Active progress bar line -->
+<div class="absolute left-4 w-[75%] h-1 bg-primary -translate-y-1/2 top-1/2 z-0"></div>
+<!-- Step 1: Triagem -->
+<div class="relative z-10 flex flex-col items-center text-center group cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-space-xxs hidden md:block">1. Triagem</span>
+<span class="font-body-sm text-[10px] text-primary font-bold hidden md:block">Concluído</span>
+</div>
+<!-- Step 2: Entrevista RH -->
+<div class="relative z-10 flex flex-col items-center text-center group cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-space-xxs hidden md:block">2. Entrevista RH</span>
+<span class="font-body-sm text-[10px] text-primary font-bold hidden md:block">Aprovado</span>
+</div>
+<!-- Step 3: Estudo de Caso -->
+<div class="relative z-10 flex flex-col items-center text-center group cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-space-xxs hidden md:block">3. Estudo de Caso</span>
+<span class="font-body-sm text-[10px] text-primary font-bold hidden md:block">Nota 9.4 / Aprovado</span>
+</div>
+<!-- Step 4: Entrevista Liderança (Current) -->
+<div class="relative z-10 flex flex-col items-center text-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-md ring-4 ring-primary/30">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">videocam</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-space-xxs hidden md:block">4. Liderança</span>
+<span class="font-body-sm text-[10px] text-primary-container font-semibold hidden md:block">Agendada</span>
+</div>
+<!-- Step 5: Proposta -->
+<div class="relative z-10 flex flex-col items-center text-center group">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-semibold">5</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xxs hidden md:block">5. Proposta</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70 hidden md:block">Aguardando</span>
+</div>
+</div>
+<!-- Scheduled Interview Highlight Pill inside Card -->
+<div class="mt-space-md p-space-sm bg-surface-container-lowest rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">calendar_clock</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface leading-snug">Entrevista com Diretoria de Gente e Gestão</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs flex-wrap">
+<span>Terça-feira, 28 de Outubro</span>
+<span>•</span>
+<span>14:30 - 15:15 (Horário de Brasília)</span>
+<span>•</span>
+<span class="text-primary font-medium">Link Microsoft Teams</span>
+</div>
+</div>
+</div>
+<a class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md font-medium hover:bg-primary-container transition-all flex items-center gap-space-xs whitespace-nowrap shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Acessar Link da Entrevista</span>
+</a>
+</div>
+</div>
+<!-- Action Footers -->
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/80">update</span>
+              Atualizado em 24/10/2026 pelo Headhunter da Vaga
+            </span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-dim transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Ver Detalhes do Processo</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 2: Business Partner de RH (Tech & Dados) -->
+<article class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm transition-all duration-300 hover:shadow-md relative overflow-hidden">
+<div class="w-2 bg-secondary absolute top-0 left-0 bottom-0"></div>
+<div class="pl-space-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xxs flex-wrap">
+<span class="px-2.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold rounded-md">Edital #2026-RH02</span>
+<span class="px-2.5 py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold rounded-md">Híbrido (São Paulo)</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1">hub</span>Engenharia de Pessoas
+                </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+                Business Partner de RH (Tech &amp; Dados)
+              </h2>
+</div>
+<div class="flex items-center gap-space-xs self-start">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Avaliação de Estudo de Caso</span>
+</div>
+</div>
+<!-- Stepper Visualization -->
+<div class="bg-surface-container-low rounded-2xl p-space-md my-space-xs">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Evolução do Processo Seletivo</span>
+<span class="font-label-md text-label-md text-secondary font-bold">Etapa 3 de 5</span>
+</div>
+<!-- Stepper line -->
+<div class="relative flex items-center justify-between w-full py-space-xs">
+<div class="absolute left-4 right-4 h-1 bg-surface-container-high -translate-y-1/2 top-1/2 z-0"></div>
+<div class="absolute left-4 w-[50%] h-1 bg-secondary -translate-y-1/2 top-1/2 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-space-xxs hidden md:block">1. Triagem</span>
+<span class="font-body-sm text-[10px] text-secondary font-bold hidden md:block">Aprovado</span>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-space-xxs hidden md:block">2. Fit Cultural</span>
+<span class="font-body-sm text-[10px] text-secondary font-bold hidden md:block">Aprovado</span>
+</div>
+<!-- Step 3 (Current) -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest text-secondary flex items-center justify-center shadow-md ring-4 ring-secondary/20">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold mt-space-xxs hidden md:block">3. Case Prático</span>
+<span class="font-body-sm text-[10px] text-secondary font-medium hidden md:block">Em Correção</span>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-semibold">4</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xxs hidden md:block">4. Painel Técnico</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70 hidden md:block">Pendente</span>
+</div>
+<!-- Step 5 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-semibold">5</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xxs hidden md:block">5. Proposta</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70 hidden md:block">Aguardando</span>
+</div>
+</div>
+<!-- Notification banner for Step 3 feedback -->
+<div class="mt-space-md p-space-sm bg-surface-container-lowest rounded-xl flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">
+                Seu estudo de caso sobre <span class="font-semibold text-on-surface">"People Analytics em Turnover de Engenharia"</span> foi entregue com sucesso. Aguardando parecer da banca avaliadora com previsão até <span class="font-semibold text-secondary">30 de Outubro</span>.
+              </div>
+</div>
+</div>
+<!-- Action Footers -->
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/80">mark_email_read</span>
+              Protocolo de Envio: #CASE-88219-OK
+            </span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-dim transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Histórico de Mensagens</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-dim transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>Ver Detalhes da Vaga</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 3: Especialista em Comunicação Interna & Endomarketing -->
+<article class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm transition-all duration-300 hover:shadow-md relative overflow-hidden">
+<div class="w-2 bg-outline-variant absolute top-0 left-0 bottom-0"></div>
+<div class="pl-space-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xxs flex-wrap">
+<span class="px-2.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold rounded-md">Edital #2026-RH11</span>
+<span class="px-2.5 py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold rounded-md">100% Remoto</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1">campaign</span>Marca Empregadora
+                </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+                Especialista em Comunicação Interna &amp; Endomarketing
+              </h2>
+</div>
+<div class="flex items-center gap-space-xs self-start">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Triagem Curricular</span>
+</div>
+</div>
+<!-- Stepper Visualization -->
+<div class="bg-surface-container-low rounded-2xl p-space-md my-space-xs">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Evolução do Processo Seletivo</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-bold">Etapa 1 de 5</span>
+</div>
+<!-- Stepper line -->
+<div class="relative flex items-center justify-between w-full py-space-xs">
+<div class="absolute left-4 right-4 h-1 bg-surface-container-high -translate-y-1/2 top-1/2 z-0"></div>
+<div class="absolute left-4 w-[10%] h-1 bg-tertiary -translate-y-1/2 top-1/2 z-0"></div>
+<!-- Step 1 (Current) -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest text-tertiary flex items-center justify-center shadow-md ring-4 ring-tertiary/20">
+<span class="material-symbols-outlined text-[20px]">manage_search</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold mt-space-xxs hidden md:block">1. Triagem</span>
+<span class="font-body-sm text-[10px] text-tertiary font-semibold hidden md:block">Em Execução</span>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-semibold">2</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xxs hidden md:block">2. Entrevista RH</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70 hidden md:block">Pendente</span>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-semibold">3</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xxs hidden md:block">3. Portfólio</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70 hidden md:block">Pendente</span>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-semibold">4</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xxs hidden md:block">4. Painel Executivo</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70 hidden md:block">Pendente</span>
+</div>
+<!-- Step 5 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-semibold">5</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xxs hidden md:block">5. Oferta</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant/70 hidden md:block">Aguardando</span>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-lowest rounded-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">hourglass_empty</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                Seu currículo cadastrado está sendo confrontado com a matriz de competências da vaga. Você receberá atualizações via e-mail e nesta aba.
+              </div>
+</div>
+</div>
+<!-- Action Footers -->
+<div class="flex items-center justify-between pt-space-xs flex-wrap gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant/80">event</span>
+              Inscrito em 21/10/2026
+            </span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-dim transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Ver Requisitos do Edital</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Sidebar: Candidate Intelligence, Preparation Tips & Support -->
+<aside class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Interview Prep Card with high visual polish -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm relative overflow-hidden">
+<div class="w-full h-44 rounded-xl overflow-hidden mb-space-md relative">
+<img class="w-full h-full object-cover" data-alt="A clean modern meeting room with warm lighting, professional laptop setup, notebook and discreet corporate greenery, conveying calm focus and readiness for high stakes interview." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLaetM45Obp6n_Jen5f31ziQJsFrlvhGwepEk9UbRwQPrAQWK63nQd_sCkChT6ShOnkbVDRkhIlUcb90xd2pIutWvypXo2106Li5uWGZOHVQRHIw8kMdS-U5avJChkY192nhts8PAKWWxHqgno4VDpVElVDw1QcSU4esuDtRrqyJWVRvwpbfnw9JQxfrJ7QvzqHc6TprLqediZWoF54j7Ta2Zjg5bSL1An1teqCaDPy06vB3tBkyy6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 text-on-primary">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold uppercase">Guia de Sucesso</span>
+<h3 class="font-title-md text-title-md font-semibold text-white mt-0.5">Preparação para Entrevista com a Liderança</h3>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] font-bold">check_small</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-on-surface">Metodologia STAR:</span> Estruture exemplos reais detalhando Situação, Tarefa, Ação e Resultados mensuráveis.
+            </p>
+</div>
+<div class="flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] font-bold">check_small</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-on-surface">Conectividade &amp; Câmera:</span> Teste com 15 minutos de antecedência áudio, iluminação e o aplicativo MS Teams.
+            </p>
+</div>
+<div class="flex items-start gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[14px] font-bold">check_small</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-on-surface">Governança da Organização:</span> Revise os pilares estratégicos de DHO e projetos de cultura em andamento.
+            </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t-0">
+<a class="w-full py-space-xs px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-dim transition-colors flex items-center justify-center gap-space-xs text-center font-medium" href="#">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Acessar Manual do Candidato</span>
+</a>
+</div>
+</div>
+<!-- Candidate Support & Ombudsperson Contact -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md relative">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Comissão de Seleção &amp; Suporte</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Atendimento em dias úteis das 08h às 18h</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Dúvidas sobre editais vigentes, reagendamento de entrevistas por motivo de força maior ou solicitações de acessibilidade para etapas presenciais/remotas:
+        </p>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">mail</span> E-mail:
+            </span>
+<a class="text-primary font-medium hover:underline" href="mailto:processoseletivo@rhconnect.gov.br">processoseletivo@rhconnect.gov.br</a>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">chat_bubble</span> Chat RH:
+            </span>
+<span class="text-on-surface font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Online agora
+            </span>
+</div>
+</div>
+<button class="w-full py-space-xs px-space-md rounded-lg bg-surface-container-highest text-on-surface hover:bg-surface-dim transition-colors font-label-md text-label-md font-medium flex items-center justify-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">question_answer</span>
+<span>Abrir Chamado com a Comissão</span>
+</button>
+</div>
+<!-- Quick Document Check Pill -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/30 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Documentação LGPD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Termo de consentimento ativo até Dezembro/2026</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Filter Tabs micro-interaction
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      filterTabs.forEach(t => {
+        t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        t.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high', 'hover:text-on-surface');
+      });
+      tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      tab.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high', 'hover:text-on-surface');
+    });
+  });
+
+  // Client search micro-interaction
+  const searchInput = document.getElementById('job-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      const articles = document.querySelectorAll('article');
+      articles.forEach(article => {
+        const text = article.innerText.toLowerCase();
+        if (text.includes(term)) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_-1px_6px_rgba(16,42,67,0.03)]"><div class="w-full px-space-lg lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-headline-sm text-[12px] font-bold">RC</div><span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 RH Connect Governança &amp; Pessoas. Todos os direitos reservados.</span></div><div class="flex flex-wrap items-center gap-space-lg"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Conformidade LGPD</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidade de Dados</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Termos de Uso</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Suporte ao Candidato</a></div></div></footer></body></html>

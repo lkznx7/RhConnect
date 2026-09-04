@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#bcc9c9", "on-secondary-fixed-variant": "#334766", "on-tertiary-fixed-variant": "#2e4962", "on-background": "#191c1e", "on-primary-container": "#f3ffff", "primary-fixed-dim": "#6bd7da", "on-secondary-container": "#4a5e7e", "on-primary": "#ffffff", "secondary-container": "#c3d8fe", "on-tertiary-container": "#fdfcff", "surface": "#f7f9fb", "inverse-surface": "#2d3133", "error-container": "#ffdad6", "inverse-on-surface": "#eff1f3", "background": "#f7f9fb", "on-secondary": "#ffffff", "on-surface-variant": "#3d4949", "outline": "#6d7979", "surface-dim": "#d8dadc", "surface-container": "#eceef0", "primary-container": "#008285", "on-tertiary": "#ffffff", "on-secondary-fixed": "#031c38", "on-error-container": "#93000a", "surface-container-high": "#e6e8ea", "on-primary-fixed": "#002021", "tertiary": "#445e78", "on-surface": "#191c1e", "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f4f6", "error": "#ba1a1a", "tertiary-fixed-dim": "#aec9e7", "secondary-fixed-dim": "#b3c7ec", "on-error": "#ffffff", "inverse-primary": "#6bd7da", "primary-fixed": "#89f3f6", "surface-container-highest": "#e0e3e5", "surface-tint": "#00696c", "primary": "#006769", "secondary": "#4b5f7f", "on-primary-fixed-variant": "#004f51", "tertiary-container": "#5c7792", "on-tertiary-fixed": "#001d32", "secondary-fixed": "#d5e3ff", "surface-bright": "#f7f9fb", "tertiary-fixed": "#cee5ff", "surface-variant": "#e0e3e5" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-3xl": "4rem", "margin-tablet": "2rem", "space-2xl": "3rem", "margin-mobile": "1rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-xxs": "0.25rem", "margin-desktop": "3rem", "space-sm": "0.75rem" }, "fontFamily": { "label-md": [ "DM Sans" ], "display": [ "Hanken Grotesk" ], "body-sm": [ "DM Sans" ], "headline-lg": [ "Hanken Grotesk" ], "title-md": [ "DM Sans" ], "title-lg": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "headline-lg-mobile": [ "Hanken Grotesk" ], "body-md": [ "DM Sans" ], "headline-sm": [ "Hanken Grotesk" ], "headline-md": [ "Hanken Grotesk" ], "label-sm": [ "DM Sans" ] }, "fontSize": { "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(16,42,67,0.05)]"><div class="h-28 w-full px-space-lg lg:px-margin-desktop flex flex-col justify-between"><div class="h-16 flex items-center justify-between"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold shadow-[0_2px_4px_rgba(0,103,105,0.2)]">RC</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">RH Connect</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Portal do Candidato</span></div></div><nav class="hidden md:flex items-center gap-space-lg pl-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="vagas-abertas" href="#">Vagas</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalogo-cursos" href="#">Cursos</a></nav></div><div class="flex items-center gap-space-md"><button aria-label="Notificações" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-8 w-[1px] bg-surface-container-high hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">Lucas Mendes</span><span class="font-label-sm text-label-sm text-primary leading-tight font-medium">Candidato / Aluno</span></div><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-fixed-dim ring-2 ring-surface-container-lowest"></span></div></div></div></div><div class="h-12 flex items-center justify-between overflow-x-auto"><nav class="flex items-center gap-space-xs pb-space-xxs" data-active-classes="bg-primary-container text-on-primary-container font-medium"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="visao-geral" href="#">Visão Geral</a><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-all whitespace-nowrap bg-primary-container text-on-primary-container font-medium" data-path="meu-perfil" href="#">Meu Perfil</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="meu-curriculo" href="#">Meu Currículo</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="minhas-candidaturas" href="#">Minhas Candidaturas</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="minhas-inscricoes" href="#">Minhas Inscrições</a></nav></div></div></header><main class="w-full pt-28 bg-surface min-h-[calc(100vh-140px)] px-space-lg lg:px-margin-desktop py-space-xl"><div class="flex flex-col w-full pb-space-3xl">
+<!-- Top Banner / Editorial Identity Strip -->
+<div class="relative w-full rounded-2xl bg-surface-container-lowest shadow-sm p-space-lg lg:p-space-xl mb-space-xl overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Configuração &amp; Identidade</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Meu Perfil Profissional</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Mantenha seus registros civis, credenciais e parâmetros de contratação alinhados aos critérios de governança da rede RH Connect.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto bg-surface-container px-space-md py-space-xs rounded-full">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Sincronizado com LGPD</span>
+<span class="text-on-surface-variant/40 font-mono text-[10px]">v2.4.9</span>
+</div>
+</div>
+</div>
+<!-- Dual Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Identity, Trust, Security & Account Health (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Profile Card & Integrity Badges -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg flex flex-col items-center text-center relative overflow-hidden">
+<div class="relative mb-space-md group">
+<div class="w-32 h-32 rounded-full overflow-hidden shadow-md ring-4 ring-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up professional studio portrait of Lucas Mendes, a Brazilian man in his late 20s with warm confident expression, subtle smart casual blazer, soft daylighting, clean corporate architectural background with neutral slate and teal undertones, photorealistic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhSvEe9KWA-IcqNXzmUx1Z_JWB3ZR8vsXEjsvQjVCMwu-skUflVUlg2rvCP0PHuKPZfkF_jwZsolfJxkIe76IzU5PgMDG8N2T7xudJO996o67fMQ6_tHL2qkIb2iXsQoLYMsm-5kGubsLDwJ-AkMCTPRG38Mf72rrY7zoMymIRVwsuWKd47OBsD6YTkF-rU1Z7s1ANz6nG7Zyv7DhqUaavqrDfI8Eo6W4Rtvwz2tx6O2LDdgBLhy7T"/>
+</div>
+<button aria-label="Atualizar Foto" class="absolute bottom-1 right-1 w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md hover:bg-primary-container transition-all" title="Atualizar Foto" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</button>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Lucas Mendes de Oliveira</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xxs">Analista Sênior de Pessoas &amp; DHO</p>
+<!-- Integrity Badges -->
+<div class="flex flex-wrap items-center justify-center gap-space-xs mt-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+            Conta Verificada
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+            Integridade Nível A
+          </span>
+</div>
+<!-- Completion Meter -->
+<div class="w-full mt-space-lg pt-space-md bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs text-left">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Força do Perfil</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">85%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000" style="width: 85%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xxs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">info</span>
+            Adicione sua pretensão salarial final para atingir 100%.
+          </p>
+</div>
+</div>
+<!-- Quick Metrics Chart Card -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-title-md text-on-surface">Visibilidade dos Dados</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Trimestral</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Interesse gerado junto a recrutadores certificados.</p>
+<!-- Inline Metric Vector Visualization -->
+<div class="w-full h-24 flex items-end justify-between gap-2 pt-2 px-1">
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container rounded-t h-10 hover:bg-primary/20 transition-colors"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">JAN</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container rounded-t h-14 hover:bg-primary/20 transition-colors"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">FEV</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-primary/40 rounded-t h-16 hover:bg-primary/60 transition-colors"></div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">MAR</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-primary rounded-t h-20 shadow-sm"></div>
+<span class="font-label-sm text-[10px] text-primary font-bold">ABR</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>+34% acessos em recrutamentos</span>
+<span class="text-primary font-bold">Ativo</span>
+</div>
+</div>
+<!-- Security & Preferences Modules -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-primary">lock_reset</span>
+<h3 class="font-title-md text-title-md">Segurança e Acessos</h3>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Password Row -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-medium text-on-surface">Senha de Acesso</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Atualizada há 42 dias</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+              Alterar
+            </button>
+</div>
+<!-- 2FA Toggle Row -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex flex-col pr-2">
+<span class="font-title-md text-body-md font-medium text-on-surface">Autenticação em 2 Etapas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Via App Autenticador (TOTP)</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-2fa" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Notification Channels -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-space-sm">
+<span class="font-title-md text-body-md font-medium text-on-surface">Canais Notificadores</span>
+<label class="flex items-center justify-between cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">mail</span> E-mail Transacional
+              </span>
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">chat</span> Alertas no WhatsApp
+              </span>
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary/20 accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Danger Zone / Account Deactivation -->
+<div class="pt-space-md flex flex-col gap-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl text-error hover:bg-error-container/30 transition-colors font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">no_accounts</span>
+            Desativar Minha Conta
+          </button>
+<span class="font-label-sm text-[10px] text-center text-on-surface-variant">Conforme Art. 18 da LGPD, você pode revogar acessos a qualquer momento.</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Detailed Profiles & Form Sections (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- 1. DADOS PESSOAIS -->
+<section class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">1. Dados Pessoais</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Informações civis fundamentais para processos seletivos e admissão.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 bg-surface-container px-space-sm py-1 rounded-md">Obrigatório</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Nome Completo -->
+<div class="flex flex-col gap-space-xxs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="full-name">Nome Completo</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="full-name" type="text" value="Lucas Mendes de Oliveira"/>
+</div>
+<!-- Nome Social -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="social-name">Nome Social <span class="text-on-surface-variant font-normal">(Opcional)</span></label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-outline" id="social-name" placeholder="Como prefere ser chamado(a)" type="text"/>
+</div>
+<!-- CPF Mascarado -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="cpf">CPF</label>
+<span class="font-label-sm text-[11px] text-primary flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">lock</span> Validado RFB</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container text-on-surface-variant font-mono text-body-md cursor-not-allowed outline-none" disabled="" id="cpf" type="text" value="***.842.198-**"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-outline text-[18px]">verified_user</span>
+</div>
+</div>
+<!-- Data de Nascimento -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="dob">Data de Nascimento</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="dob" type="date" value="1995-06-14"/>
+</div>
+<!-- Gênero -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="gender">Identidade de Gênero</label>
+<select class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="gender">
+<option selected="" value="masculino">Masculino Cisgênero</option>
+<option value="feminino">Feminino Cisgênero</option>
+<option value="trans">Pessoa Transgênero</option>
+<option value="nao-binario">Não-Binário</option>
+<option value="outro">Prefiro não informar</option>
+</select>
+</div>
+<!-- Estado Civil -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="marital-status">Estado Civil</label>
+<select class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="marital-status">
+<option selected="" value="solteiro">Solteiro(a)</option>
+<option value="casado">Casado(a) / União Estável</option>
+<option value="divorciado">Divorciado(a)</option>
+<option value="viuvo">Viúvo(a)</option>
+</select>
+</div>
+<!-- PCD Selection -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Pessoa com Deficiência (PCD)</label>
+<div class="flex items-center gap-space-md h-11">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary accent-primary" name="pcd" onchange="document.getElementById('pcd-upload-box').classList.add('hidden')" type="radio" value="nao"/>
+<span class="font-body-md text-body-md text-on-surface">Não</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input class="w-4 h-4 text-primary accent-primary" name="pcd" onchange="document.getElementById('pcd-upload-box').classList.remove('hidden')" type="radio" value="sim"/>
+<span class="font-body-md text-body-md text-on-surface">Sim</span>
+</label>
+</div>
+</div>
+</div>
+<!-- PCD Upload Dropzone (Conditional Container) -->
+<div class="hidden p-space-md bg-surface-container-low rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md" id="pcd-upload-box">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">upload_file</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Laudo Médico / CID (Obrigatório para PCD)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">PDF, JPG ou PNG de até 10MB.</p>
+</div>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-primary shadow-sm hover:bg-surface-container transition-colors font-label-md text-label-md" type="button">
+            Selecionar Documento
+          </button>
+</div>
+</section>
+<!-- 2. INFORMAÇÕES DE CONTATO -->
+<section class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/60 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[22px]">contact_phone</span>
+</div>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">2. Informações de Contato</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Como os comitês de atração de talentos encontrarão você.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- E-mail Principal -->
+<div class="flex flex-col gap-space-xxs md:col-span-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="email">E-mail Corporativo / Principal</label>
+<span class="font-label-sm text-[11px] text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verificado
+              </span>
+</div>
+<div class="relative">
+<input class="w-full h-11 pl-space-md pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="email" type="email" value="lucas.mendes@email.com.br"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+</div>
+<!-- Celular com WhatsApp -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="phone-main">Telefone Celular (WhatsApp)</label>
+<span class="font-label-sm text-label-sm text-primary font-medium">Habilitado</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 pl-space-md pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="phone-main" type="tel" value="(11) 98765-4321"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-primary text-[18px]">chat</span>
+</div>
+</div>
+<!-- Telefone de Recado -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="phone-alt">Telefone de Recado <span class="text-on-surface-variant font-normal">(Opcional)</span></label>
+<div class="relative">
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-outline" id="phone-alt" placeholder="(11) 3456-7890 (Mariana)" type="tel"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-outline text-[18px]">phone_in_talk</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. ENDEREÇO RESIDENCIAL -->
+<section class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed/60 flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">home_pin</span>
+</div>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">3. Endereço Residencial</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Utilizado para dimensionamento de mobilidade urbana e benefícios.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 gap-space-md">
+<!-- CEP -->
+<div class="flex flex-col gap-space-xxs md:col-span-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="cep">CEP</label>
+<a class="font-label-sm text-[10px] text-primary hover:underline" href="#">Não sei o CEP</a>
+</div>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all font-mono" id="cep" type="text" value="04571-010"/>
+</div>
+<!-- Logradouro -->
+<div class="flex flex-col gap-space-xxs md:col-span-4">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="street">Logradouro / Avenida / Rua</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="street" type="text" value="Avenida Engenheiro Luís Carlos Berrini"/>
+</div>
+<!-- Número -->
+<div class="flex flex-col gap-space-xxs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="number">Número</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="number" type="text" value="1200"/>
+</div>
+<!-- Complemento -->
+<div class="flex flex-col gap-space-xxs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="complement">Complemento</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="complement" type="text" value="Apto 84 - Bloco B"/>
+</div>
+<!-- Bairro -->
+<div class="flex flex-col gap-space-xxs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="neighborhood">Bairro</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="neighborhood" type="text" value="Brooklin Novo"/>
+</div>
+<!-- Cidade -->
+<div class="flex flex-col gap-space-xxs md:col-span-4">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="city">Cidade</label>
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="city" type="text" value="São Paulo"/>
+</div>
+<!-- Estado (UF) -->
+<div class="flex flex-col gap-space-xxs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="state">Estado (UF)</label>
+<select class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all" id="state">
+<option selected="" value="SP">SP - São Paulo</option>
+<option value="RJ">RJ - Rio de Janeiro</option>
+<option value="MG">MG - Minas Gerais</option>
+<option value="PR">PR - Paraná</option>
+<option value="RS">RS - Rio Grande do Sul</option>
+<option value="SC">SC - Santa Catarina</option>
+</select>
+</div>
+</div>
+</section>
+<!-- 4. PREFERÊNCIAS DE OPORTUNIDADES -->
+<section class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</div>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">4. Preferências de Oportunidades</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calibre a compatibilidade dos algoritmos de matching de vagas.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-lg">
+<!-- Modalidade Desejada -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-medium">Modalidade de Trabalho Aceita</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">desktop_mac</span>
+<span class="font-title-md text-title-md text-on-surface">Remoto</span>
+</div>
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary/20 accent-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">corporate_fare</span>
+<span class="font-title-md text-title-md text-on-surface">Híbrido</span>
+</div>
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-primary/20 accent-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[20px]">business_center</span>
+<span class="font-title-md text-title-md text-on-surface">Presencial</span>
+</div>
+<input class="w-5 h-5 rounded text-primary focus:ring-primary/20 accent-primary" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Nível de Cargo & Pretensão Salarial -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Níveis -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Níveis de Cargo de Interesse</label>
+<div class="flex flex-wrap gap-space-xs pt-1">
+<span class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-medium flex items-center gap-1 cursor-pointer">
+                  Pleno <span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-medium flex items-center gap-1 cursor-pointer">
+                  Sênior <span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors cursor-pointer">
+                  + Especialista
+                </span>
+<span class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors cursor-pointer">
+                  + Coordenação
+                </span>
+</div>
+</div>
+<!-- Pretensão Salarial -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="salary">Pretensão Salarial Mensal (CLT)</label>
+<div class="relative">
+<span class="absolute left-3.5 top-3 font-title-md text-title-md text-on-surface-variant">R$</span>
+<input class="w-full h-11 pl-10 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 outline-none transition-all font-mono" id="salary" type="text" value="12.500,00"/>
+</div>
+</div>
+</div>
+<!-- Áreas de Maior Interesse -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Áreas de Especialização Prioritárias</label>
+<div class="flex flex-wrap gap-space-xs pt-1">
+<span class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[16px]">group</span>
+                Recursos Humanos Estratégico
+                <button aria-label="Remover" class="hover:text-error transition-colors" type="button">×</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[16px]">psychology</span>
+                DHO (Desenvolvimento Humano &amp; Organizacional)
+                <button aria-label="Remover" class="hover:text-error transition-colors" type="button">×</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[16px]">analytics</span>
+                People Analytics &amp; Métricas
+                <button aria-label="Remover" class="hover:text-error transition-colors" type="button">×</button>
+</span>
+<button class="inline-flex items-center gap-1 px-space-md py-2 rounded-xl bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span> Adicionar Área
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Footer (Sticky Bar on Scroll / Generous Space) -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md sticky bottom-4 z-40">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">history</span>
+<span class="font-body-sm text-body-sm">Última sincronização completa: hoje, às 14:32</span>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto justify-end">
+<button class="px-space-lg py-space-sm rounded-xl text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md font-medium" type="button">
+            Cancelar
+          </button>
+<button class="px-space-xl py-space-sm rounded-xl bg-primary text-on-primary hover:bg-primary-container shadow-md hover:shadow-lg transition-all font-label-md text-label-md font-bold flex items-center gap-space-xs" id="btn-save-profile" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+            Salvar Alterações
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Interactive feedback micro-interaction for primary button
+    const saveBtn = document.getElementById('btn-save-profile');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', function() {
+        const originalText = saveBtn.innerHTML;
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = `
+          <span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+          Atualizando Base...
+        `;
+        setTimeout(() => {
+          saveBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+            Dados Atualizados!
+          `;
+          saveBtn.classList.remove('bg-primary');
+          saveBtn.classList.add('bg-primary-container');
+          setTimeout(() => {
+            saveBtn.innerHTML = originalText;
+            saveBtn.disabled = false;
+            saveBtn.classList.add('bg-primary');
+            saveBtn.classList.remove('bg-primary-container');
+          }, 2400);
+        }, 1000);
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_-1px_6px_rgba(16,42,67,0.03)]"><div class="w-full px-space-lg lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-headline-sm text-[12px] font-bold">RC</div><span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 RH Connect Governança &amp; Pessoas. Todos os direitos reservados.</span></div><div class="flex flex-wrap items-center gap-space-lg"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Conformidade LGPD</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidade de Dados</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Termos de Uso</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Suporte ao Candidato</a></div></div></footer></body></html>

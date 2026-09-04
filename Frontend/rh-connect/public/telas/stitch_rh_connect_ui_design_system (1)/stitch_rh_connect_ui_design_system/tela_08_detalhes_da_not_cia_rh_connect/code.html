@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"on-primary-fixed-variant":"#004f51","outline-variant":"#bcc9c9","inverse-primary":"#6bd7da","on-primary-fixed":"#002021","outline":"#6d7979","surface-container":"#eceef0","surface-dim":"#d8dadc","on-primary":"#ffffff","tertiary-fixed":"#cee5ff","on-secondary-fixed-variant":"#334766","on-secondary-container":"#4a5e7e","surface-tint":"#00696c","inverse-on-surface":"#eff1f3","secondary-container":"#c3d8fe","secondary-fixed-dim":"#b3c7ec","on-tertiary":"#ffffff","primary-container":"#008285","surface-container-low":"#f2f4f6","on-secondary":"#ffffff","on-error":"#ffffff","on-error-container":"#93000a","surface-variant":"#e0e3e5","background":"#f7f9fb","tertiary-container":"#5c7792","on-tertiary-container":"#fdfcff","surface-container-high":"#e6e8ea","inverse-surface":"#2d3133","on-surface-variant":"#3d4949","on-secondary-fixed":"#031c38","secondary-fixed":"#d5e3ff","tertiary":"#445e78","on-surface":"#191c1e","primary":"#006769","on-tertiary-fixed":"#001d32","surface":"#f7f9fb","surface-bright":"#f7f9fb","surface-container-highest":"#e0e3e5","primary-fixed-dim":"#6bd7da","error":"#ba1a1a","tertiary-fixed-dim":"#aec9e7","on-background":"#191c1e","primary-fixed":"#89f3f6","secondary":"#4b5f7f","error-container":"#ffdad6","on-primary-container":"#f3ffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#2e4962"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"3rem","space-lg":"1.5rem","space-2xl":"3rem","gutter-mobile":"1rem","margin-tablet":"2rem","space-3xl":"4rem","space-sm":"0.75rem","space-xs":"0.5rem","gutter-desktop":"1.5rem","space-xxs":"0.25rem","space-md":"1rem","space-xl":"2rem","margin-mobile":"1rem"},"fontFamily":{"title-md":["DM Sans"],"headline-lg":["Hanken Grotesk"],"label-sm":["DM Sans"],"headline-lg-mobile":["Hanken Grotesk"],"body-sm":["DM Sans"],"body-lg":["DM Sans"],"body-md":["DM Sans"],"label-md":["DM Sans"],"headline-sm":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"title-lg":["DM Sans"],"display":["Hanken Grotesk"]},"fontSize":{"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs" data-path="inicio" href="#"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-[0_1px_3px_0_rgba(16,42,67,0.04)]"><span class="material-symbols-outlined text-2xl">diversity_3</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">RH<span class="text-primary">Connect</span></span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase leading-none mt-1">Portal de Pessoas</span></div></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-title-md"><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-o-rh" href="#">Sobre o RH</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="oportunidades" href="#">Oportunidades</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="cursos" href="#">Cursos</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="noticias" href="#">Notícias</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#">Banco de Talentos</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center font-label-md text-label-md px-space-md py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" data-path="cadastrar-curriculo" href="#">Cadastrar Currículo</a><a class="inline-flex items-center justify-center font-label-md text-label-md px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary transition-all shadow-[0_1px_3px_0_rgba(16,42,67,0.04)]" data-path="acessar-portal" href="#">Acessar Portal</a><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/></div></div></div></header><main class="w-full pt-20 bg-background flex-grow"><div class="flex flex-col w-full">
+<!-- Reading Progress Bar -->
+<div class="fixed top-20 left-0 h-1 bg-primary z-40 transition-all duration-150" id="read-progress" style="width: 0%"></div>
+<!-- Breadcrumb & Top Context Banner -->
+<section class="w-full bg-surface-container-low py-space-md">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="inicio" href="#">
+<span class="material-symbols-outlined text-base">home</span>
+          Início
+        </a>
+<span class="material-symbols-outlined text-sm text-outline-variant">chevron_right</span>
+<a class="hover:text-primary transition-colors" data-path="noticias" href="#">Notícias</a>
+<span class="material-symbols-outlined text-sm text-outline-variant">chevron_right</span>
+<span class="text-on-surface truncate font-semibold max-w-[280px] sm:max-w-md lg:max-w-xl">
+          RH Connect Conquista Certificação Ouro em Boas Práticas
+        </span>
+</nav>
+</div>
+</section>
+<!-- Main Editorial Container -->
+<article class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-xl lg:py-space-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
+<!-- Left Sticky Share & Actions Toolbar (Desktop) -->
+<aside class="hidden lg:flex lg:col-span-1 flex-col items-center">
+<div class="sticky top-28 flex flex-col items-center gap-space-sm bg-surface-container-lowest p-space-xs rounded-xl shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider [writing-mode:vertical-rl] rotate-180 py-space-xs">
+            Compartilhar
+          </span>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low hover:bg-primary hover:text-on-primary text-secondary transition-all" onclick="shareLink('linkedin')" title="Compartilhar no LinkedIn">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low hover:bg-primary hover:text-on-primary text-secondary transition-all" onclick="shareLink('email')" title="Enviar por E-mail">
+<span class="material-symbols-outlined text-lg">mail</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low hover:bg-primary hover:text-on-primary text-secondary transition-all" id="copy-btn" onclick="copyArticleUrl()" title="Copiar Link Permanente">
+<span class="material-symbols-outlined text-lg">link</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low hover:bg-primary hover:text-on-primary text-secondary transition-all" onclick="window.print()" title="Imprimir Comunicado">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-surface-container-low hover:bg-primary hover:text-on-primary text-secondary transition-all" onclick="toggleBookmark(this)" title="Salvar leitura">
+<span class="material-symbols-outlined text-lg">bookmark_border</span>
+</button>
+</div>
+</aside>
+<!-- Center & Right Article Body Content -->
+<div class="lg:col-span-11 xl:col-span-8 flex flex-col gap-space-xl">
+<!-- Header Metadata -->
+<header class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-md text-label-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Reconhecimento &amp; Cultura
+            </span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-md text-label-md bg-surface-container px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm">schedule</span>
+              4 min de leitura
+            </span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-md text-label-md bg-surface-container px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm">verified</span>
+              Comunicado Oficial #48/2024
+            </span>
+</div>
+<!-- Headline -->
+<h1 class="font-display text-headline-lg lg:text-display text-on-surface tracking-tight leading-tight">
+            RH Connect Conquista Selo Ouro de Equidade e Pluralidade no Ambiente de Trabalho
+          </h1>
+<!-- Author, Date & Mobile Share Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md py-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-headline-sm">
+<span class="material-symbols-outlined text-2xl">campaign</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Assessoria de Comunicação &amp; DHO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Publicado em 03 de Novembro de 2024 • Atualizado às 14h20</span>
+</div>
+</div>
+<!-- Mobile Quick Actions -->
+<div class="flex lg:hidden items-center gap-space-xs">
+<button class="p-2 rounded-lg bg-surface-container-low text-secondary hover:text-primary" onclick="shareLink('linkedin')">
+<span class="material-symbols-outlined text-lg">share</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-secondary hover:text-primary" onclick="shareLink('email')">
+<span class="material-symbols-outlined text-lg">mail</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-secondary hover:text-primary" onclick="copyArticleUrl()">
+<span class="material-symbols-outlined text-lg">link</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-secondary hover:text-primary" onclick="window.print()">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Featured Image -->
+<figure class="flex flex-col gap-space-xs">
+<div class="relative w-full aspect-[16/9] overflow-hidden rounded-xl bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="Modern corporate celebration of diversity in an expansive boardroom. High-ranking diverse HR team and executives gathered around glass presentation screens showing corporate governance charts. Warm natural sunlight streaming through floor-to-ceiling windows, professional executive atmosphere, rich teal and soft blue ambient accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcQlkcRAvScFoks0h3XOwPwbG09gaAUJH89e8cdvcfuCJzZyp3P9p6avkfjLzZbElAUSzLae50AK7O1TfsFspVhRoqPiVzx0iFO1sc5fOoGvbibOLI9mGEjqYXjyCx4lnR-KhY_J6RRFum2BqGVULW4ZQaH8PIssErBhnAfR5W50KoteJ9JjXhCdt4bJyOEII3bUtLDWJhQ9amziiw0oO3nwTLEB-fZ8m92omZKNh3ywdlSQDraRs5"/>
+<div class="absolute top-4 left-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-base text-primary">workspace_premium</span>
+                Certificação Instituto ESG Brasil 2024
+              </span>
+</div>
+</div>
+<figcaption class="font-body-sm text-body-sm text-on-surface-variant italic px-space-xs flex items-center justify-between">
+<span>Membros do Comitê de Pessoas e Cultura celebrando a homologação do resultado de conformidade ESG no auditório corporativo.</span>
+<span class="text-outline">Foto: Acervo Institucional / DHO</span>
+</figcaption>
+</figure>
+<!-- Article Text Sections -->
+<div class="flex flex-col gap-space-lg text-on-surface font-body-lg text-body-lg leading-relaxed">
+<p class="font-title-lg text-title-lg text-secondary font-medium leading-relaxed">
+            É com orgulho corporativo e senso de responsabilidade institucional que a Diretoria de Desenvolvimento Humano e Organizacional (DHO) anuncia a obtenção oficial do <strong>Selo Ouro de Equidade e Pluralidade no Trabalho</strong>, conferido pelo Comitê Nacional de Governança e Auditoria Social.
+          </p>
+<p>
+            O reconhecimento consolida um ciclo de quatro anos ininterruptos de revisão nas políticas de recrutamento sênior, equidade salarial comprovada e inclusão transversal de grupos historicamente sub-representados em posições estratégicas. Com o índice global de 96,4 pontos em conformidade normativa, a organização figura agora entre as dez maiores referências nacionais do setor.
+          </p>
+<!-- KPI Infographic Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm my-space-xs">
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-display text-headline-lg text-primary leading-none">96,4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Conformidade ESG</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Auditoria externa</span>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-display text-headline-lg text-primary leading-none">52%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Liderança Feminina</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Cargos de Diretoria e Gerência</span>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-display text-headline-lg text-primary leading-none">0:1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Diferença Salarial</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Mesmo cargo e atribuição</span>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-display text-headline-lg text-primary leading-none">+420</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Horas de Letramento</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Treinamentos contínuos</span>
+</div>
+</div>
+<!-- Subtitle -->
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-space-sm">
+            Auditoria Externa e Transparência Radical
+          </h2>
+<p>
+            Durante os meses de julho a setembro de 2024, auditores independentes entrevistaram aleatoriamente mais de 350 colaboradores em diferentes unidades fabris e administrativas, além de analisarem minuciosamente as métricas de turnover voluntário, programas de acolhimento parental e canais anônimos de ouvidoria.
+          </p>
+<!-- Pull Quote Styled with primary teal accent -->
+<blockquote class="my-space-md p-space-lg rounded-xl bg-primary/5 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-2 bg-primary"></div>
+<span class="material-symbols-outlined text-primary text-3xl opacity-40 mb-space-xs block">format_quote</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-medium leading-snug pl-space-xs">
+              “Construir ambientes verdadeiramente inclusivos não é uma cartilha cosmética, mas sim um compromisso diário de governança, clareza nos critérios de promoção e proteção à saúde emocional das nossas equipes.”
+            </p>
+<footer class="mt-space-sm pl-space-xs flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+                MC
+              </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Marina Carvalho</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Diretora-Executiva de Desenvolvimento Humano e Organizacional</span>
+</div>
+</footer>
+</blockquote>
+<!-- Key Highlights Bullet List -->
+<h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight mt-space-xs">
+            Pilares Estruturantes da Certificação
+          </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md my-space-xs">
+<div class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Processos Seletivos Às Cegas</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-0.5">Anonimização integral da primeira triagem de competências curriculares eliminando vieses inconscientes.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Licença Parental Estendida</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-0.5">Ampara mães e pais de recém-nascidos e processos de adoção com estabilidade e retorno assistido por mentoria.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Comitê de Ética Autônomo</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-0.5">Acesso direto ao Conselho de Administração garantindo apuração rigorosa e sem retaliação a denúncias.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Acessibilidade Digital &amp; Física</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-0.5">Conformidade total do portal RH Connect às diretrizes WCAG 2.1 AA e adaptação arquitetônica plena.</span>
+</div>
+</div>
+</div>
+<p>
+            Além do reconhecimento público, o selo habilita a instituição a participar prioritariamente dos fundos corporativos de investimento verde (Green Bonds) e iniciativas multinacionais alinhadas aos Objetivos de Desenvolvimento Sustentável (ODS 5, 8 e 10) do Pacto Global da ONU.
+          </p>
+<!-- SVG Visual Infographic / Progress Ring -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xxs max-w-md">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Indicador de Clima Interno</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">94% dos colaboradores declaram sentimento pleno de segurança psicológica</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Dado consolidado na Pesquisa de Pulso Q3/2024 com 98,2% de participação voluntária corporativa.</p>
+</div>
+<div class="relative flex items-center justify-center flex-shrink-0">
+<svg class="w-32 h-32 transform -rotate-90" viewbox="0 0 120 120">
+<circle class="stroke-surface-container" cx="60" cy="60" fill="none" r="50" stroke-width="12"></circle>
+<circle class="stroke-primary" cx="60" cy="60" fill="none" r="50" stroke-dasharray="314.15" stroke-dashoffset="18.8" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-display text-headline-md text-on-surface font-bold">94%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Escore</span>
+</div>
+</div>
+</div>
+<!-- Secondary In-Text Editorial Image -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md my-space-xs">
+<figure class="flex flex-col gap-space-xxs">
+<div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close-up of human resources audit report on mahogany desk, fountain pen, glasses, and tablet showing statistics charts in clean teal aesthetic. Natural soft studio lighting, high precision editorial corporate detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUGeb0-sW6WFMLkb8Kg2ZWdv3HdEVqxroLIMP0WecXH_Le4Pz314mxSukUJkU_IjeXmSEWx8VRx2y5m0nWlNanwWOWC-dfH5pUgrlCrPYOj-NI1jy9eUrddKWdQoZRFmKEW4UK3RDZOr90uSILLnzNIhU-fIV9e-5tJLV6CxrQU5z2HsqfBbM0IvULLfzT4yMChsGLHedAgaBStmgpBz8PPJnKKYlw1xjMFb-ACABI9w36UFURN0SA"/>
+</div>
+<figcaption class="font-body-sm text-body-sm text-on-surface-variant italic">
+                Documentação de conformidade auditada pelo Instituto ESG Brasil.
+              </figcaption>
+</figure>
+<figure class="flex flex-col gap-space-xxs">
+<div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Diverse Brazilian professional collaborators in collaborative workshop, smiling, reviewing training blueprints with teal highlighters and sticky notes on whiteboard wall. Bright corporate office space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqwjvHBM2p2uFW3YvgYe4clAN5_g8JgMDQbbmX0aS4fLR-JNggt7fcCxMECzGoUZWv2YpUmmPb5SuVdS2Bzq70Hlu62OA7he79YjKCIVLrAWhuFyKNKqj4M0w9XSlxu8aTnfu6BWVvIems7n77NYOUPW3aipQjj6GnrCtrdFB5QMDODJsOib1lkGHCcBCthNJQJCwv0qE0CJu1zOlQSmyPECJ5ZgfGHpZCagyr-HqAK1OjMpym35Lk"/>
+</div>
+<figcaption class="font-body-sm text-body-sm text-on-surface-variant italic">
+                Oficinas interdisciplinares de letramento em equidade e respeito interpessoal.
+              </figcaption>
+</figure>
+</div>
+<p>
+            O DHO convida todos os colaboradores a prestigiarem o painel público de resultados e compartilharem suas impressões nos encontros mensais de alinhamento com a liderança. A íntegra do parecer de auditoria e a portaria que atualiza as políticas internas já estão disponíveis para consulta pública na seção de arquivos abaixo.
+          </p>
+</div>
+<!-- Tags / Topics Section -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant mr-1">Tópicos Relacionados:</span>
+<a class="px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-secondary transition-colors" href="#">#ESGCorporativo</a>
+<a class="px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-secondary transition-colors" href="#">#EquidadeDeGenero</a>
+<a class="px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-secondary transition-colors" href="#">#CertificacaoOuro</a>
+<a class="px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-secondary transition-colors" href="#">#DHO</a>
+<a class="px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-secondary transition-colors" href="#">#GovernançaRH</a>
+</div>
+<!-- Feedback & Reaction Micro-Interaction -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl">sentiment_satisfied</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Este comunicado foi útil para você?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sua resposta é anônima e apoia nossa melhoria contínua.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs" id="feedback-buttons">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-lowest hover:bg-primary hover:text-on-primary font-label-md text-label-md text-on-surface transition-all flex items-center gap-1.5 shadow-sm" onclick="recordReaction(this, 'positive')">
+<span class="material-symbols-outlined text-base">thumb_up</span>
+              Sim, relevante
+            </button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-all flex items-center gap-1.5 shadow-sm" onclick="recordReaction(this, 'negative')">
+<span class="material-symbols-outlined text-base">thumb_down</span>
+              Não muito
+            </button>
+</div>
+</div>
+<!-- Downloads / Attachments Box -->
+<section class="flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-xl">folder_zip</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Documentos e Anexos Relacionados</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Arquivos oficiais assinados digitalmente com validade jurídica.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">2 Arquivos Disponíveis</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- File Card 1 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xl">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Relatório_Auditoria_ESG_2024.pdf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PDF • 4.8 MB • Autenticação ICP-Brasil • Verificado</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-secondary font-label-md text-label-md transition-all flex-shrink-0 shadow-sm" download="" href="#">
+<span class="material-symbols-outlined text-base">download</span>
+                Baixar
+              </a>
+</div>
+<!-- File Card 2 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-xl">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">Portaria_Normativa_012_Diretrizes_Equidade.pdf</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PDF • 1.2 MB • Publicação Interna em Diário • Vigência 2025</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-xl bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-secondary font-label-md text-label-md transition-all flex-shrink-0 shadow-sm" download="" href="#">
+<span class="material-symbols-outlined text-base">download</span>
+                Baixar
+              </a>
+</div>
+</div>
+</section>
+<!-- Previous / Next Navigation Banner -->
+<nav class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-md">
+<!-- Previous Article -->
+<a class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm transition-all group" href="#">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+              Artigo Anterior
+            </span>
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors mt-1 line-clamp-2">
+              Calendário Oficial de Férias e Fechamento de Ponto: Orientações para Dezembro
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">29 de Outubro de 2024</span>
+</a>
+<!-- Next Article -->
+<a class="flex flex-col p-space-lg rounded-xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm transition-all group sm:text-right" href="#">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase flex items-center gap-1 sm:justify-end">
+              Próximo Artigo
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors mt-1 line-clamp-2">
+              Programa de Bolsas e Pós-Graduação 2025: Inscrições Abertas
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">08 de Novembro de 2024</span>
+</a>
+</nav>
+</div>
+<!-- Right Sidebar: Author Card, Summary & Highlights (Desktop) -->
+<aside class="hidden xl:flex xl:col-span-3 flex-col gap-space-lg">
+<!-- Author Profile Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Publicado por</span>
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface leading-tight">DHO Corporativo</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gestão de Pessoas &amp; ESG</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Canal institucional oficial responsável pela emissão de comunicados executivos, diretrizes regulatórias e cultura organizacional do Portal RH Connect.
+          </p>
+<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1" data-path="sobre-o-rh" href="#">
+            Conheça os pilares do RH
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Quick Summary Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-xl">electric_bolt</span>
+            Resumo do Artigo
+          </div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+              Certificação com nota 96,4 após auditoria externa rigorosa.
+            </li>
+<li class="flex items-start gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+              Equidade salarial garantida e 52% de mulheres em cargos de decisão.
+            </li>
+<li class="flex items-start gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+              Políticas integradas aos Objetivos de Desenvolvimento Sustentável da ONU.
+            </li>
+<li class="flex items-start gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+              Arquivos de auditoria disponíveis para download e conferência.
+            </li>
+</ul>
+</div>
+<!-- Newsletter Subscription Widget -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary font-title-md text-title-md">
+<span class="material-symbols-outlined text-xl">mark_email_read</span>
+            Boletim Interno Semanal
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Receba as novidades da organização, novos editais e notas de diretoria diretamente no seu e-mail funcional.
+          </p>
+<div class="flex flex-col gap-space-xs mt-space-xxs">
+<input class="w-full px-space-md py-2.5 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" placeholder="seu.email@empresa.com" type="email"/>
+<button class="w-full py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all" onclick="subscribeNewsletter(this)">
+              Inscrever-se
+            </button>
+</div>
+</div>
+<!-- Emergency / Ombudsperson Banner -->
+<div class="p-space-md rounded-xl bg-tertiary-container/10 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-xl flex-shrink-0">shield</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Canal de Ouvidoria LGPD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Relatos ou dúvidas éticas são tratados com sigilo integral garantido.</span>
+<a class="font-label-sm text-label-sm text-primary font-semibold mt-1 hover:underline" data-path="ouvidoria" href="#">Acessar Canal Anônimo →</a>
+</div>
+</div>
+</aside>
+</div>
+</article>
+<!-- Related News Section -->
+<section class="w-full bg-surface-container-low py-space-3xl mt-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xxs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Aprofunde-se</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Notícias Relacionadas</h2>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-1 self-start sm:self-auto" data-path="noticias" href="#">
+          Ver todas as notícias
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Related News Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Related Card 1 -->
+<article class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Group of Brazilian professionals smiling in an open modern office environment during an onboarding workshop. High-key natural lighting, diverse team, corporate teal uniforms or contemporary attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUgMOrTa0mvrLhfnuYx7AuEjx5Pxm72SLH23zSEPFuFSCqy4a5sUKJARvKGrZGuSgWGNclvVI1vCxyF7y52MXaiBTBCLA7cHJcMQn90kJTSw9zIQxiXrzeswSD_K6E_jQPU_OLzUx32Z2cDVoJS8Fh3FyXwxRrLCezzf3ie8S1sT2KjOJFpxxA1aMF_dRk6P7RCsPY5-nAnuSFgHA_T0V2dN6F9WvQwR1YhLBEx6FxASz5ncO_4JRd"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              Capacitação
+            </span>
+</div>
+<div class="flex flex-col p-space-lg flex-grow justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">25 de Outubro de 2024</span>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                Programa Liderança do Futuro abre 120 vagas com bolsa integral
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Trilha formativa voltada ao aprimoramento de soft skills analíticas e gestão estratégica de projetos complexos.
+              </p>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+              Ler comunicado
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Related Card 2 -->
+<article class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Digital tablet displaying health benefits dashboard with heart rate analytics and wellness metrics in modern corporate clinic setting. Soft daylight, clean teal accents, sophisticated high-end aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdqQFWiq6fPV7z45pUJfFTvCz7UPN7t3a7DQO_UBP-zkbs9baCe3_9ayr8M7i-UJF6d7RCqfH6mX9T8DYEE6USEhvbiR-2KbhpkF5ka76ZoXQYfbqOUCBphPUCKTD1isAEoC9fVEpFlLjJksebDvt-LNQU1Swvuw5z9R2LbPWe8ZhyrlFXQZRk4Tm3sBkpzZDSBggokZcD_q0Ud11-zLcrTJIBPVV2yYIcA0acjXSgwAnfz5AU3oTI"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              Benefícios
+            </span>
+</div>
+<div class="flex flex-col p-space-lg flex-grow justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">18 de Outubro de 2024</span>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                Novo Plano de Saúde Mental e Bem-Estar passa a vigorar em todo o país
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Parceria ampliada com telemedicina psicológica 24 horas sem custo de coparticipação para dependentes diretos.
+              </p>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+              Ler comunicado
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Related Card 3 -->
+<article class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern corporate architectural headquarters garden with employees walking on sustainable pathway discussing innovations. Daylight, architectural depth, elegant glass facade with teal structural framing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJSrmxeePhHCsDjOoyQ8K5Z3bZU_x08D3tAPuzt8shvz79Kl4V1uAg7lwgLSaYHtaXVfceOD2DiSapwevWaGdJOLyoAh7-i2atS8C2B7y8GUFKhEgZcqAL5zFwip3d8He8FNjwQcNArsIZ1b5uNiL2v5YSwkiZhXz2uQ6QkFHX1-Vm8nl8FSPtrYss43JUQfoxiLVublJdI7ReCE0RG8AndS55a8Tag2iHQc4i9Qq-nXoluvB3bXfy"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              Institucional
+            </span>
+</div>
+<div class="flex flex-col p-space-lg flex-grow justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">10 de Outubro de 2024</span>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors leading-snug">
+                Portal RH Connect atinge a marca histórica de 2 milhões de acessos
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Centralização completa de holerites eletrônicos, férias e desenvolvimento de carreira completam dois anos de operação.
+              </p>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+              Ler comunicado
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Interactive Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-space-md py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl font-label-md text-label-md" id="toast">
+<span class="material-symbols-outlined text-primary-fixed text-lg">check_circle</span>
+<span id="toast-message">Ação concluída com sucesso</span>
+</div>
+<!-- Client-side Logic for Reading Indicator & Micro-Interactions -->
+<script>
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const article = document.querySelector('article');
+      if (!article) return;
+      const totalHeight = article.clientHeight;
+      const scrollPosition = window.scrollY - article.offsetTop;
+      const percent = Math.min(100, Math.max(0, (scrollPosition / totalHeight) * 100));
+      const progressBar = document.getElementById('read-progress');
+      if (progressBar) {
+        progressBar.style.width = percent + '%';
+      }
+    });
+
+    // Toast Trigger Helper
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (!toast || !toastMsg) return;
+      toastMsg.innerText = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+
+    // Copy Link Action
+    function copyArticleUrl() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href);
+        showToast('Link do comunicado copiado para a área de transferência!');
+      } else {
+        showToast('Link pronto para compartilhamento!');
+      }
+    }
+
+    // Share Trigger
+    function shareLink(channel) {
+      if (channel === 'linkedin') {
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank');
+      } else if (channel === 'email') {
+        window.location.href = 'mailto:?subject=' + encodeURIComponent('Comunicado RH Connect: Certificação Ouro') + '&body=' + encodeURIComponent('Confira o comunicado oficial na íntegra: ' + window.location.href);
+      }
+    }
+
+    // Toggle Bookmark
+    function toggleBookmark(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon.innerText === 'bookmark_border') {
+        icon.innerText = 'bookmark';
+        btn.classList.add('text-primary');
+        showToast('Artigo salvo na sua pasta de leitura!');
+      } else {
+        icon.innerText = 'bookmark_border';
+        btn.classList.remove('text-primary');
+        showToast('Artigo removido dos seus salvos.');
+      }
+    }
+
+    // Record Reaction
+    function recordReaction(btn, type) {
+      const container = document.getElementById('feedback-buttons');
+      if (container) {
+        container.innerHTML = '<span class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">task_alt</span> Obrigado pelo seu feedback!</span>';
+      }
+      showToast(type === 'positive' ? 'Agradecemos a avaliação positiva!' : 'Agradecemos o apontamento para aprimoramento.');
+    }
+
+    // Newsletter Micro-Interaction
+    function subscribeNewsletter(btn) {
+      btn.innerText = 'Inscrito com Sucesso!';
+      btn.disabled = true;
+      btn.classList.replace('bg-primary', 'bg-surface-container-high');
+      btn.classList.replace('text-on-primary', 'text-on-surface-variant');
+      showToast('E-mail institucional adicionado ao boletim semanal.');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl mb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-xl">diversity_3</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">RH<span class="text-primary">Connect</span></span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Plataforma integrada de governança de pessoas, atração de talentos e desenvolvimento organizacional. Estimulando conexões sólidas e humanizadas.</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="w-3 h-3 rounded-full bg-primary"></span><span class="font-label-md text-label-md text-on-surface-variant">Sistemas Operacionais • 100% Conformes</span></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Links Rápidos</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-o-rh" href="#">Sobre o RH</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="oportunidades" href="#">Oportunidades</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="cursos" href="#">Cursos &amp; Treinamentos</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#">Banco de Talentos</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Governança &amp; Apoio</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ouvidoria" href="#">Canal de Ouvidoria</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="codigo-de-etica" href="#">Código de Ética</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="politica-lgpd" href="#">Privacidade &amp; LGPD</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contato" href="#">Fale com o RH</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Central de Atendimento</h3><div class="flex flex-col gap-space-xs"><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">support_agent</span><div class="flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold">Atendimento ao Colaborador</span><span class="font-body-sm text-body-sm">0800 724 5000</span></div></div><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">mail</span><div class="flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold">E-mail Institucional</span><span class="font-body-sm text-body-sm">atendimento.rh@connect.corp</span></div></div><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">schedule</span><div class="flex flex-col"><span class="font-body-sm text-body-sm">Seg a Sex: 08h às 18h</span></div></div></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant bg-surface-container-high/40 rounded-xl p-space-lg"><div class="font-body-sm text-body-sm">© 2024 Portal RH Connect. Todos os direitos reservados. Conformidade Geral de Proteção de Dados (Lei nº 13.709/2018).</div><div class="flex items-center gap-space-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="termos-de-uso" href="#">Termos de Uso</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="politica-lgpd" href="#">Segurança LGPD</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ouvidoria" href="#">Ouvidoria Anônima</a></div></div></div></footer></body></html>

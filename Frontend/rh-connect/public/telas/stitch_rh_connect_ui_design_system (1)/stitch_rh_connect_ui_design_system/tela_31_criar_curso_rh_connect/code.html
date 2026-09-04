@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#aec9e7", "tertiary": "#445e78", "surface-container-high": "#e6e8ea", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "primary-container": "#008285", "on-primary-container": "#f3ffff", "error-container": "#ffdad6", "on-secondary-container": "#4a5e7e", "surface-variant": "#e0e3e5", "on-tertiary-container": "#fdfcff", "surface-tint": "#00696c", "inverse-on-surface": "#eff1f3", "surface-container-low": "#f2f4f6", "inverse-primary": "#6bd7da", "secondary-fixed-dim": "#b3c7ec", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "primary-fixed-dim": "#6bd7da", "outline-variant": "#bcc9c9", "surface-container-highest": "#e0e3e5", "secondary-fixed": "#d5e3ff", "surface": "#f7f9fb", "primary": "#006769", "on-primary-fixed-variant": "#004f51", "background": "#f7f9fb", "error": "#ba1a1a", "tertiary-fixed": "#cee5ff", "outline": "#6d7979", "surface-bright": "#f7f9fb", "surface-dim": "#d8dadc", "surface-container": "#eceef0", "on-secondary-fixed-variant": "#334766", "on-surface": "#191c1e", "on-secondary-fixed": "#031c38", "on-tertiary-fixed-variant": "#2e4962", "primary-fixed": "#89f3f6", "secondary-container": "#c3d8fe", "on-background": "#191c1e", "inverse-surface": "#2d3133", "on-surface-variant": "#3d4949", "tertiary-container": "#5c7792", "secondary": "#4b5f7f", "on-primary-fixed": "#002021", "on-error-container": "#93000a", "on-tertiary-fixed": "#001d32", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-tablet": "2rem", "margin-mobile": "1rem", "margin-desktop": "3rem", "space-xl": "2rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-3xl": "4rem", "gutter-mobile": "1rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "space-xxs": "0.25rem", "space-md": "1rem", "space-2xl": "3rem" }, "fontFamily": { "headline-lg": [ "Hanken Grotesk" ], "body-md": [ "DM Sans" ], "label-sm": [ "DM Sans" ], "title-lg": [ "DM Sans" ], "title-md": [ "DM Sans" ], "body-sm": [ "DM Sans" ], "display": [ "Hanken Grotesk" ], "headline-lg-mobile": [ "Hanken Grotesk" ], "label-md": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "headline-md": [ "Hanken Grotesk" ], "headline-sm": [ "Hanken Grotesk" ] }, "fontSize": { "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(16,42,67,0.04)]"><div class="h-16 flex items-center px-space-lg gap-space-sm bg-surface-container-lowest"><div class="flex items-center justify-center w-10 h-10 rounded-xl bg-primary-container text-on-primary-container"><span class="material-symbols-outlined text-[22px]">hub</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-primary tracking-tight font-bold leading-none">RH Connect</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight mt-0.5 uppercase">Portal Corporativo</span></div></div><div class="px-space-md py-space-xs"><div class="h-[1px] w-full bg-surface-container"></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Menu Principal</div><nav class="flex flex-col gap-1 mt-1" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-xl shadow-[0_1px_3px_0_rgba(16,42,67,0.04)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="vagas" href="#"><span class="material-symbols-outlined text-[20px]">business_center</span><span class="font-body-md text-body-md">Vagas</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="curriculos-talentos" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Currículos &amp; Talentos</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="cursos-capacitacoes" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-body-md text-body-md">Cursos &amp; Capacitações</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="noticias-mural" href="#"><span class="material-symbols-outlined text-[20px]">feed</span><span class="font-body-md text-body-md">Notícias &amp; Mural</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="relatorios-indicadores" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Relatórios &amp; Indicadores</span></a></nav><div class="mt-space-md px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Administração</div><nav class="flex flex-col gap-1 mt-1" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-xl shadow-[0_1px_3px_0_rgba(16,42,67,0.04)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="gestao-de-usuarios" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-body-md text-body-md">Gestão de Usuários</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Configurações</span></a></nav></div><div class="p-space-md bg-surface-container-low"><div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-lowest"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 rounded-full bg-primary-container inline-block"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Status do Sistema</span></div><span class="font-label-sm text-label-sm text-primary font-semibold">Operacional</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(16,42,67,0.04)]"><div class="flex items-center w-96"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-xl bg-surface-container-lowest border-0 ring-1 ring-outline-variant/40 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Busca rápida por colaboradores, vagas, artigos..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span class="font-label-sm text-label-sm text-on-surface">RH Governança v2.4</span></div><button aria-label="Notificações" class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><button aria-label="Mensagens" class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">chat_bubble_outline</span></button><div class="h-6 w-[1px] bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Juliana Prado</span><div class="flex items-center justify-end mt-0.5"><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">Administrador</span></div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_0_rgba(16,42,67,0.08)]" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/></div></div></header><main class="w-full pt-16 bg-background px-space-xl py-space-lg"><div class="flex flex-col w-full">
+<!-- Subtle decorative ambient glow -->
+<div class="absolute -top-10 right-20 w-96 h-96 bg-gradient-to-br from-primary/10 via-tertiary-fixed/15 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-80 -left-20 w-80 h-80 bg-gradient-to-tr from-secondary-container/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Breadcrumb & Context Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-xs">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>Cursos &amp; Capacitações</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="text-primary font-semibold">Novo Curso</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Criar Novo Treinamento</h1>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">Ciclo Q3/Q4</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Estruture matrizes de capacitação contínua, configure trilhas e libere vagas corporativas com certificação automática.</p>
+</div>
+<!-- Stepper Indicator -->
+<div class="hidden lg:flex items-center gap-space-md px-space-lg py-2.5 rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center">1</span>
+<span class="font-label-md text-label-md font-semibold text-primary">Preenchimento</span>
+</div>
+<div class="w-8 h-[2px] bg-surface-container-highest"></div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="w-6 h-6 rounded-full bg-surface-container-high font-label-sm text-label-sm font-semibold flex items-center justify-center">2</span>
+<span class="font-label-md text-label-md font-medium">Revisão RH</span>
+</div>
+<div class="w-8 h-[2px] bg-surface-container-highest"></div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="w-6 h-6 rounded-full bg-surface-container-high font-label-sm text-label-sm font-semibold flex items-center justify-center">3</span>
+<span class="font-label-md text-label-md font-medium">Publicação</span>
+</div>
+</div>
+</div>
+<form class="flex flex-col gap-space-xl" id="create-course-form" onsubmit="event.preventDefault();">
+<!-- GRID PRINCIPAL: 8 colunas de formulário modular + 4 colunas de apoio lateral/preview -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Coluna Principal (Formulários Modulares) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- SEÇÃO 1: Informações Básicas -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-center justify-between pb-space-md mb-space-lg border-b border-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Informações Básicas</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Defina a identidade curricular e taxonomia do treinamento</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold px-2 py-1 rounded bg-surface-container-low">Obrigatório</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Título -->
+<div class="md:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="course-title">Título do Curso ou Workshop</label>
+<input class="h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner transition-all" id="course-title" placeholder="Ex: Gestão Orientada por Dados para Líderes" type="text" value="Liderança Estratégica e Gestão Ágil"/>
+</div>
+<!-- Categoria -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="course-cat">Categoria Temática</label>
+<div class="relative">
+<select class="w-full h-11 pl-space-md pr-10 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary appearance-none transition-all cursor-pointer" id="course-cat">
+<option selected="">Liderança &amp; Governança Corporativa</option>
+<option>Tecnologia, Dados &amp; IA</option>
+<option>Compliance, ESG &amp; Ética</option>
+<option>Operações &amp; Produtividade Ágil</option>
+<option>Desenvolvimento Pessoal &amp; Soft Skills</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Carga Horária -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="course-workload">Carga Horária Total</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[18px]">schedule</span>
+<input class="w-full h-11 pl-10 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="course-workload" placeholder="Ex: 24 horas" type="text" value="40 horas"/>
+</div>
+</div>
+<!-- Nível de Complexidade -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium">Nível de Complexidade</label>
+<div class="grid grid-cols-3 gap-2">
+<label class="relative flex items-center justify-center p-2.5 rounded-xl bg-surface-container-low text-on-surface cursor-pointer hover:bg-surface-container has-[:checked]:bg-primary-container has-[:checked]:text-on-primary-container transition-all">
+<input class="sr-only" name="level" type="radio" value="iniciante"/>
+<span class="font-label-md text-label-md font-medium">Iniciante</span>
+</label>
+<label class="relative flex items-center justify-center p-2.5 rounded-xl bg-surface-container-low text-on-surface cursor-pointer hover:bg-surface-container has-[:checked]:bg-primary-container has-[:checked]:text-on-primary-container transition-all">
+<input checked="" class="sr-only" name="level" type="radio" value="intermediario"/>
+<span class="font-label-md text-label-md font-medium">Intermediário</span>
+</label>
+<label class="relative flex items-center justify-center p-2.5 rounded-xl bg-surface-container-low text-on-surface cursor-pointer hover:bg-surface-container has-[:checked]:bg-primary-container has-[:checked]:text-on-primary-container transition-all">
+<input class="sr-only" name="level" type="radio" value="avancado"/>
+<span class="font-label-md text-label-md font-medium">Avançado</span>
+</label>
+</div>
+</div>
+<!-- Modalidade -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium">Modalidade de Aplicação</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container has-[:checked]:bg-surface-container-highest transition-all">
+<input checked="" class="accent-primary w-4 h-4" name="modality" type="radio" value="live"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Online ao Vivo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Síncrono via Teams</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container has-[:checked]:bg-surface-container-highest transition-all">
+<input class="accent-primary w-4 h-4" name="modality" type="radio" value="recorded"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Gravado</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Autoinstrucional</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container has-[:checked]:bg-surface-container-highest transition-all">
+<input class="accent-primary w-4 h-4" name="modality" type="radio" value="hybrid"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Híbrido</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Teoria + Encontros</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container has-[:checked]:bg-surface-container-highest transition-all">
+<input class="accent-primary w-4 h-4" name="modality" type="radio" value="inperson"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Presencial</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sede Corporativa</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 2: Descrição e Objetivos Pedagógicos -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-space-sm pb-space-md mb-space-lg border-b border-surface-container-low">
+<div class="w-9 h-9 rounded-xl bg-secondary-container/60 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Descrição &amp; Objetivos Pedagógicos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Detalhe expectativas de entrega, matriz curricular e pré-condições</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-lg">
+<!-- Ementa -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="course-syllabus">Ementa Detalhada</label>
+<textarea class="p-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none" id="course-syllabus" placeholder="Descreva os tópicos nucleares, contextualização estratégica e dinâmicas propostas..." rows="4">O programa foi desenhado para acelerar competências contemporâneas de liderança situacional, tomada de decisão com dados e rituais ágeis (Scrum/Kanban) aplicados a squads multidisciplinares. Focado na governança corporativa e segurança psicológica para inovação contínua.</textarea>
+</div>
+<!-- Pré-requisitos -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="course-prereq">Pré-requisitos Recomendados</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[18px]">verified_user</span>
+<input class="w-full h-11 pl-10 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="course-prereq" type="text" value="Experiência mínima de 1 ano em coordenação de times ou papel de liderança técnica."/>
+</div>
+</div>
+<!-- O que você vai aprender (Dynamic Bullets) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium">O que o colaborador irá dominar (Resultados de Aprendizagem)</label>
+<button class="flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md font-semibold transition-colors" id="add-learning-goal-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Adicionar Tópico</span>
+</button>
+</div>
+<div class="flex flex-col gap-2.5" id="learning-goals-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<input class="flex-1 h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" type="text" value="Aplicação prática de OKRs e métricas de valor em ciclos trimestrais"/>
+<button class="remove-bullet p-2 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Remover item" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<input class="flex-1 h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" type="text" value="Gestão de conflitos e comunicação assertiva para squads descentralizadas"/>
+<button class="remove-bullet p-2 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Remover item" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<input class="flex-1 h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" type="text" value="Desenho de rituais de feedback contínuo e desenvolvimento de pessoas (PDI)"/>
+<button class="remove-bullet p-2 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Remover item" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 3: Instrutor & Responsável Pedagógico -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-space-sm pb-space-md mb-space-lg border-b border-surface-container-low">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed/40 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">person_celebrate</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Instrutor / Responsável Acadêmico</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Identificação profissional da liderança que conduzirá os módulos</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-space-lg items-start">
+<!-- Foto / Upload do Instrutor -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="relative group">
+<img class="w-24 h-24 rounded-2xl object-cover shadow-md" data-alt="Portrait photography of a confident female corporate executive coach and instructor smiling warmly in modern glass-wall office, soft natural lighting, subtle teal accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBskIE4gZLByEiC-Hzvlo25NVsAQdXRgmTZe9hPKd2-PeANHt2GocpCW1TEU7eY94rEdeVRzE7u2erPLfvBbLM9cyqGSdBrJf5ZLksJfr1k49y9eie6264HNUAvL5rYBH2GQLCQCSKDwb9SJBVKB-x14ey_Ug_-R-tiQeZXf-Y2O7Ny_Fk0BdYqbF1WD8bvRyOPIJeorzza94mci7olTgsA-anvWQuCQL2YbuZustcPqOPqcZisSZ6Q"/>
+<button class="absolute inset-0 bg-inverse-surface/60 rounded-2xl text-on-tertiary flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[22px]">photo_camera</span>
+<span class="font-label-sm text-label-sm">Alterar</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PNG ou JPG (max 2MB)</span>
+</div>
+<!-- Dados Textuais do Instrutor -->
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-space-md w-full">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="instructor-name">Nome Completo</label>
+<input class="h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="instructor-name" type="text" value="Helena Vasconcellos"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="instructor-role">Cargo / Função Institucional</label>
+<input class="h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="instructor-role" type="text" value="Especialista em Desenvolvimento Organizacional"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="instructor-bio">Bio Resumida do Facilitador</label>
+<textarea class="p-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none" id="instructor-bio" rows="2">Mestre em Psicologia Organizacional pela USP, certificada PMP e Agile Master. Mais de 12 anos liderando programas de transformação de cultura em corporações multinacionais.</textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 4: Configurações da Turma & Certificado -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-space-sm pb-space-md mb-space-lg border-b border-surface-container-low">
+<div class="w-9 h-9 rounded-xl bg-primary-container/15 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Configurações da Turma &amp; Frequência</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Capacidade de atendimento, calendário e regras regulatórias de certificação</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Vagas Disponíveis -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="batch-slots">Número de Vagas Corporativas</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[18px]">group</span>
+<input class="w-full h-11 pl-10 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="batch-slots" max="500" min="1" type="number" value="50"/>
+<span class="absolute right-3.5 font-label-sm text-label-sm text-on-surface-variant font-medium">vagas</span>
+</div>
+</div>
+<!-- Período de Inscrição -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium">Período de Inscrição (Início / Fim)</label>
+<div class="grid grid-cols-2 gap-2">
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-sm rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" type="date" value="2025-06-01"/>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-sm rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" type="date" value="2025-06-20"/>
+</div>
+</div>
+</div>
+<!-- Datas das Aulas / Calendário -->
+<div class="md:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant font-medium" for="batch-dates">Cronograma dos Encontros Síncronos / Presenciais</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[18px]">calendar_month</span>
+<input class="w-full h-11 pl-10 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="batch-dates" type="text" value="Terças e Quintas-feiras, das 19h às 21h (De 01/07 a 15/08/2025)"/>
+</div>
+</div>
+<!-- Toggle de Certificado -->
+<div class="md:col-span-2 p-space-md rounded-2xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold leading-tight">Emissão Automática de Certificado</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Libera certificado autenticado via hash após validação de frequência mínima</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end sm:self-center">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Frequência mínima:</span>
+<span class="font-label-md text-label-md text-primary font-bold">75%</span>
+</div>
+<!-- Custom Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="certificate-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 5: Upload de Material Didático -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-space-sm pb-space-md mb-space-lg border-b border-surface-container-low">
+<div class="w-9 h-9 rounded-xl bg-secondary-container/60 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Material Didático &amp; Gravações</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Anexe apostilas, slides em PDF ou URLs de repositórios de aula</p>
+</div>
+</div>
+<!-- Drag and Drop Zone -->
+<div class="p-space-xl rounded-2xl bg-surface-container-low/60 hover:bg-surface-container-low border-2 border-dashed border-outline-variant/60 flex flex-col items-center justify-center text-center cursor-pointer transition-all group" id="drop-zone">
+<div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-space-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">upload_file</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Arraste seus arquivos aqui ou clique para buscar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-1">Suporte para PDFs, apresentações PPTX, manuais e planilhas auxiliares de até 50MB.</p>
+<button class="mt-space-md px-space-lg py-2 rounded-xl bg-surface-container-lowest text-on-surface text-label-md font-label-md font-semibold shadow-sm hover:bg-surface transition-colors" type="button">
+              Selecionar Arquivos
+            </button>
+</div>
+<!-- File List -->
+<div class="mt-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between p-space-sm px-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container/60 text-error flex items-center justify-center font-bold font-label-sm">
+                  PDF
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Apostila_Lideranca_Agil_Modulo1.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.2 MB • Pronto para disponibilização</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Link de Aula Gravada / Repositório -->
+<div class="flex items-center gap-2 mt-1">
+<div class="relative flex-1 flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">link</span>
+<input class="w-full h-10 pl-9 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Adicionar link de pasta em nuvem (SharePoint, Drive ou Teams Stream)..." type="url"/>
+</div>
+<button class="h-10 px-space-md rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-variant transition-colors" type="button">
+                Anexar Link
+              </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Coluna Lateral: Resumo de Governança, Preview & Métricas de Capacitação -->
+<div class="lg:col-span-4 flex flex-col gap-space-xl">
+<!-- Cartão Preview do Treinamento -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Pré-visualização do Card</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              Rascunho Ativo
+            </span>
+</div>
+<!-- Miniatura do Curso -->
+<div class="relative rounded-xl overflow-hidden mb-space-md shadow-inner">
+<img class="w-full h-40 object-cover" data-alt="Corporate workshop room with diverse executive team engaged in agile collaborative planning session with sticky notes and digital screens, professional teal accent lighting, modern workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZGLmpEw4B7NKDJ-JQWQgXBqopX6IRAa1s1_i31KS5-Ezcph3CA8dmemBnzTca1RCpRCc6ahEjCPYSccozuX9kvJz1kocCBhxutkkMI-qqfzqcY_UtAEu93szPbwaGVKRPPPfmUZWwcRNAa2mCRo7pz4G9ffB1xor1S8gAxSknnVsbDmuJP1t6nuBaFXbVrxRh4qMMFzaf_LdW-MF4zKfdtIpZzbcn7OCOVq-UhluyvU8irpi_yyM"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm font-semibold">Online ao Vivo</span>
+<span class="px-2 py-0.5 rounded-md bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">Intermediário</span>
+</div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">schedule</span>
+<span>40h</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold line-clamp-2 leading-snug">Liderança Estratégica e Gestão Ágil</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">Desenvolvimento de competências em gestão situacional, rituais ágeis e governança de times.</p>
+<div class="flex items-center gap-space-sm mt-space-md pt-space-sm border-t border-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-[11px]">HV</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Helena Vasconcellos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Especialista em D.O.</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md border-t border-surface-container-low flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+<strong>50 vagas</strong> totais
+            </span>
+<span class="flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Certificado 75%
+            </span>
+</div>
+</div>
+<!-- Governança & Requisitos de Compliance -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">shield_locked</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Regras de Compliance do RH</h3>
+</div>
+<ul class="flex flex-col gap-space-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5 shrink-0">task_alt</span>
+<span>Todos os inscritos computam automaticamente no censo anual de capacitação da organização.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5 shrink-0">task_alt</span>
+<span>Cancelamento de inscrição permitido até 48 horas antes da primeira sessão síncrona.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5 shrink-0">task_alt</span>
+<span>Aprovação gera badge digital vinculável ao perfil corporativo do colaborador no portal.</span>
+</li>
+</ul>
+<!-- Mini Indicador de Eficiência -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aderência ao PDI 2025</span>
+<span class="font-title-md text-title-md text-primary font-bold">92.4% Alta Afinidade</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Atalho de Ajuda / Suporte da Academia RH -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dúvidas com a matriz?</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-medium" href="#">Consulte as Diretrizes de Aprendizagem 2025</a>
+</div>
+</div>
+</div>
+</div>
+<!-- BARRA DE AÇÕES INFERIOR (Action Bar Sticky / Floating Style) -->
+<div class="sticky bottom-4 z-30 w-full p-space-md rounded-2xl bg-surface-container-lowest/95 backdrop-blur-xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Última alteração salva automaticamente há 1 minuto</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<!-- Cancelar -->
+<button class="px-space-lg py-2.5 rounded-xl text-secondary hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors" type="button">
+          Cancelar
+        </button>
+<!-- Salvar como Rascunho -->
+<button class="px-space-lg py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Salvar como Rascunho</span>
+</button>
+<!-- Botão Primário Temático: Criar e Abrir Inscrições -->
+<button class="px-space-xl py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-md hover:shadow-lg transition-all flex items-center gap-2" id="btn-submit" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Criar e Abrir Inscrições</span>
+</button>
+</div>
+</div>
+</form>
+<!-- Notification Toast (Micro-interaction feedback) -->
+<div class="fixed bottom-24 right-8 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 px-space-lg py-space-sm rounded-xl bg-inverse-surface text-inverse-on-surface shadow-2xl" id="toast-feedback">
+<span class="material-symbols-outlined text-primary-fixed text-[22px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Capacitação Criada com Sucesso!</span>
+<span class="font-label-sm text-label-sm text-surface-variant">Inscrições publicadas no mural corporativo.</span>
+</div>
+</div>
+<!-- Inline Vanilla Script for Micro-interactions -->
+<script>
+    (function() {
+      // Dynamic addition and removal of learning objective bullets
+      const addBtn = document.getElementById('add-learning-goal-btn');
+      const container = document.getElementById('learning-goals-container');
+
+      if (addBtn && container) {
+        addBtn.addEventListener('click', () => {
+          const div = document.createElement('div');
+          div.className = 'flex items-center gap-2 animate-fadeIn';
+          div.innerHTML = `
+            <span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+            <input type="text" placeholder="Descreva um resultado mensurável de aprendizado..." class="flex-1 h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all">
+            <button type="button" class="remove-bullet p-2 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" title="Remover item">
+              <span class="material-symbols-outlined text-[18px]">delete</span>
+            </button>
+          `;
+          container.appendChild(div);
+        });
+
+        container.addEventListener('click', (e) => {
+          const deleteBtn = e.target.closest('.remove-bullet');
+          if (deleteBtn) {
+            const row = deleteBtn.closest('.flex');
+            if (container.children.length > 1) {
+              row.remove();
+            } else {
+              const input = row.querySelector('input');
+              if (input) input.value = '';
+            }
+          }
+        });
+      }
+
+      // Drag and drop micro-effect
+      const dropZone = document.getElementById('drop-zone');
+      if (dropZone) {
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            dropZone.classList.add('bg-primary/5', 'border-primary');
+          }, false);
+        });
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('bg-primary/5', 'border-primary');
+          }, false);
+        });
+      }
+
+      // Submit feedback simulation
+      const submitBtn = document.getElementById('btn-submit');
+      const toast = document.getElementById('toast-feedback');
+      if (submitBtn && toast) {
+        submitBtn.addEventListener('click', () => {
+          toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+          }, 3500);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
