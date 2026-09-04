@@ -595,33 +595,200 @@ O sistema atende a dois públicos principais: **candidatos/colaboradores** (áre
 
 ---
 
-## 5. Requisitos Não Funcionais
+## 5. Requisitos Não Funcionais (RNF)
 
-### 5.1 Acessibilidade
+### RNF-001 — Acessibilidade (WCAG 2.1 AA)
 
-Não definido no design atual.
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-001.1 | Conformidade WCAG 2.1 nível AA | Toda a interface pública e autenticada deverá atender ao nível AA de conformidade com as Diretrizes de Acessibilidade para Conteúdo Web 2.1 (WCAG 2.1). |
+| RNF-001.2 | Leitura por tecnologias assistivas | Cada página deverá possuir `<title>` descritivo, landmarks ARIA (`<main>`, `<nav>`, `<header>`, `<footer>`) e hierarquia de headings (`h1`–`h6`) sem saltos. |
+| RNF-001.3 | Contraste mínimo | Relação de contraste entre texto e fundo deverá ser ≥ 4.5:1 (texto normal) e ≥ 3:1 (texto grande, ≥ 18pt ou 14pt bold). |
+| RNF-001.4 | Navegação por teclado | Todos os elementos interativos (botões, links, formulários, modais, accordion, Kanban) deverão ser acessíveis via `Tab`/`Shift+Tab` e operáveis via `Enter`/`Space`. |
+| RNF-001.5 | Indicadores de foco | Elementos focáveis deverão exibir indicador de foco visível (outline) com contraste ≥ 3:1. |
+| RNF-001.6 | Textos alternativos | Imagens informativas deverão possuir `alt` descritivo. Imagens decorativas deverão possuir `alt=""`. �cones sem texto visível deverão possuir `aria-label`. |
+| RNF-001.7 | Formulários acessíveis | Campos de formulário deverão possuir `<label>` associado via `for`/`id`. Mensagens de erro deverão ser vinculadas via `aria-describedby`. Indicador de força da senha deverá comunicar estado via `aria-live`. |
+| RNF-001.8 | Modais acessíveis | Modais deverão capturar foco, permitir fechamento via `Escape`, retornar foco ao elemento triggering ao fechar e possuir `aria-modal="true"` + `aria-labelledby`. |
+| RNF-001.9 | Kanban acessível | Pipeline Kanban deverá suportar navegação por setas entre cards e colunas, com instrução clara de uso via `aria-roledescription`. |
+| RNF-001.10 | Upload acessível | Zona de drag-and-drop deverá possuir alternativa de clique com rótulo claro e feedback via `aria-live` para estados (idle, sucesso, erro). |
+| RNF-001.11 | Skip links | Páginas com sidebar/navegação lateral deverão oferecer "Pular para o conteúdo principal". |
+| RNF-001.12 | Redução de movimento | Respeitar `prefers-reduced-motion: reduce` — desativar animações e transições não essenciais. |
 
-### 5.2 Idioma
+---
 
-O sistema apresenta toda a interface em **português do Brasil (pt-BR)**, conforme indicado no atributo `lang="pt-BR"` do HTML.
+### RNF-002 — Design Responsivo
 
-### 5.3 Design Responsivo
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-002.1 | Breakpoints | A interface deverá se adaptar a no mínimo 3 breakpoints: **mobile** (≤ 640px), **tablet** (641–1024px) e **desktop** (≥ 1025px). |
+| RNF-002.2 | Grade responsiva | Utilizar sistema de grade fluida (12 colunas desktop → 8 colunas tablet → 4 colunas mobile) com container responsivo. |
+| RNF-002.3 | Tabelas em mobile | Tabelas extensas (vagas, candidaturas, inscrições) deverão usar scroll horizontal ou layout adaptativo (cards) em telas estreitas. |
+| RNF-002.4 | Sidebar colapsável | Painel RH e dashboard do candidato deverão possuir sidebar colapsável em tablet e menu hamburger em mobile. |
+| RNF-002.5 | Formulários multi-etapas | Formulários (envio de currículo, criar vaga) deverão manter progresso visível e campos empilhados verticalmente em mobile. |
+| RNF-002.6 | Kanban responsivo | Pipeline Kanban deverá permitir scroll horizontal em tablet e modo lista/accordion em mobile. |
+| RNF-002.7 | Touch targets | Elementos interativos deverão possuir área mínima de toque de 44×44px em dispositivos touch. |
+| RNF-002.8 | Imagens responsivas | Imagens e banners deverão usar `srcset`/`sizes` ou CSS `object-fit` para evitar distorção e excesso de download. |
 
-Não há evidência explícita de breakpoints de responsividade nos designs. As telas apresentam layout desktop.
+---
 
-> Decisão pendente de implementação: define-se responsividade para dispositivos móveis e tablets.
+### RNF-003 — Performance
 
-### 5.4 Performance
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-003.1 | Core Web Vitals | As páginas públicas (home, listagem de vagas, notícias) deverão atender: LCP ≤ 2.5s, FID ≤ 100ms, CLS ≤ 0.1 em conexão 4G. |
+| RNF-003.2 | Tempo de carregamento inicial | Página inicial deverá carregar em ≤ 3s em conexão broadband (50 Mbps). Páginas autenticadas ≤ 4s. |
+| RNF-003.3 | Time to First Byte (TTFB) | TTFB ≤ 600ms para páginas estáticas (SSG/ISR) e ≤ 1200ms para páginas dinâmicas (SSR). |
+| RNF-003.4 | Lote de requisições | Requisições à API deverão ser agrupadas (batching) quando possível para reduzir round-trips. |
+| RNF-003.5 | Cache de dados | Listagens públicas (vagas, cursos, notícias) deverão utilizar ISR (Incremental Static Regeneration) com revalidação de no mínimo 60s. |
+| RNF-003.6 | Lazy loading | Imagens below-the-fold, componentes pesados (Recharts, editor rich text) e modais deverão ser carregados sob demanda (dynamic import). |
+| RNF-003.7 | Paginação | Listagens com > 20 registros deverão usar paginação server-side com limite de 20 itens/página por padrão. |
+| RNF-003.8 | Compressão de assets | Imagens deverão ser servidas em formato WebP/AVIF com compressão adequada. CSS e JS deverão ser minificados e servidos com gzip/brotli. |
+| RNF-003.9 | Bundle size | O bundle principal (JS) não deverá exceder 250KB (gzipped). Páginas individuais não deverão exceder 150KB (gzipped). |
+| RNF-003.10 | Database queries | Queries à API não deverão exceder 200ms em operações simples (CRUD) e 500ms em operações de agregação (relatórios). |
 
-Não definido no design atual.
+---
 
-### 5.5 Conformidade LGPD
+### RNF-004 — Segurança
 
-A Tela 36 (Configurações) apresenta uma seção dedicada a "Conformidade LGPD & Governança de Dados", indicando que o sistema deverá atender à Lei Geral de Proteção de Dados. Detalhes de implementação não definidos.
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-004.1 | Autenticação JWT | Sessões autenticadas deverão utilizar JWT (access token + refresh token) com assinatura RS256 ou HS256. Access token: 15min. Refresh token: 7d. |
+| RNF-004.2 | Senhas | Senhas deverão ser armazenadas com hash bcrypt (cost 12) ou Argon2id. Nunca em texto plano. |
+| RNF-004.3 | Força de senha | Senhas deverão conter: ≥ 8 caracteres, 1 maiúscula, 1 minúscula, 1 número, 1 caractere especial. |
+| RNF-004.4 | Autenticação de dois fatores (2FA) | O sistema deverá suportar 2FA via TOTP (Google Authenticator, Authy) para usuários que optarem por ativar (conforme RF-017). |
+| RNF-004.5 | Rate limiting | Endpoints de login deverão limitar a 5 tentativas/minuto por IP. Endpoints de API deverão limitar a 100 req/min por usuário autenticado. |
+| RNF-004.6 | Bloqueio de conta | Conta deverá ser bloqueada temporariamente após 5 tentativas de login falhadas (lockout de 15min). |
+| RNF-004.7 | CORS | API deverá permitir origem apenas do frontend configurado (`localhost:3000` em dev, domínio de produção). Headers: `Access-Control-Allow-Credentials: true`. |
+| RNF-004.8 | Headers de segurança | Respostas HTTP deverão incluir: `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `X-XSS-Protection: 0`, `Referrer-Policy: strict-origin-when-cross-origin`, `Content-Security-Policy` (política restritiva). |
+| RNF-004.9 | HSTS | Em produção, deverá usar `Strict-Transport-Security: max-age=31536000; includeSubDomains`. |
+| RNF-004.10 | Validação server-side | Todos os dados de entrada deverão ser validados no backend (Bean Validation + sanitização). Nunca confiar na validação apenas no frontend. |
+| RNF-004.11 | Proteção contra XSS | Saídas dinâmicas deverão ser sanitizadas. Rich text editor deverá sanitizar HTML antes de persistir. |
+| RNF-004.12 | Proteção contra CSRF | Tokens CSRF deverão ser utilizados em mutações state-changing (POST, PUT, DELETE) via cookies. |
+| RNF-004.13 | Sessões | Usuário deverá visualizar e encerrar sessões dispositivos em RF-017. Sessão expira após 30min de inatividade. |
+| RNF-004.14 | Logs de auditoria | Ações críticas (login, alteração de dados, exclusão, mudança de papel) deverão ser registradas com timestamp, IP, user-agent e identificador do usuário. |
+| RNF-004.15 | Upload seguro | Uploads deverão validar: tipo MIME permitido, tamanho máximo (5MB currículo, 10MB materiais didáticos, 2MB imagens), extensões permitidas. Arquivos deverão ser armazenados fora do diretório público. |
+| RNF-004.16 | Secret management | Chaves secretas (JWT_SECRET, DB_PASSWORD, SMTP credentials) deverão ser gerenciadas via variáveis de ambiente. Nunca no código-fonte. |
+| RNF-004.17 | Vulnerabilidades | O projeto deverá ser verificado periodicamente contra vulnerabilidades conhecidas (OWASP Top 10) usando ferramentas como Snyk ou Dependabot. |
 
-### 5.6 Compatibilidade de Navegadores
+---
 
-Não definido no design atual.
+### RNF-005 — Conformidade LGPD
+
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-005.1 | Base legal | Todo tratamento de dados pessoais deverá ter base legal identificada (consentimento, execução de contrato, legítimo interesse). |
+| RNF-005.2 | Consentimento explícito | Envio de currículo (Banco de Talentos) e inscrição em newsletter deverão exigir consentimento explícito (checkbox de termos). |
+| RNF-005.3 | Direito ao esquecimento | Usuário autenticado deverá poder solicitar exclusão de seus dados pessoais via painel (Configurações/LGPD). Dados deverão ser anonimizados ou removidos em até 15 dias. |
+| RNF-005.4 | Portabilidade de dados | Usuário deverá poder exportar seus dados pessoais e currículo em formato estruturado (JSON/PDF). |
+| RNF-005.5 | Minimização de dados | Formulários deverão coletar apenas dados estritamente necessários. Campos opcionais deverão ser claramente identificados. |
+| RNF-005.6 | Retenção de dados | Dados de candidatos não selecionados deverão ser mantidos por no máximo 12 meses após o encerramento do processo seletivo, depois anonimizados ou excluídos. |
+| RNF-005.7 | Registro de operações | O sistema deverá manter registro de todas as operações de tratamento de dados pessoais (criação, alteração, exclusão, acesso). |
+| RNF-005.8 | Dados sensíveis | Dados sensíveis ( PcD, gênero) deverão possuir tratamento diferenciado com acesso restrito e justificativa de coleta. |
+| RNF-005.9 | Política de privacidade | O sistema deverá exibir link acessível para a Política de Privacidade em todas as páginas (footer). |
+| RNF-005.10 | Encarregado de dados (DPO) | As Configurações deverão permitir configurar os dados de contato do Encarregado de Proteção de Dados. |
+| RNF-005.11 | Notificação de incidentes | Em caso de incidente de segurança com dados pessoais, o sistema deverá notificar os afetados e a ANPD em prazo razoável (até 72h). |
+
+---
+
+### RNF-006 — Compatibilidade de Navegadores e Dispositivos
+
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-006.1 | Navegadores suportados | Chrome (2 últimas versões), Firefox (2 últimas versões), Safari (2 últimas versões), Edge (2 últimas versões). |
+| RNF-006.2 | Mobile | Safari iOS (2 últimas versões), Chrome Android (2 últimas versões). |
+| RNF-006.3 | Resolução mínima | Largura mínima suportada: 320px (mobile pequeno). Resolução recomendada: 1280×720 ou superior. |
+| RNF-006.4 | JavaScript obrigatório | O sistema requer JavaScript habilitado. Páginas públicas deverão exibir mensagem amigável quando JS estiver desabilitado. |
+| RNF-006.5 | Cookies | O sistema dependerá de cookies para autenticação (httpOnly, secure, sameSite). O navegador deverá permitir cookies de first-party. |
+
+---
+
+### RNF-007 — Idioma e Localização
+
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-007.1 | Idioma padrão | Toda a interface deverá ser exibida em **português do Brasil (pt-BR)**, conforme `lang="pt-BR"` no HTML. |
+| RNF-007.2 | Formatação de dados | Datas: DD/MM/AAAA. Moeda: R$ X.XXX,XX. Números: separador de milhar (.) e decimal (,). Telefone: (XX) XXXXX-XXXX. |
+| RNF-007.3 | Timezone | Servidor e frontend deverão operar no fuso horário `America/Sao_Paulo` (UTC-3). |
+| RNF-007.4 | Múltiplos idiomas | Não há necessidade de suporte a múltiplos idiomas na versão atual. Estrutura de i18n deverá ser prevista para facilitar futura internacionalização. |
+
+---
+
+### RNF-008 — Disponibilidade e Confiabilidade
+
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-008.1 | Uptime | O sistema deverá manter disponibilidade de ≥ 99.5% mensal (exceto manutenções programadas). |
+| RNF-008.2 | Manutenção programada | Manutenções deverão ser agendadas com aviso mínimo de 48h e realizadas em horário de menor uso (00h–06h horário de Brasília). |
+| RNF-008.3 | Backup | Banco de dados deverá possuir backup automático diário com retenção de 30 dias. Backup deverá ser testado mensalmente. |
+| RNF-008.4 | Recuperação de falhas | O sistema deverá implementar graceful degradation — páginas públicas deverão permanecer acessíveis mesmo com falha parcial da API. |
+| RNF-008.5 | Logs | Todas as requisições deverão gerar logs estruturados (JSON) com timestamp, método, path, status code, latência e user-id. Logs de erro deverão incluir stack trace. |
+| RNF-008.6 | Monitoramento | Métricas de application performance (latência, throughput, erro rate) deverão ser coletadas e disponibilizadas em dashboard. |
+| RNF-008.7 | Health check | Backend deverá expor endpoint `GET /health` retornando status do banco de dados e dependências externas. |
+| RNF-008.8 | Tratamento de erros | Erros 5xx deverão exibir mensagem genérica ao usuário. Erros 4xx deverão exibir mensagem descritiva. Todos os erros deverão ser registrados em log. |
+
+---
+
+### RNF-009 — Manutenibilidade e Extensibilidade
+
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-009.1 | Arquitetura modular | Backend deverá seguir arquitetura modular (módulos por domínio: auth, candidato, vagas, cursos, notícias, etc.) conforme definido na estrutura de pacotes `br.com.rhconnect`. |
+| RNF-009.2 | Padrões de código | Backend: convenções Spring Boot, Java 21, naming conventions padrão Maven. Frontend: convenções Next.js, TypeScript, componentes React funcionais. |
+| RNF-009.3 | Testes unitários | Cobertura mínima de 70% em services do backend. Testes unitários em utils, validators e lógica de negócio. |
+| RNF-009.4 | Testes de integração | Testes de integração para endpoints críticos (auth, candidatura, inscrição) usando Testcontainers (PostgreSQL). |
+| RNF-009.5 | Documentação da API | Backend deverá gerar documentação OpenAPI 3.0 (SpringDoc/Swagger) acessível em `/swagger-ui.html`. |
+| RNF-009.6 | Versionamento de API | API deverá suportar versionamento via path (`/api/v1/...`). |
+| RNF-009.7 | CI/CD | Pipeline de CI deverá executar: lint, testes unitários, build, verificação de vulnerabilidades antes de cada merge na branch `main`. |
+| RNF-009.8 | Code review | Nenhum código deverá ser mergingado sem pelo menos 1 review e aprovação de um membro da equipe. |
+| RNF-009.9 | Branching strategy | Utilizar Git Flow: branches `main` (produção), `develop` (integração), `feature/*` (funcionalidades), `hotfix/*` (correções urgentes). |
+
+---
+
+### RNF-010 — Infraestrutura e Deploy
+
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-010.1 | Containerização | Backend e frontend deverão ser containerizados com Docker com Dockerfiles otimizados (multi-stage build). |
+| RNF-010.2 | Orquestração | Produção deverá utilizar Docker Compose (simples) ou Kubernetes (escalável) conforme porte. |
+| RNF-010.3 | Variáveis de ambiente | Todas as configurações sensíveis (DB_URL, DB_PASSWORD, JWT_SECRET, SMTP_* ) deverão ser gerenciadas via variáveis de ambiente ou secret manager. |
+| RNF-010.4 | Portas padrão | Frontend: `3000`. Backend: `3001`. PostgreSQL: `5432`. |
+| RNF-010.5 | HTTPS | Em produção, tráfego deverá ser servido via HTTPS com certificado TLS válido. |
+| RNF-010.6 | CDN | Assets estáticos (imagens, fontes, bundles) deverão ser servidos via CDN em produção. |
+| RNF-010.7 | Estratégia de upload | Arquivos deverão ser armazenados em bucket S3 (ou equivalente) com política de acesso privado e URLs temporárias (presigned URLs). |
+| RNF-010.8 | Estratégia de cache | API: Redis (ou equivalente) para cache de sessões e dados frequentes. Frontend: ISR + stale-while-revalidate. |
+
+---
+
+### RNF-011 — Usabilidade
+
+| ID | Requisito | Descrição |
+|---|---|---|
+| RNF-011.1 | Consistência visual | Componentes do design system (shadcn/ui + tokens do design.md) deverão ser utilizados de forma consistente em todas as telas. |
+| RNF-011.2 | Feedback imediato | Ações do usuário deverão gerar feedback visual: toast para sucesso/erro, spinner para carregamento, skeleton para content loading. |
+| RNF-011.3 | Validação inline | Formulários deverão validar campos em tempo real (blur) e exibir mensagens de erro abaixo do campo. |
+| RNF-011.4 | Estados de UI | Todas as telas deverão implementar estados: carregamento (skeleton), vazio, erro, sucesso. |
+| RNF-011.5 | Navegação | Breadcrumbs deverão estar presentes em páginas internas. Sidebar deverá indicar a página ativa. |
+| RNF-011.6 | Atalhos | Dashboard do RH e do candidato deverão oferecer atalhos para ações frequentes. |
+| RNF-011.7 | Mensagens de erro | Mensagens de erro deverão ser claras, orientar o usuário sobre como resolver e evitar códigos técnicos. |
+| RNF-011.8 | Confirmação de ações destrutivas | Exclusões e alterações irreversíveis deverão exigir confirmação explícita (modal). |
+
+---
+
+### Quadro Resumo dos RNF
+
+| ID | Categoria | Status |
+|---|---|---|
+| RNF-001 | Acessibilidade (WCAG 2.1 AA) | A implementar |
+| RNF-002 | Design Responsivo | A implementar |
+| RNF-003 | Performance | A implementar |
+| RNF-004 | Segurança | A implementar |
+| RNF-005 | Conformidade LGPD | A implementar |
+| RNF-006 | Compatibilidade | A implementar |
+| RNF-007 | Idioma e Localização | Parcialmente definido |
+| RNF-008 | Disponibilidade e Confiabilidade | A implementar |
+| RNF-009 | Manutenibilidade e Extensibilidade | A implementar |
+| RNF-010 | Infraestrutura e Deploy | A implementar |
+| RNF-011 | Usabilidade | A implementar |
 
 ---
 
