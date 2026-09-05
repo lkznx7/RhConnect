@@ -17,17 +17,17 @@ O diagrama completo está em [database.dbml](database.dbml).
 
 ### Usuario
 
-**Papel central do sistema.** Toda pessoa que interage com o RH Connect possui um registro de `usuario`.
+**Papel central do sistema.** Toda pessoa que interage com o RH Connect possui um registro de `Usuario`.
 
 **O que representa:** A conta de autenticação — nome, e-mail, CPF, senha e perfil de acesso.
 
 **Quem tem:** Candidatos, colaboradores de RH e administradores.
 
 **Relacionamentos:**
-- `usuario` → `candidato` (1:1) — Se o perfil for CANDIDATO, existe um registro complementar
-- `usuario` → `vaga` (1:N) — Usuários RH criam vagas
-- `usuario` → `curso_corporativo` (1:N) — Usuários RH criam cursos
-- `usuario` → `noticia` (1:N) — Usuários RH criam notícias
+- `Usuario` → `candidato` (1:1) — Se o perfil for CANDIDATO, existe um registro complementar
+- `Usuario` → `vaga` (1:N) — Usuários RH criam vagas
+- `Usuario` → `curso_corporativo` (1:N) — Usuários RH criam cursos
+- `Usuario` → `noticia` (1:N) — Usuários RH criam notícias
 
 **Regras:**
 - `email` é único no sistema
@@ -41,14 +41,14 @@ O diagrama completo está em [database.dbml](database.dbml).
 
 ### Candidato
 
-**Extensão do `usuario` para candidatos.** Contém dados pessoais e preferências profissionais que ficam fora do escopo de autenticação.
+**Extensão do `Usuario` para candidatos.** Contém dados pessoais e preferências profissionais que ficam fora do escopo de autenticação.
 
 **O que representa:** O perfil completo de um candidato — dados pessoais, localização, expectativas de carreira.
 
 **Quem tem:** Apenas usuários com perfil `CANDIDATO`.
 
 **Relacionamentos:**
-- `candidato` ← `usuario` (1:1) — Cada candidato é um usuário
+- `candidato` ← `Usuario` (1:1) — Cada candidato é um usuário
 - `candidato` → `curriculo` (1:1) — Cada candidato possui um currículo
 - `candidato` → `candidatura` (1:N) — Candidatos se candidatam a vagas
 - `candidato` → `inscricao_curso` (1:N) — Candidatos se inscrevem em cursos
@@ -75,7 +75,7 @@ O diagrama completo está em [database.dbml](database.dbml).
 - `curriculo` → `idioma` (1:N)
 
 **Como funciona na prática:**
-1. Candidato cria conta → `usuario` é criado
+1. Candidato cria conta → `Usuario` é criado
 2. Candidato preenche "Meu Currículo" → `curriculo` é criado com todas as sub-entidades
 3. Candidato submete para Banco de Talentos → `curriculo` fica disponível para consulta pelo RH
 4. RH visualiza "Detalhes do Currículo" → todas as sub-entidades são carregadas
@@ -109,7 +109,7 @@ Cada sub-entidade é uma lista de itens dentro do currículo:
 **Quem cria:** Usuários com perfil `COLABORADOR` ou `ADMIN`.
 
 **Relacionamentos:**
-- `vaga` ← `usuario` (N:1) — Quem criou a vaga
+- `vaga` ← `Usuario` (N:1) — Quem criou a vaga
 - `vaga` → `candidatura` (1:N) — Candidaturas recebidas
 - `vaga` → `categoria` (N:N) — Classificação por categorias/tags
 
@@ -161,7 +161,7 @@ NOVOS_INSCRITOS → TRIAGEM → ENTREVISTA_RH → ESTUDO_CASO → ENTREVISTA_LID
 **Quem cria:** Usuários com perfil `COLABORADOR` ou `ADMIN`.
 
 **Relacionamentos:**
-- `curso_corporativo` ← `usuario` (N:1) — Quem criou o curso
+- `curso_corporativo` ← `Usuario` (N:1) — Quem criou o curso
 - `curso_corporativo` → `inscricao_curso` (1:N) — Inscrições recebidas
 - `curso_corporativo` → `categoria` (N:N) — Classificação por categorias/tags
 
@@ -200,7 +200,7 @@ PENDENTE_APROVACAO → APROVADA → EM_ANDAMENTO → CONCLUIDA
 **Quem cria:** Usuários com perfil `COLABORADOR` ou `ADMIN`.
 
 **Relacionamentos:**
-- `noticia` ← `usuario` (N:1) — Quem publicou
+- `noticia` ← `Usuario` (N:1) — Quem publicou
 - `noticia` → `anexo_noticia` (1:N) — Documentos anexos
 - `noticia` → `categoria` (N:N) — Tags associadas
 
@@ -272,10 +272,10 @@ PENDENTE_APROVACAO → APROVADA → EM_ANDAMENTO → CONCLUIDA
 
 | Regra | Entidades | Descrição |
 |---|---|---|
-| **1 candidato = 1 usuario** | `usuario` ↔ `candidato` | Relação 1:1; candidato é opcional (só existe se perfil = CANDIDATO) |
+| **1 candidato = 1 usuario** | `Usuario` ↔ `candidato` | Relação 1:1; candidato é opcional (só existe se perfil = CANDIDATO) |
 | **1 curriculo = 1 candidato** | `candidato` ↔ `curriculo` | Relação 1:1; cada candidato tem exatamente um currículo |
-| **CPF único** | `usuario` | Não pode haver dois usuários com o mesmo CPF |
-| **Email único** | `usuario` | Não pode haver dois usuários com o mesmo e-mail |
+| **CPF único** | `Usuario` | Não pode haver dois usuários com o mesmo CPF |
+| **Email único** | `Usuario` | Não pode haver dois usuários com o mesmo e-mail |
 | **1 candidatura por candidato-vaga** | `candidatura` | Um candidato não pode se candidatar duas vezes à mesma vaga |
 | **Protocolo único** | `candidatura` | Cada candidatura gera um protocolo único para rastreamento |
 | **Edital único** | `vaga` | Número do edital é identificador único da vaga |
