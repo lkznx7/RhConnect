@@ -1,14 +1,14 @@
 // api/auth - requests
-type LoginRequest = {
+export type LoginRequest = {
   email: string;
   password: string;
 };
 
-type RefreshTokenRequest = {
+export type RefreshTokenRequest = {
   refreshToken: string;
 };
 
-type RegisterRequest = {
+export type RegisterRequest = {
   nomeCompleto: string;
   email: string;
   cpf: string;
@@ -18,23 +18,25 @@ type RegisterRequest = {
 
 // api/auth - responses
 
-type RoleUser = "CANDIDATO" | "COLABORADOR" | "ADMIN";
+export type RoleUser = "CANDIDATO" | "COLABORADOR" | "ADMIN";
 
-type UserResponse = {
+export type UserResponse = {
   id: string;
   nomeCompleto: string;
   email: string;
   role: RoleUser;
 };
 
-type AuthResponse = {
+export type AuthResponse = {
   accessToken: string;
   tokenType: string;
   expiresIn: number;
   user: UserResponse;
 };
 
-type RefreshTokenResponse = {
+export type RefreshTokenResponse = {
   refreshToken: string;
   expiresIn: number;
 };
+
+

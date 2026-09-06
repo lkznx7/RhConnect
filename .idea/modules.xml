@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RhConnect.iml" filepath="$PROJECT_DIR$/.idea/RhConnect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Backend/RhConnectBackend/RhConnectBackend.iml" filepath="$PROJECT_DIR$/Backend/RhConnectBackend/RhConnectBackend.iml" />
     </modules>
   </component>
 </project>

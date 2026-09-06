@@ -1,43 +1,98 @@
-import { Blend, Building2, GraduationCap, MonitorSmartphone, TrendingUp, Video } from "lucide-react"
-import SectionHeader from "./section-header"
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight, Clock, Laptop, School } from "lucide-react"
 import type { Curso } from "@/lib/public-data"
 
-const MODALIDADE_ICONS: Record<string, React.ComponentType<{ size?: number }>> = {
-  "EAD Síncrono": Video,
-  "Presencial": Building2,
-  "Autoinstrucional": MonitorSmartphone,
-  "Híbrido": Blend,
+function badgeClass(badge?: string) {
+  if (!badge) return ""
+  if (badge.toLowerCase().includes("certific")) return " lp-course-badge-cert"
+  if (badge.toLowerCase().includes("essencial")) return " lp-course-badge-essencial"
+  return ""
+}
+
+function formatIcon(formato?: string) {
+  if (!formato) return <Laptop size={15} />
+  const normalizado = formato.toLowerCase()
+  if (normalizado.includes("híbrido") || normalizado.includes("hibrido")) return <School size={15} />
+  return <Laptop size={15} />
 }
 
 export default function Cursos({ cursos }: { cursos: Curso[] }) {
-  return (
-    <section className="lp-section lp-section-alt" id="cursos">
-      <div className="lp-container">
-        <SectionHeader
-          eyebrow="Universidade Corporativa & Capacitação"
-          title="Aprenda, evolua e alcance novos patamares"
-          description="Trilhas de desenvolvimento, cursos e formações para que cada pessoa cresça junto com a instituição."
-        />
+  const destaqueCursos = cursos.slice(0, 3)
 
-        <div className="lp-card-grid">
-          {cursos.map((curso) => {
-            const Icon = MODALIDADE_ICONS[curso.modalidade] ?? GraduationCap
-            return (
-              <article key={curso.id} className="lp-card lp-curso-card">
-                <div className="lp-card-top">
-                  <span className="lp-card-icon lp-card-icon-teal"><Icon size={18} /></span>
-                  <span className="lp-tag lp-tag-teal">{curso.nivelProficiencia}</span>
+  return (
+    <section className="lp-section lp-section-alt">
+      <div className="lp-container">
+        <div className="lp-sec-head">
+          <div className="lp-sec-head-copy">
+            <span className="lp-sec-eyebrow lp-sec-eyebrow-secondary">
+              <School size={15} />
+              Educação Contínua
+            </span>
+            <h2>Universidade Corporativa &amp; Capacitação</h2>
+            <p>Trilhas estruturadas para acelerar competências de liderança, técnica e inteligência emocional.</p>
+          </div>
+
+          <Link href="/cursos" className="lp-sec-link">
+            Ver catálogo completo de cursos
+            <ArrowRight size={15} />
+          </Link>
+        </div>
+
+        {destaqueCursos.length === 0 ? (
+          <div className="lp-empty">
+            <p>Nenhum curso em destaque no momento.</p>
+          </div>
+        ) : (
+          <div className="lp-cursos-grid">
+            {destaqueCursos.map((curso) => (
+              <article className="lp-course-card group" key={curso.id}>
+                <div className="lp-course-cover">
+                  {curso.capa && (
+                    <Image
+                      src={curso.capa}
+                      alt={curso.titulo}
+                      fill
+                      sizes="(max-width: 1080px) 100vw, 380px"
+                    />
+                  )}
+                  <span className="lp-course-badges">
+                    {curso.badge && (
+                      <span className={`lp-course-badge${badgeClass(curso.badge)}`}>{curso.badge}</span>
+                    )}
+                  </span>
+                  {curso.cargaHoraria && (
+                    <span className="lp-course-hours">
+                      <Clock size={13} />
+                      {curso.cargaHoraria} Carga Horária
+                    </span>
+                  )}
                 </div>
-                <h3>{curso.titulo}</h3>
-                <p className="lp-card-meta"><GraduationCap size={13} /> {curso.areaConhecimento}</p>
-                <div className="lp-chip-row">
-                  <span className="lp-tag">{curso.modalidade}</span>
-                  {curso.instrutor && <span className="lp-tag lp-tag-instrutor"><TrendingUp size={11} /> {curso.instrutor}</span>}
+
+                <div className="lp-course-body">
+                  <span className="lp-course-eyebrow">
+                    <i />
+                    {curso.areaConhecimento}
+                  </span>
+                  <h3 className="lp-course-title">{curso.titulo}</h3>
+                  {curso.descricao && <p className="lp-course-desc">{curso.descricao}</p>}
+
+                  <div className="lp-course-foot">
+                    {curso.formato && (
+                      <span className="lp-course-format">
+                        {formatIcon(curso.formato)}
+                        {curso.formato}
+                      </span>
+                    )}
+                    <Link href={`/cursos/${curso.id}`} className="lp-course-link">
+                      Acessar Trilha
+                    </Link>
+                  </div>
                 </div>
               </article>
-            )
-          })}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

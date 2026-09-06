@@ -1,25 +1,44 @@
 import Link from "next/link"
-import { ArrowRight, FileText } from "lucide-react"
+import { Bell, Lock, Send, Users } from "lucide-react"
 
 export default function TalentosCta() {
   return (
-    <section className="lp-section" id="talentos">
+    <section className="lp-section lp-section-cta">
       <div className="lp-container">
         <div className="lp-cta">
-          <div className="lp-cta-icon"><FileText size={24} /></div>
+          <div className="lp-cta-blob lp-cta-blob-a" />
+          <div className="lp-cta-blob lp-cta-blob-b" />
+
           <div className="lp-cta-copy">
-            <h2>Banco de Talentos</h2>
+            <span className="lp-cta-pill">
+              <Users size={15} />
+              Banco de Talentos Estratégico
+            </span>
+            <h2>Não encontrou a posição desejada no momento?</h2>
             <p>
-              Não encontrou a vaga ideal agora? Cadastre seu currículo e fique disponível para novas oportunidades,
-              trilhas de capacitação e editais futuros.
+              Cadastre seu perfil profissional em nosso radar de talentos. Nossos Business Partners
+              analisam diariamente novas compatibilidades para futuras oportunidades internas e
+              projetos prioritários.
             </p>
+            <div className="lp-cta-trust">
+              <span>
+                <Lock size={15} />
+                Privacidade LGPD Garantida
+              </span>
+              <span>
+                <Bell size={15} />
+                Alertas automáticos de novas vagas
+              </span>
+            </div>
           </div>
+
           <div className="lp-cta-actions">
-            <Link className="lp-btn lp-btn-light" href="/register">
-              Cadastrar Currículo <ArrowRight size={15} />
+            <Link href="/banco-de-talentos/cadastrar-curriculo" className="lp-cta-btn lp-cta-btn-solid">
+              Cadastrar Meu Currículo
+              <Send size={17} />
             </Link>
-            <Link className="lp-btn lp-btn-ghost" href="/login">
-              Acessar Portal
+            <Link href="/sobre-o-rh" className="lp-cta-btn lp-cta-btn-ghost">
+              Saber Como Funciona
             </Link>
           </div>
         </div>

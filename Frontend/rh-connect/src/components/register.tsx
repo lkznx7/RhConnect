@@ -17,8 +17,6 @@ import {
   ShieldCheck,
   UserRound,
 } from "lucide-react"
-import { register } from "@/services/auth"
-import BrandPanel from "../auth/brand-panel"
 import {
   checkPasswordRequirements,
   getPasswordStrength,
@@ -27,6 +25,8 @@ import {
   maskCpf,
   maskPhone,
 } from "@/lib/validators"
+import { RegisterRequest } from "@/types/dtoApi"
+import { postRegister } from "@/lib/api"
 
 const OBJETIVOS = [
   { value: "EMPREGO", label: "Encontrar oportunidades de emprego" },
@@ -73,6 +73,35 @@ export default function RegisterForm() {
     return null
   }
 
+  const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault() 
+    
+    const validationError = validate()
+    if (validationError) {
+      setError(validationError)
+      return
+    }
+
+    setIsSubmitting(true)
+    setError(null)
+
+    try {
+      await postRegister({
+        nomeCompleto: nome,
+        email: email,
+        cpf: cpf,
+        telefone: telefone, 
+        senha: senha,
+      })
+
+      setSuccess("Conta criada com sucesso!")
+    } catch (err: any) {
+      setError(err?.response?.data?.message || "Erro ao criar conta. Verifique os dados.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const validation = validate()
@@ -82,29 +111,11 @@ export default function RegisterForm() {
     }
     setIsSubmitting(true)
     setError(null)
-    try {
-      const data = await register({
-        nomeCompleto: nome.trim(),
-        email: email.trim(),
-        cpf,
-        telefoneWhatsapp: telefone,
-        senha,
-        confirmacaoSenha: confirmacao,
-        objetivoRhConnect: objetivo,
-      })
-      setSuccess(data.mensagem ?? "Conta criada com sucesso!")
-    } catch (err: unknown) {
-      const response = (err as { response?: { data?: { mensagem?: string; message?: string } } })?.response?.data
-      setError(response?.mensagem ?? response?.message ?? "Não foi possível criar sua conta. Tente novamente.")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+}
 
   return (
     <main className="login-page">
       <section className="login-shell">
-        <BrandPanel />
 
         <div className="auth-panel">
           <div className="auth-content">
@@ -124,7 +135,7 @@ export default function RegisterForm() {
                 <Link className="submit-button" href="/login">Ir para o Login <ArrowRight size={18} /></Link>
               </div>
             ) : (
-              <form className="auth-form login-form" onSubmit={handleSubmit} noValidate>
+              <form className="auth-form login-form" onSubmit={handleRegister} noValidate>
                 <label htmlFor="register-nome">Nome completo</label>
                 <div className="input-wrap"><CircleUserRound size={17} /><input id="register-nome" placeholder="Ex.: Maria Silva Souza" type="text" autoComplete="name" value={nome} onChange={(e) => setNome(e.target.value)} /></div>
 

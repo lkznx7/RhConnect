@@ -1,67 +1,83 @@
 import Link from "next/link"
-import { HeartHandshake, Lock, ShieldCheck } from "lucide-react"
+import { BarChart3, Lock, Mail, MapPin, Phone, ShieldCheck } from "lucide-react"
 import Logo from "./logo"
 
-const FOOTER_LINKS = [
-  {
-    title: "Navegação",
-    links: [
-      { label: "Início", href: "#top" },
-      { label: "Sobre o RH", href: "#sobre" },
-      { label: "Oportunidades", href: "#oportunidades" },
-      { label: "Cursos", href: "#cursos" },
-      { label: "Notícias", href: "#noticias" },
-    ],
-  },
-  {
-    title: "Portal",
-    links: [
-      { label: "Acessar Portal", href: "/login" },
-      { label: "Criar conta", href: "/register" },
-      { label: "Recuperar senha", href: "/forgot-password" },
-      { label: "Banco de Talentos", href: "#talentos" },
-      { label: "Newsletter", href: "#newsletter" },
-    ],
-  },
+const INSTITUCIONAL = [
+  { href: "/sobre-o-rh", label: "Sobre o RH" },
+  { href: "/sobre-o-rh#politica", label: "Política de Pessoas" },
+  { href: "/banco-de-talentos/cadastrar-curriculo", label: "Banco de Talentos" },
+  { href: "/noticias", label: "Notícias & Comunicados" },
+]
+
+const ACESSO = [
+  { href: "/login", label: "Entrar" },
+  { href: "/register", label: "Criar Conta" },
+  { href: "/forgot-password", label: "Esqueci minha senha" },
+  { href: "/oportunidades", label: "Oportunidades" },
 ]
 
 export default function Footer() {
   return (
     <footer className="lp-footer">
-      <div className="lp-container lp-footer-inner">
+      <div className="lp-footer-inner">
         <div className="lp-footer-brand">
-          <Logo inverse />
+          <Logo />
           <p>
-            Plataforma de Gestão de Pessoas que conecta oportunidades, capacitação e comunicação entre RH,
-            candidatos e colaboradores.
+            Ambiente integrado para atração de talentos, desenvolvimento profissional contínuo e
+            transparência institucional em gestão de pessoas.
           </p>
           <ul className="lp-footer-pills">
-            <li><ShieldCheck size={13} /> Conformidade LGPD</li>
-            <li><Lock size={13} /> Criptografia SSL 256-bit</li>
+            <li>
+              <ShieldCheck size={14} />
+              Governança Corporativa
+            </li>
+            <li>
+              <BarChart3 size={14} />
+              People Analytics
+            </li>
+            <li>
+              <Lock size={14} />
+              LGPD
+            </li>
           </ul>
         </div>
 
-        {FOOTER_LINKS.map((group) => (
-          <div className="lp-footer-col" key={group.title}>
-            <h4>{group.title}</h4>
-            <ul>
-              {group.links.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="lp-footer-col">
+          <h4>Institucional</h4>
+          <ul>
+            {INSTITUCIONAL.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="lp-footer-col">
-          <h4>Contato & Ouvidoria</h4>
-          <ul className="lp-footer-contact">
-            <li>rh@rhconnect.gov.br</li>
-            <li>0800 000 0000</li>
-            <li>Segunda a sexta, 8h às 17h</li>
+          <h4>Acesso</h4>
+          <ul>
+            {ACESSO.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="lp-footer-col lp-footer-contact">
+          <h4>Fale Conosco</h4>
+          <ul>
             <li>
-              <Link href="#sobre">Fale com o RH <HeartHandshake size={12} /></Link>
+              <Mail size={15} />
+              rh@connect.corp
+            </li>
+            <li>
+              <Phone size={15} />
+              (11) 4004-0000
+            </li>
+            <li>
+              <MapPin size={15} />
+              São Paulo — SP · Brasil
             </li>
           </ul>
         </div>
@@ -69,8 +85,8 @@ export default function Footer() {
 
       <div className="lp-footer-bottom">
         <div className="lp-container">
-          <p>© {new Date().getFullYear()} RH Connect · Gestão de Pessoas. Todos os direitos reservados.</p>
-          <span>Termos de Uso · Política de Privacidade</span>
+          <p>© 2026 RH Connect — Portal institucional de Gestão de Pessoas.</p>
+          <span>Política de Privacidade · Termos de Uso · LGPD</span>
         </div>
       </div>
     </footer>

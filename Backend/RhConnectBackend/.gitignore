@@ -35,5 +35,6 @@ src/main/resources/application-prod.properties
 /nbdist/
 /.nb-gradle/
 
+.idea
 ### VS Code ###
 .vscode/
