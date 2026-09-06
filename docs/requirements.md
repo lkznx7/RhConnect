@@ -732,7 +732,7 @@ O sistema atende a dois públicos principais: **candidatos/colaboradores** (áre
 
 | ID | Requisito | Descrição |
 |---|---|---|
-| RNF-009.1 | Arquitetura modular | Backend deverá seguir arquitetura modular (módulos por domínio: auth, candidato, vagas, cursos, notícias, etc.) conforme definido na estrutura de pacotes `br.com.rhconnect`. |
+| RNF-009.1 | Arquitetura modular | Backend deverá seguir arquitetura modular (módulos por domínio: auth, usuarios, vagas, cursos, notícias, etc.) conforme definido na estrutura de pacotes `br.com.rhconnect`. |
 | RNF-009.2 | Padrões de código | Backend: convenções Spring Boot, Java 21, naming conventions padrão Maven. Frontend: convenções Next.js, TypeScript, componentes React funcionais. |
 | RNF-009.3 | Testes unitários | Cobertura mínima de 70% em services do backend. Testes unitários em utils, validators e lógica de negócio. |
 | RNF-009.4 | Testes de integração | Testes de integração para endpoints críticos (auth, candidatura, inscrição) usando Testcontainers (PostgreSQL). |

@@ -2,10 +2,10 @@
 
 ## Visão Geral
 
-O sistema RH Connect é composto por **17 entidades** organizadas em 4 domínios:
+O sistema RH Connect é composto por **15 entidades** organizadas em 4 domínios:
 
 1. **Identidade e Acesso** — Quem é o usuário e como acessa o sistema
-2. **Candidato e Currículo** — Perfil profissional completo do candidato
+2. **Currículo** — Perfil profissional completo do candidato
 3. **Recrutamento** — Vagas, candidaturas e pipeline seletivo
 4. **Capacitação e Comunicação** — Cursos, notícias e configurações
 
@@ -17,46 +17,34 @@ O diagrama completo está em [database.dbml](database.dbml).
 
 ### Usuario
 
-**Papel central do sistema.** Toda pessoa que interage com o RH Connect possui um registro de `Usuario`.
+**Papel central do sistema.** Toda pessoa que interage com o RH Connect possui um registro unificado de `Usuario`.
 
-**O que representa:** A conta de autenticação — nome, e-mail, CPF, senha e perfil de acesso.
+**O que representa:** A conta de autenticação **e** o perfil completo — nome, e-mail, CPF, senha, perfil de acesso **e** todos os dados de candidato/colaborador.
 
 **Quem tem:** Candidatos, colaboradores de RH e administradores.
 
+**Modelo unificado por role:** Não há tabela separada para `Candidato` ou `Colaborador`. Todos os campos de perfil vivem na própria tabela `usuario` e são **opcionais (nullable)**, preenchidos de forma condicional conforme o perfil:
+
+- **CANDIDATO:** `data_nascimento`, `genero`, `pcd`, `cidade`, `uf`, `email_profissional`, `area_interesse`, `nivel_senioridade`, `expectativa_salarial`, `modalidade_trabalho_preferida`, `resumo_carreira`, `linkedin_url`, `portfolio_url`, `curriculo_arquivo_url`
+- **COLABORADOR:** `matricula`, `cargo`, `departamento`, `gestor_imediato_id`, `email_corporativo`, `data_admissao`
+- **ADMIN:** herda os dados base (sem campos extras obrigatórios)
+
 **Relacionamentos:**
-- `Usuario` → `candidato` (1:1) — Se o perfil for CANDIDATO, existe um registro complementar
+- `Usuario` → `curriculo` (1:1) — Se o perfil for CANDIDATO, pode haver um currículo
 - `Usuario` → `vaga` (1:N) — Usuários RH criam vagas
 - `Usuario` → `curso_corporativo` (1:N) — Usuários RH criam cursos
 - `Usuario` → `noticia` (1:N) — Usuários RH criam notícias
+- `Usuario` → `usuario` (1:N, auto) — `gestor_imediato_id` referencia outro colaborador
+- `Usuario` → `candidatura` (1:N) — Candidatos se candidatam a vagas
+- `Usuario` → `inscricao_curso` (1:N) — Candidatos/colaboradores se inscrevem em cursos
 
 **Regras:**
 - `email` é único no sistema
 - `cpf` é único no sistema
+- `matricula` e `email_corporativo` são únicos (quando preenchidos)
 - `senha_hash` armazena a senha com criptografia (algoritmo a definir)
 - `perfil` determina o que o usuário pode acessar: `CANDIDATO`, `COLABORADOR` ou `ADMIN`
-
----
-
-## Domínio 2 — Candidato e Currículo
-
-### Candidato
-
-**Extensão do `Usuario` para candidatos.** Contém dados pessoais e preferências profissionais que ficam fora do escopo de autenticação.
-
-**O que representa:** O perfil completo de um candidato — dados pessoais, localização, expectativas de carreira.
-
-**Quem tem:** Apenas usuários com perfil `CANDIDATO`.
-
-**Relacionamentos:**
-- `candidato` ← `Usuario` (1:1) — Cada candidato é um usuário
-- `candidato` → `curriculo` (1:1) — Cada candidato possui um currículo
-- `candidato` → `candidatura` (1:N) — Candidatos se candidatam a vagas
-- `candidato` → `inscricao_curso` (1:N) — Candidatos se inscrevem em cursos
-
-**Campos-chave:**
-- `area_interesse`, `nivel_senioridade`, `expectativa_salarial` — usados para matching com vagas
-- `pcd` — flag de acessibilidade
-- `genero` — dados inclusivos (6 opções)
+- Se perfil = CANDIDATO, os campos de candidato devem ser preenchidos (validação no service); se COLABORADOR, os campos funcionais
 
 ---
 
@@ -67,7 +55,7 @@ O diagrama completo está em [database.dbml](database.dbml).
 **O que representa:** A versão organizada do histórico profissional do candidato.
 
 **Relacionamentos:**
-- `curriculo` ← `candidato` (1:1) — Um currículo por candidato
+- `curriculo` ← `usuario` (1:1) — Um currículo por usuário candidato
 - `curriculo` → `experiencia_profissional` (1:N)
 - `curriculo` → `formacao_academica` (1:N)
 - `curriculo` → `curso_certificacao` (1:N)
@@ -127,12 +115,12 @@ RASCUNHO → PUBLICADA → EM_PROCESSO → ENCERRADA
 
 ### Candidatura
 
-**Registro de que um candidato se candidatou a uma vaga.** É a tabela associativa entre `candidato` e `vaga`.
+**Registro de que um candidato se candidatou a uma vaga.** É a tabela associativa entre `usuario` (perfil candidato) e `vaga`.
 
 **O que representa:** O momento exato em que um candidato expressa interesse em uma vaga, com protocolo de rastreamento.
 
 **Relacionamentos:**
-- `candidatura` ← `candidato` (N:1) — Quem se candidatou
+- `candidatura` ← `usuario` (N:1) — Quem se candidatou
 - `candidatura` ← `vaga` (N:1) — A qual vaga
 
 **Pipeline de triagem (status):**
@@ -171,12 +159,12 @@ NOVOS_INSCRITOS → TRIAGEM → ENTREVISTA_RH → ESTUDO_CASO → ENTREVISTA_LID
 
 ### InscricaoCurso
 
-**Registro de inscrição em curso.** É a tabela associativa entre `candidato` e `curso_corporativo`.
+**Registro de inscrição em curso.** É a tabela associativa entre `usuario` e `curso_corporativo`.
 
 **O que representa:** O momento em que um candidato/colaborador se inscreve em um curso, incluindo aprovação do gestor.
 
 **Relacionamentos:**
-- `inscricao_curso` ← `candidato` (N:1) — Quem se inscreveu
+- `inscricao_curso` ← `usuario` (N:1) — Quem se inscreveu
 - `inscricao_curso` ← `curso_corporativo` (N:1) — Em qual curso
 
 **Fluxo:**
@@ -249,7 +237,7 @@ PENDENTE_APROVACAO → APROVADA → EM_ANDAMENTO → CONCLUIDA
               │            │            │
               ▼            ▼            ▼
         ┌──────────┐ ┌──────────┐ ┌──────────┐
-        │CANDIDATO │ │ vaga.criador│ │curso.criador│
+        │CURRICULO │ │ vaga.criador│ │curso.criador│
         └────┬─────┘ └──────────┘ └──────────┘
              │
     ┌────────┼────────┐
@@ -272,11 +260,13 @@ PENDENTE_APROVACAO → APROVADA → EM_ANDAMENTO → CONCLUIDA
 
 | Regra | Entidades | Descrição |
 |---|---|---|
-| **1 candidato = 1 usuario** | `Usuario` ↔ `candidato` | Relação 1:1; candidato é opcional (só existe se perfil = CANDIDATO) |
-| **1 curriculo = 1 candidato** | `candidato` ↔ `curriculo` | Relação 1:1; cada candidato tem exatamente um currículo |
+| **1 usuario = 1 perfil unificado** | `Usuario` | Todos os dados (candidato/colaborador/admin) em uma única tabela; campos condicionais pela role |
+| **1 curriculo = 1 usuario** | `usuario` ↔ `curriculo` | Relação 1:1; cada usuário candidato tem no máximo um currículo |
 | **CPF único** | `Usuario` | Não pode haver dois usuários com o mesmo CPF |
 | **Email único** | `Usuario` | Não pode haver dois usuários com o mesmo e-mail |
-| **1 candidatura por candidato-vaga** | `candidatura` | Um candidato não pode se candidatar duas vezes à mesma vaga |
+| **Matrícula única** | `Usuario` | Não pode haver dois colaboradores com a mesma matrícula (quando preenchida) |
+| **Email corporativo único** | `Usuario` | Não pode haver dois colaboradores com o mesmo e-mail corporativo (quando preenchido) |
+| **1 candidatura por usuario-vaga** | `candidatura` | Um candidato não pode se candidatar duas vezes à mesma vaga |
 | **Protocolo único** | `candidatura` | Cada candidatura gera um protocolo único para rastreamento |
 | **Edital único** | `vaga` | Número do edital é identificador único da vaga |
 | **Codigo de inscrição único** | `inscricao_curso` | Cada inscrição em curso gera código único |

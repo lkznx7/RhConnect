@@ -1,5 +1,7 @@
 # Regras de Negócio — RH Connect
 
+> **Nota sobre "Candidato":** Neste documento, "candidato" refere-se ao **usuário com perfil `CANDIDATO`** (entidade única `Usuario`). Não existe mais entidade/tabela separada `Candidato`. Toda referência a "candidato/colaborador" diz respeito ao mesmo modelo unificado de usuário, diferenciado apenas pela `role` e pelos campos de perfil preenchidos.
+
 ## 1. Candidatos
 
 ### RN-001 — Cadastro de Candidato

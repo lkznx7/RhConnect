@@ -12,7 +12,7 @@ O modelo de dados foi inferido a partir das telas e interfaces do sistema. Todos
 
 ### Entidade: Usuario
 
-**Objetivo:** Armazenar dados de autenticação e acesso dos usuários do sistema (candidatos, colaboradores e administradores).
+**Objetivo:** Armazenar dados de autenticação, acesso **e perfil completo** dos usuários do sistema (candidatos, colaboradores e administradores) em uma única tabela unificada.
 
 **Campos identificados:**
 
@@ -29,33 +29,38 @@ O modelo de dados foi inferido a partir das telas e interfaces do sistema. Todos
 | ativo | BOOLEAN | Sim | Implícito |
 | criado_em | TIMESTAMP | Sim | Implícito |
 | atualizado_em | TIMESTAMP | Sim | Implícito |
+| **data_nascimento** | DATE | Não* | Tela 09 — Envio de Currículo |
+| **genero** | ENUM / VARCHAR | Não* | Tela 09 — Envio de Currículo |
+| **pcd** | BOOLEAN | Não* | Tela 09 — Toggle PcD |
+| **cidade** | VARCHAR(100) | Não* | Tela 09 — Envio de Currículo |
+| **uf** | CHAR(2) | Não* | Tela 09 — Envio de Currículo |
+| **email_profissional** | VARCHAR(255) | Não* | Tela 09 — Envio de Currículo |
+| **area_interesse** | VARCHAR(255) | Não* | Tela 09 — Etapa 2 |
+| **nivel_senioridade** | VARCHAR(50) | Não* | Tela 09 — Etapa 2 |
+| **expectativa_salarial** | VARCHAR(50) | Não* | Tela 09 — Etapa 2 |
+| **modalidade_trabalho_preferida** | VARCHAR(50) | Não* | Tela 09 — Etapa 2 |
+| **resumo_carreira** | TEXT | Não* | Tela 09 — Etapa 2 |
+| **linkedin_url** | VARCHAR(500) | Não* | Tela 09 — Etapa 2 |
+| **portfolio_url** | VARCHAR(500) | Não* | Tela 09 — Etapa 2 |
+| **curriculo_arquivo_url** | VARCHAR(500) | Não* | Tela 09 — Etapa 3 (upload) |
 
----
+> **\*** Campos de perfil não marcados como obrigatórios gerais são **condicionais à role**:
+> - Se `perfil` = CANDIDATO → campos de candidato devem ser preenchidos (data_nascimento, cidade, uf, email_profissional, area_interesse, nivel_senioridade, modalidade_trabalho_preferida)
+> - Se `perfil` = COLABORADOR → campos funcionais devem ser preenchidos (ver abaixo)
+> - Se `perfil` = ADMIN → sem campos extras obrigatórios
 
-### Entidade: Candidato
+**Campos adicionais de COLABORADOR (na mesma tabela, condicionais à role):**
 
-**Objetivo:** Dados complementares do perfil de candidato, estendendo o Usuario.
-
-**Campos identificados:**
-
-| Campo | Tipo Sugerido | Obrigatório | Origem |
+| Campo | Tipo Sugerido | Obrigatório* | Origem |
 |---|---|---|---|
-| id | UUID / BIGINT | Sim | Implícito |
-| usuario_id | FK → Usuario | Sim | Implícito |
-| data_nascimento | DATE | Sim | Tela 09 — Envio de Currículo |
-| genero | ENUM / VARCHAR | Não | Tela 09 — Envio de Currículo |
-| pcd | BOOLEAN | Não | Tela 09 — Toggle PcD |
-| cidade | VARCHAR(100) | Sim | Tela 09 — Envio de Currículo |
-| uf | CHAR(2) | Sim | Tela 09 — Envio de Currículo |
-| email_profissional | VARCHAR(255) | Sim | Tela 09 — Envio de Currículo |
-| area_interesse | VARCHAR(255) | Sim | Tela 09 — Etapa 2 |
-| nivel_senioridade | VARCHAR(50) | Sim | Tela 09 — Etapa 2 |
-| expectativa_salarial | VARCHAR(50) | Sim | Tela 09 — Etapa 2 |
-| modalidade_trabalho_preferida | VARCHAR(50) | Sim | Tela 09 — Etapa 2 |
-| resumo_carreira | TEXT | Não | Tela 09 — Etapa 2 |
-| linkedin_url | VARCHAR(500) | Não | Tela 09 — Etapa 2 |
-| portfolio_url | VARCHAR(500) | Não | Tela 09 — Etapa 2 |
-| curriculo_arquivo_url | VARCHAR(500) | Não | Tela 09 — Etapa 3 (upload) |
+| **matricula** | VARCHAR(50) | Não* (unique) | Interno / Tela 06 — Inscrição |
+| **cargo** | VARCHAR(150) | Não* | Interno |
+| **departamento** | VARCHAR(150) | Não* | Interno |
+| **gestor_imediato_id** | UUID → Usuario | Não* | Tela 06 — Modal de inscrição |
+| **email_corporativo** | VARCHAR(255) | Não* (unique) | Tela 06 — Modal de inscrição |
+| **data_admissao** | DATE | Não* | Interno |
+
+**Nota:** Não existe mais tabela separada `candidato` ou `colaborador`. Todos os dados de perfil vivem em `usuario`, com campos opcionais preenchidos conforme o perfil do usuário.
 
 ---
 
@@ -68,7 +73,7 @@ O modelo de dados foi inferido a partir das telas e interfaces do sistema. Todos
 | Campo | Tipo Sugerido | Obrigatório | Origem |
 |---|---|---|---|
 | id | UUID / BIGINT | Sim | Implícito |
-| candidato_id | FK → Candidato | Sim | Implícito |
+| usuario_id | FK → Usuario | Sim | Implícito |
 | resumo_profissional | TEXT | Não | Tela 18 — Meu Currículo |
 | atualizado_em | TIMESTAMP | Sim | Implícito |
 
@@ -193,7 +198,7 @@ O modelo de dados foi inferido a partir das telas e interfaces do sistema. Todos
 | Campo | Tipo Sugerido | Obrigatório | Origem |
 |---|---|---|---|
 | id | UUID / BIGINT | Sim | Implícito |
-| candidato_id | FK → Candidato | Sim | Implícito |
+| usuario_id | FK → Usuario | Sim | Implícito |
 | vaga_id | FK → Vaga | Sim | Implícito |
 | status | ENUM / VARCHAR | Sim | Tela 19, 24 — Status de candidatura |
 | protocolo | VARCHAR(50) | Sim | Tela 10 — Número de protocolo |
@@ -239,7 +244,7 @@ O modelo de dados foi inferido a partir das telas e interfaces do sistema. Todos
 |---|---|---|---|
 | id | UUID / BIGINT | Sim | Implícito |
 | curso_id | FK → Curso | Sim | Implícito |
-| candidato_id | FK → Candidato | Sim | Tela 06 — Modal de inscrição |
+| usuario_id | FK → Usuario | Sim | Tela 06 — Modal de inscrição |
 | email_corporativo | VARCHAR(255) | Sim | Tela 06 — Modal de inscrição |
 | identificador_corporativo | VARCHAR(50) | Sim | Tela 06 — Matrícula ou CPF |
 | gestor_aprovador | VARCHAR(255) | Sim | Tela 06 — Select de gestor |
@@ -342,21 +347,21 @@ O modelo de dados foi inferido a partir das telas e interfaces do sistema. Todos
 ## 3. Relacionamentos
 
 ```
-Usuario (1) ──── (1) Candidato
-Candidato (1) ──── (1) Curriculo
+Usuario (1) ──── (0..1) Curriculo    [somente perfil candidato]
 Curriculo (1) ──── (N) ExperienciaProfissional
 Curriculo (1) ──── (N) FormacaoAcademica
 Curriculo (1) ──── (N) CursoCertificacao
 Curriculo (1) ──── (N) Competencia
 Curriculo (1) ──── (N) Idioma
-Candidato (N) ──── (N) Vaga          [via Candidatura]
-Candidato (N) ──── (N) Curso         [via InscricaoCurso]
-Vaga (N) ──── (N) Candidato          [via Candidatura]
-Curso (N) ──── (N) Candidato         [via InscricaoCurso]
+Usuario (N) ──── (N) Vaga             [via Candidatura]
+Usuario (N) ──── (N) Curso            [via InscricaoCurso]
+Vaga (N) ──── (N) Usuario             [via Candidatura]
+Curso (N) ──── (N) Usuario            [via InscricaoCurso]
 Noticia (1) ──── (N) AnexoNoticia
-Usuario (1) ──── (N) Vaga            [como criador]
-Usuario (1) ──── (N) Curso           [como criador]
-Usuario (1) ──── (N) Noticia         [como criador]
+Usuario (1) ──── (N) Vaga             [como criador]
+Usuario (1) ──── (N) Curso            [como criador]
+Usuario (1) ──── (N) Noticia          [como criador]
+Usuario (1) ──── (N) Usuario          [gestor_imediato_id — hierarquia]
 Categoria (N) ──── (N) Vaga          [via categorias/tags]
 Categoria (N) ──── (N) Curso          [via categorias/tags]
 ```
@@ -365,10 +370,11 @@ Categoria (N) ──── (N) Curso          [via categorias/tags]
 
 ## 4. Regras de Integridade
 
-- **Cada Candidato possui exatamente um Curriculo** — o currículo é vinculado ao perfil do candidato.
-- **Cada Candidatura é única por candidato-vaga** — um candidato não pode se candidatar duas vezes à mesma vaga (inferido a partir do pipeline de triagem).
+- **Cada Usuario candidato possui no máximo um Curriculo** — o currículo é vinculado ao perfil do usuário com role CANDIDATO.
+- **Cada Candidatura é única por usuario-vaga** — um candidato não pode se candidatar duas vezes à mesma vaga (inferido a partir do pipeline de triagem).
 - **CPF deve ser único** entre todos os usuarios — validação em tempo real na criação de conta.
 - **Email deve ser único** entre todos os usuarios — usado como identificador de login.
+- **Matrícula e e-mail corporativo únicos** — quando preenchidos (perfil colaborador).
 - **Número de edital deve ser único** — usado como referência em buscas.
 - **Protocolo de candidatura deve ser único** — gerado automaticamente no envio.
 

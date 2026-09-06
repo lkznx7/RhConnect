@@ -76,9 +76,17 @@ Enum tipo_categoria {
 }
 
 // ============================================================
-// TABELAS DE USUÁRIOS E PERFIS
+// TABELA DE USUÁRIOS (unificada — todos os perfis)
 // ============================================================
 
+// Modelo único de usuário. Os campos são opcionais (nullable) e apenas
+// relevantes conforme o perfil:
+//   - CANDIDATO:   data_nascimento, genero, pcd, cidade, uf, email_profissional,
+//                  area_interesse, nivel_senioridade, expectativa_salarial,
+//                  modalidade_trabalho_preferida, resumo_carreira, linkedin_url,
+//                  portfolio_url, curriculo_arquivo_url
+//   - COLABORADOR: matricula, cargo, departamento, gestor_imediato_id,
+//                  email_corporativo, data_admissao
 Table usuario {
   id uuid [pk, default: `gen_random_uuid()`]
   nome_completo varchar(255) [not null]
@@ -92,43 +100,31 @@ Table usuario {
   criado_em timestamp [not null, default: `now()`]
   atualizado_em timestamp [not null, default: `now()`]
 
-  Note: 'Usuário de autenticação e acesso centralizado'
-}
-
-Table candidato {
-  id uuid [pk, default: `gen_random_uuid()`]
-  usuario_id uuid [not null, unique]
-  data_nascimento date [not null]
+  // --- Campos de CANDIDATO (nullable) ---
+  data_nascimento date
   genero varchar(50)
-  pcd boolean [not null, default: false]
-  cidade varchar(100) [not null]
-  uf char(2) [not null]
-  email_profissional varchar(255) [not null]
-  area_interesse varchar(255) [not null]
-  nivel_senioridade varchar(50) [not null]
+  pcd boolean [default: false]
+  cidade varchar(100)
+  uf char(2)
+  email_profissional varchar(255)
+  area_interesse varchar(255)
+  nivel_senioridade varchar(50)
   expectativa_salarial numeric(12, 2)
-  modalidade_trabalho_preferida varchar(50) [not null]
+  modalidade_trabalho_preferida varchar(50)
+  resumo_carreira text
   linkedin_url varchar(500)
   portfolio_url varchar(500)
-  criado_em timestamp [not null, default: `now()`]
-  atualizado_em timestamp [not null, default: `now()`]
+  curriculo_arquivo_url varchar(500)
 
-  Note: 'Dados complementares do perfil de candidato externo'
-}
-
-Table colaborador {
-  id uuid [pk, default: `gen_random_uuid()`]
-  usuario_id uuid [not null, unique]
-  matricula varchar(50) [not null, unique]
-  cargo varchar(150) [not null]
-  departamento varchar(150) [not null]
+  // --- Campos de COLABORADOR (nullable) ---
+  matricula varchar(50) [unique]
+  cargo varchar(150)
+  departamento varchar(150)
   gestor_imediato_id uuid
-  email_corporativo varchar(255) [not null, unique]
-  data_admissao date [not null]
-  criado_em timestamp [not null, default: `now()`]
-  atualizado_em timestamp [not null, default: `now()`]
+  email_corporativo varchar(255) [unique]
+  data_admissao date
 
-  Note: 'Dados funcionais para usuários com perfil interno'
+  Note: 'Usuário de autenticação, acesso e perfil unificado por role'
 }
 
 // ============================================================
@@ -137,13 +133,13 @@ Table colaborador {
 
 Table curriculo {
   id uuid [pk, default: `gen_random_uuid()`]
-  candidato_id uuid [not null, unique]
+  usuario_id uuid [not null, unique]
   resumo_profissional text
   arquivo_url varchar(500)
   criado_em timestamp [not null, default: `now()`]
   atualizado_em timestamp [not null, default: `now()`]
 
-  Note: 'Currículo estruturado atrelado ao candidato'
+  Note: 'Currículo estruturado atrelado ao usuário candidato'
 }
 
 Table experiencia_profissional {
@@ -234,7 +230,7 @@ Table vaga {
 
 Table candidatura {
   id uuid [pk, default: `gen_random_uuid()`]
-  candidato_id uuid [not null]
+  usuario_id uuid [not null]
   vaga_id uuid [not null]
   protocolo varchar(50) [not null, unique]
   status status_candidatura [not null, default: 'NOVOS_INSCRITOS']
@@ -242,7 +238,7 @@ Table candidatura {
   atualizado_em timestamp [not null, default: `now()`]
 
   indexes {
-    (candidato_id, vaga_id) [unique]
+    (usuario_id, vaga_id) [unique]
   }
 
   Note: 'Inscrição de candidato em processos seletivos'
@@ -407,13 +403,11 @@ Table newsletter_inscricao {
 // RELACIONAMENTOS (FOREIGN KEYS)
 // ============================================================
 
-// Extensões de Perfil (1:1)
-Ref: candidato.usuario_id - usuario.id
-Ref: colaborador.usuario_id - usuario.id
-Ref: colaborador.gestor_imediato_id > colaborador.id
+// Auto-referência: gestor imediato de colaborador (1:N)
+Ref: usuario.gestor_imediato_id > usuario.id
 
 // Currículo do Candidato (1:1)
-Ref: curriculo.candidato_id - candidato.id
+Ref: curriculo.usuario_id - usuario.id
 
 // Elementos do Currículo (1:N)
 Ref: experiencia_profissional.curriculo_id > curriculo.id
@@ -428,7 +422,7 @@ Ref: curso_corporativo.criado_por > usuario.id
 Ref: noticia.criado_por > usuario.id
 
 // Vagas e Inscrições
-Ref: candidatura.candidato_id > candidato.id
+Ref: candidatura.usuario_id > usuario.id
 Ref: candidatura.vaga_id > vaga.id
 
 // Treinamentos Internos

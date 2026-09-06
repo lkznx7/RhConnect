@@ -3,6 +3,8 @@
 Documento de referência das medidas de segurança do **backend** do RH Connect (Spring Boot).
 Status: atualizado em setembro/2026, conforme implementação atual do módulo `modules/auth`.
 
+> **Modelo unificado de usuário:** Com a fusão dos perfis em uma única entidade `Usuario` (campos de CANDIDATO/COLABORADOR todos na mesma tabela), a proteção de dados sensíveis (`genero`, `pcd`, `cpf`, `expectativa_salarial` etc.) passa a ser responsabilidade dos **services**, aplicando controle de acesso por role e por ownership (o usuário só acessa os próprios dados; o RH acessa dados de candidatos no contexto da triagem). Consulte [entities.md](entities.md) para a definição dos campos condicionais à role.
+
 ---
 
 ## 1. Resumo

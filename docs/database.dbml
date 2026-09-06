@@ -14,40 +14,41 @@ Table usuario {
   criado_em timestamp [not null, default: `now()`]
   atualizado_em timestamp [not null, default: `now()`]
 
-  Note: 'Usuário de autenticação e acesso ao sistema'
-}
-
-Table candidato {
-  id uuid [pk, default: `gen_random_uuid()`]
-  usuario_id uuid [not null, unique, ref: > usuario.id]
-  data_nascimento date [not null]
+  // --- Campos de perfil CANDIDATO (nullable) ---
+  data_nascimento date
   genero varchar(50) // Mulher cis, Homem cis, Mulher trans, Homem trans, Não-binário, Prefiro não declarar
   pcd boolean [default: false]
-  cidade varchar(100) [not null]
-  uf char(2) [not null]
-  email_profissional varchar(255) [not null]
-  area_interesse varchar(255) [not null]
-  nivel_senioridade varchar(50) [not null]
-  expectativa_salarial varchar(50) [not null]
-  modalidade_trabalho_preferida varchar(50) [not null]
+  cidade varchar(100)
+  uf char(2)
+  email_profissional varchar(255)
+  area_interesse varchar(255)
+  nivel_senioridade varchar(50)
+  expectativa_salarial varchar(50)
+  modalidade_trabalho_preferida varchar(50)
   resumo_carreira text
   linkedin_url varchar(500)
   portfolio_url varchar(500)
   curriculo_arquivo_url varchar(500)
-  criado_em timestamp [not null, default: `now()`]
-  atualizado_em timestamp [not null, default: `now()`]
 
-  Note: 'Dados complementares do perfil de candidato'
+  // --- Campos de perfil COLABORADOR (nullable) ---
+  matricula varchar(50) [unique]
+  cargo varchar(150)
+  departamento varchar(150)
+  gestor_imediato_id uuid [ref: > usuario.id]
+  email_corporativo varchar(255) [unique]
+  data_admissao date
+
+  Note: 'Usuário unificado: autenticação + perfil completo condicionado à role'
 }
 
 Table curriculo {
   id uuid [pk, default: `gen_random_uuid()`]
-  candidato_id uuid [not null, unique, ref: > candidato.id]
+  usuario_id uuid [not null, unique, ref: > usuario.id]
   resumo_profissional text
   criado_em timestamp [not null, default: `now()`]
   atualizado_em timestamp [not null, default: `now()`]
 
-  Note: 'Currículo estruturado do candidato'
+  Note: 'Currículo estruturado do usuário candidato'
 }
 
 Table experiencia_profissional {
@@ -129,14 +130,14 @@ Table vaga {
 
 Table candidatura {
   id uuid [pk, default: `gen_random_uuid()`]
-  candidato_id uuid [not null, ref: > candidato.id]
+  usuario_id uuid [not null, ref: > usuario.id]
   vaga_id uuid [not null, ref: > vaga.id]
   protocolo varchar(50) [not null, unique]
   status varchar(50) [not null, default: 'NOVOS_INSCRITOS'] // NOVOS_INSCRITOS | TRIAGEM | ENTREVISTA_RH | ESTUDO_CASO | ENTREVISTA_LIDERANCA | PROPOSTA
   data_candidatura timestamp [not null, default: `now()`]
   atualizado_em timestamp [not null, default: `now()`]
 
-  Note: 'Registro de candidatura de um candidato a uma vaga'
+  Note: 'Registro de candidatura de um usuário candidato a uma vaga'
 }
 
 Table curso_corporativo {
@@ -163,7 +164,7 @@ Table curso_corporativo {
 Table inscricao_curso {
   id uuid [pk, default: `gen_random_uuid()`]
   curso_id uuid [not null, ref: > curso_corporativo.id]
-  candidato_id uuid [not null, ref: > candidato.id]
+  usuario_id uuid [not null, ref: > usuario.id]
   email_corporativo varchar(255) [not null]
   identificador_corporativo varchar(50) [not null] // Matrícula ou CPF
   gestor_aprovador varchar(255) [not null]
@@ -172,7 +173,7 @@ Table inscricao_curso {
   codigo_inscricao varchar(50) [not null, unique]
   data_inscricao timestamp [not null, default: `now()`]
 
-  Note: 'Inscrição de candidato/colaborador em curso'
+  Note: 'Inscrição de usuário candidato/colaborador em curso'
 }
 
 Table noticia {
@@ -271,11 +272,11 @@ Table newsletter_inscricao {
 // RELACIONAMENTOS
 // ============================================================
 
-// Candidato extende Usuario (1:1)
-Ref: candidato.usuario_id > usuario.id
+// Auto-referência: gestor imediato de colaborador (1:N)
+Ref: gestor_imediato_id > usuario.id  // já declarado inline na tabela usuario
 
-// Currículo pertence ao Candidato (1:1)
-Ref: curriculo.candidato_id > candidato.id
+// Currículo pertence ao Usuário candidato (1:1)
+Ref: curriculo.usuario_id > usuario.id
 
 // Sub-entidades do currículo (1:N)
 Ref: experiencia_profissional.curriculo_id > curriculo.id
@@ -287,16 +288,16 @@ Ref: idioma.curriculo_id > curriculo.id
 // Vaga criada por um usuário (N:1)
 Ref: vaga.criado_por > usuario.id
 
-// Candidatura: Candidato ↔ Vaga (N:N via tabela associativa)
-Ref: candidatura.candidato_id > candidato.id
+// Candidatura: Usuário candidato ↔ Vaga (N:N via tabela associativa)
+Ref: candidatura.usuario_id > usuario.id
 Ref: candidatura.vaga_id > vaga.id
 
 // Curso criado por um usuário (N:1)
 Ref: curso_corporativo.criado_por > usuario.id
 
-// Inscrição: Candidato ↔ Curso (N:N via tabela associativa)
+// Inscrição: Usuário ↔ Curso (N:N via tabela associativa)
 Ref: inscricao_curso.curso_id > curso_corporativo.id
-Ref: inscricao_curso.candidato_id > candidato.id
+Ref: inscricao_curso.usuario_id > usuario.id
 
 // Notícias criadas por um usuário (N:1)
 Ref: noticia.criado_por > usuario.id

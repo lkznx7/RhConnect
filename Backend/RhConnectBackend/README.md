@@ -29,13 +29,12 @@ src/main/java/br/com/rhconnect/
 │
 ├── modules/
 │   ├── auth/             # Autenticação (login, tokens)
-│   ├── candidato/        # Candidatos, currículos
+│   ├── usuarios/         # Perfil unificado (candidato/colaborador/admin), currículos
 │   ├── categorias/       # Categorias / tags
 │   ├── configuracoes/    # Configurações do sistema, LGPD
 │   ├── cursos/           # Cursos e inscrições
 │   ├── noticias/         # Notícias, anexos, newsletter
 │   ├── relatorios/       # Relatórios e métricas
-│   ├── usuarios/         # Gestão de usuários
 │   └── vagas/            # Vagas, candidaturas, triagem
 │
 ├── shared/               # Código compartilhado
