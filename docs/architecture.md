@@ -215,26 +215,26 @@ src/main/java/br/com/rhconnect/
 │   │   └── config/
 │   │       └── SecurityConfig.java
 │   │
-│   ├── candidato/                     # Módulo de Candidatos
+│   ├── usuarios/                      # Módulo de Usuários (perfil unificado)
 │   │   ├── controller/
-│   │   │   ├── CandidatoController.java
+│   │   │   ├── UsuarioController.java
 │   │   │   └── CurriculoController.java
 │   │   ├── service/
-│   │   │   ├── CandidatoService.java      # Interface pública
-│   │   │   ├── CandidatoServiceImpl.java
+│   │   │   ├── UsuarioService.java        # Interface pública
+│   │   │   ├── UsuarioServiceImpl.java
 │   │   │   ├── CurriculoService.java
 │   │   │   └── CurriculoServiceImpl.java
 │   │   ├── repository/
-│   │   │   ├── CandidatoRepository.java
+│   │   │   ├── UsuarioRepository.java
 │   │   │   └── CurriculoRepository.java
 │   │   ├── entity/
-│   │   │   ├── Candidato.java
+│   │   │   ├── Usuario.java
 │   │   │   ├── Curriculo.java
 │   │   │   ├── ExperienciaProfissional.java
 │   │   │   ├── FormacaoAcademica.java
 │   │   │   └── ...
 │   │   └── dto/
-│   │       ├── CandidatoResponse.java
+│   │       ├── UsuarioResponse.java
 │   │       └── CurriculoRequest.java
 │   │
 │   ├── vagas/                         # Módulo de Vagas
@@ -280,14 +280,6 @@ src/main/java/br/com/rhconnect/
 │   │   │   └── RelatorioService.java
 │   │   └── dto/
 │   │
-│   ├── usuarios/                      # Módulo de Usuários
-│   │   ├── controller/
-│   │   ├── service/
-│   │   │   └── UsuarioService.java
-│   │   ├── repository/
-│   │   ├── entity/
-│   │   └── dto/
-│   │
 │   ├── categorias/                    # Módulo de Categorias/Tags
 │   │   ├── controller/
 │   │   ├── service/
@@ -329,15 +321,15 @@ src/main/java/br/com/rhconnect/
 ** permitido:**
 
 ```
-// Módulo Vagas chama Módulo Candidato via interface
+// Módulo Vagas chama Módulo Usuarios via interface
 @Service
 public class CandidaturaServiceImpl implements CandidaturaService {
 
-    private final CandidatoService candidatoService; // ← injeta interface pública
+    private final UsuarioService usuarioService; // ← injeta interface pública
 
     public void criar(CandidaturaRequest req) {
-        CandidatoDTO candidato = candidatoService.obterPorId(req.getCandidatoId());
-        // usa dados do candidato, mas NÃO acessa CandidatoRepository
+        UsuarioDTO usuario = usuarioService.obterPorId(req.getUsuarioId());
+        // usa dados do usuário, mas NÃO acessa UsuarioRepository
     }
 }
 ```
@@ -349,7 +341,7 @@ public class CandidaturaServiceImpl implements CandidaturaService {
 @Service
 public class CandidaturaServiceImpl implements CandidaturaService {
 
-    private final CandidatoRepository candidatoRepository; // ← VIOLAÇÃO
+    private final UsuarioRepository usuarioRepository; // ← VIOLAÇÃO
 }
 ```
 
@@ -448,12 +440,12 @@ RH (usuário)
 ```
 RH (usuário) ou Candidato
   → Next.js (confirma candidatura)
-    → POST /api/candidatures { candidatoId, vagaId }
+    → POST /api/candidatures { usuarioId, vagaId }
       → CandidaturaController (valida formato)
         → CandidaturaService
-          → CandidatoService.obterPorId(candidatoId)  ← chamada ao módulo candidato
-          → VagaService.obterPorId(vagaId)            ← chamada ao módulo vagas
-          → Valida regras (vaga aberta? candidato completo?)
+          → UsuarioService.obterPorId(usuarioId)  ← chamada ao módulo usuarios
+          → VagaService.obterPorId(vagaId)        ← chamada ao módulo vagas
+          → Valida regras (vaga aberta? usuário com perfil candidato completo?)
           → CandidaturaRepository (insere no banco)
             → PostgreSQL
       ← { protocolo: "RH-2026-00123", mensagem: "..." }
@@ -499,7 +491,7 @@ Cada módulo do backend corresponde a um contexto de negócio. O frontend consom
 | Módulo | Pacote Java | Endpoints | Responsável por |
 |---|---|---|---|
 | **auth** | `modules.auth` | `/auth/*` | Login, registro, recuperação de senha, tokens |
-| **candidato** | `modules.candidato` | `/candidates/*` | Perfil, currículo, dados pessoais |
+| **usuarios** | `modules.usuarios` | `/users/*`, `/candidates/*` | Perfil unificado (candidato/colaborador/admin), currículo, dados pessoais |
 | **vagas** | `modules.vagas` | `/vagas/*`, `/candidatures/*` | Vagas, candidaturas, pipeline de triagem |
 | **cursos** | `modules.cursos` | `/cursos/*`, `/cursos/inscricoes/*` | Cursos, inscrições, presença |
 | **noticias** | `modules.noticias` | `/noticias/*`, `/noticias/newsletter` | Notícias, anexos, tags, newsletter |
@@ -515,10 +507,10 @@ O frontend organiza suas páginas por contexto de negócio, consumindo os endpoi
 | Páginas | Módulo Backend consumido |
 |---|---|
 | Página inicial, Sobre, Detalhes (01-08) | `vagas`, `cursos`, `noticias` (público) |
-| Envio de currículo, Confirmação (09-10) | `candidato` (Banco de Talentos) |
+| Envio de currículo, Confirmação (09-10) | `usuarios` (Banco de Talentos) |
 | Login, Registro, Senha (11-15) | `auth` |
-| Dashboard candidato, Perfil, Currículo, Candidaturas, Inscrições (16-20) | `candidato`, `vagas`, `cursos` |
-| Dashboard RH, Vagas, Triagem, Currículos (21-26) | `vagas`, `candidato` |
+| Dashboard candidato, Perfil, Currículo, Candidaturas, Inscrições (16-20) | `usuarios`, `vagas`, `cursos` |
+| Dashboard RH, Vagas, Triagem, Currículos (21-26) | `vagas`, `usuarios` |
 | Notícias CRUD, Categorias (27-30) | `noticias`, `categorias` |
 | Cursos CRUD, Inscrições (31-33) | `cursos` |
 | Relatórios (34) | `relatorios` |

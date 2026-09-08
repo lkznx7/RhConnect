@@ -156,7 +156,9 @@ Este documento define o contrato de comunicação entre o **Frontend (Next.js)**
 
 ---
 
-### 3.2 Candidato
+### 3.2 Perfil do Candidato (Módulo Usuarios)
+
+> **Nota:** O perfil de candidato não é mais uma entidade separada. Os endpoints abaixo são parte do módulo `usuarios`, operando sobre a entidade `Usuario` com perfil `CANDIDATO`. As rotas `/candidates/*` são mantidas por conveniência do frontend.
 
 #### GET /candidates/me/profile
 
