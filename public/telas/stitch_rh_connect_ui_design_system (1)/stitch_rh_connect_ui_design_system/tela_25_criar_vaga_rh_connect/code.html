@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed-dim":"#b3c7ec","on-background":"#191c1e","on-error":"#ffffff","surface-container-highest":"#e0e3e5","secondary-fixed":"#d5e3ff","on-primary-fixed":"#002021","inverse-surface":"#2d3133","on-primary":"#ffffff","outline-variant":"#bcc9c9","surface-bright":"#f7f9fb","primary-container":"#008285","surface":"#f7f9fb","surface-container-low":"#f2f4f6","on-secondary-fixed-variant":"#334766","surface-tint":"#00696c","primary-fixed-dim":"#6bd7da","on-error-container":"#93000a","tertiary-fixed-dim":"#aec9e7","outline":"#6d7979","error-container":"#ffdad6","on-tertiary":"#ffffff","on-surface-variant":"#3d4949","on-tertiary-container":"#fdfcff","secondary-container":"#c3d8fe","tertiary-fixed":"#cee5ff","on-secondary-container":"#4a5e7e","secondary":"#4b5f7f","surface-container-high":"#e6e8ea","on-primary-container":"#f3ffff","inverse-primary":"#6bd7da","inverse-on-surface":"#eff1f3","error":"#ba1a1a","tertiary":"#445e78","on-tertiary-fixed":"#001d32","primary-fixed":"#89f3f6","surface-variant":"#e0e3e5","tertiary-container":"#5c7792","on-surface":"#191c1e","on-primary-fixed-variant":"#004f51","on-tertiary-fixed-variant":"#2e4962","on-secondary-fixed":"#031c38","on-secondary":"#ffffff","background":"#f7f9fb","primary":"#006769","surface-container-lowest":"#ffffff","surface-dim":"#d8dadc","surface-container":"#eceef0"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xxs":"0.25rem","space-2xl":"3rem","space-xl":"2rem","space-md":"1rem","space-sm":"0.75rem","space-3xl":"4rem","margin-desktop":"3rem","gutter-mobile":"1rem","margin-tablet":"2rem","space-xs":"0.5rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","margin-mobile":"1rem"},"fontFamily":{"headline-md":["Hanken Grotesk"],"display":["Hanken Grotesk"],"body-md":["DM Sans"],"body-lg":["DM Sans"],"title-md":["DM Sans"],"label-md":["DM Sans"],"headline-lg":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"label-sm":["DM Sans"],"title-lg":["DM Sans"],"body-sm":["DM Sans"],"headline-lg-mobile":["Hanken Grotesk"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"display":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-md text-headline-md font-bold"><span class="material-symbols-outlined text-title-lg">hub</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">RH Connect</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Portal Interno</span></div></div><div class="px-space-md py-space-xs"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase text-outline font-semibold tracking-wider">Navegação Corporativa</div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-geral" href="#"><span class="material-symbols-outlined text-title-lg">dashboard</span><span>Dashboard Geral</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="gestao-de-vagas" href="#"><span class="material-symbols-outlined text-title-lg">work_outline</span><span>Gestão de Vagas</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#"><span class="material-symbols-outlined text-title-lg">badge</span><span>Banco de Talentos</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="noticias-e-comunicados" href="#"><span class="material-symbols-outlined text-title-lg">campaign</span><span>Notícias &amp; Comunicados</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="capacitacoes-e-cursos" href="#"><span class="material-symbols-outlined text-title-lg">school</span><span>Capacitações &amp; Cursos</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="relatorios-e-indicadores" href="#"><span class="material-symbols-outlined text-title-lg">analytics</span><span>Relatórios &amp; Indicadores</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracoes-e-usuarios" href="#"><span class="material-symbols-outlined text-title-lg">tune</span><span>Configurações &amp; Usuários</span></a></nav></div><div class="p-space-md"><div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Conexão Segura RH</span></div><span class="material-symbols-outlined text-label-md text-outline">verified_user</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md w-96"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-title-md pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Buscar colaboradores, vagas, processos..." type="text"/></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><button aria-label="Notificações" class="relative w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title-lg">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button aria-label="Ajuda e Suporte" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title-lg">help_outline</span></button></div><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm cursor-pointer group"><div class="flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors leading-tight">Gestão de RH</span><span class="font-label-sm text-label-sm text-outline">Administrador</span></div><img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-surface-container-high group-hover:ring-primary transition-all" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/><span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors text-title-md">expand_more</span></div></div></header><main class="relative pt-16 min-h-screen bg-background w-full px-space-xl"><div class="flex flex-col w-full pb-16">
+<!-- Top decorative blur ambiance -->
+<div class="relative w-full overflow-hidden pointer-events-none">
+<div class="absolute -top-12 right-12 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl"></div>
+<div class="absolute top-20 left-1/3 w-64 h-64 rounded-full bg-secondary-container/15 blur-2xl"></div>
+</div>
+<!-- Breadcrumb & Header Hero Context -->
+<div class="relative flex flex-col gap-space-xs pt-space-lg pb-space-xl">
+<!-- Breadcrumb -->
+<nav aria-label="Navegação Estrutural" class="flex items-center gap-space-xs text-outline font-label-md text-label-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-title-md">home</span>
+<span>Início</span>
+</a>
+<span class="text-surface-dim select-none">/</span>
+<a class="hover:text-primary transition-colors" href="#">Gestão de Vagas</a>
+<span class="text-surface-dim select-none">/</span>
+<span class="text-primary font-semibold">Nova Oportunidade</span>
+</nav>
+<!-- Page Title & Pitch -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mt-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wider uppercase font-bold">Módulo R&amp;S</span>
+<span class="text-outline font-label-sm text-label-sm">ID Provisório: #REQ-2024-098</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Criar Nova Vaga de Emprego</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Preencha os dados institucionais, requisitos técnicos e configurações de triagem para disponibilizar o processo seletivo no portal de carreiras e integrar com os avaliadores de Gente &amp; Gestão.
+        </p>
+</div>
+<!-- Quick Metrics Pill & Status Badge -->
+<div class="flex items-center gap-space-sm self-start md:self-auto bg-surface-container-lowest shadow-sm rounded-2xl p-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">tune</span>
+</div>
+<div class="flex flex-col pr-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Triagem Ativa</span>
+<span class="font-title-md text-title-md text-on-surface">Etapa 1 de 3 (Cadastro)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Architecture Layout -->
+<form class="flex flex-col gap-space-xl" id="jobForm" onsubmit="event.preventDefault();">
+<!-- SECTION 1: INFORMAÇÕES BÁSICAS -->
+<section class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-xl relative overflow-hidden">
+<div class="flex items-start justify-between pb-space-lg mb-space-lg bg-gradient-to-r from-surface-container-low to-transparent -mx-space-xl -mt-space-xl px-space-xl pt-space-xl">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">badge</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface">1. Informações Básicas da Posição</h2>
+<span class="font-body-sm text-body-sm text-outline">Definição estrutural, enquadramento corporativo e regime de trabalho</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-semibold">Obrigatório</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- Título do Cargo -->
+<div class="col-span-12 md:col-span-8 flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="cargoTitulo">
+<span>Título Oficial do Cargo</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all" id="cargoTitulo" name="cargoTitulo" placeholder="Ex.: Analista de Recursos Humanos Sênior" required="" type="text" value="Analista de Recursos Humanos Sênior"/>
+<span class="material-symbols-outlined text-outline absolute right-3 pointer-events-none text-title-md">work</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Utilize uma nomenclatura padrão para facilitar o ranqueamento SEO interno e externo.</span>
+</div>
+<!-- Departamento / Setor -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="departamento">
+<span>Departamento / Setor</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<select class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer" id="departamento" name="departamento">
+<option selected="" value="gente_gestao">Gente &amp; Gestão</option>
+<option value="tecnologia">Tecnologia &amp; Produto</option>
+<option value="operacoes">Operações &amp; Logística</option>
+<option value="comercial">Comercial &amp; Vendas</option>
+<option value="financeiro">Financeiro &amp; Controladoria</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-3 pointer-events-none text-title-md">arrow_drop_down</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Determina o centro de custo vinculado.</span>
+</div>
+<!-- Modelo de Trabalho (Pills estilizadas) -->
+<div class="col-span-12 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span>Modelo de Trabalho</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div aria-label="Modelo de Trabalho" class="grid grid-cols-1 sm:grid-cols-3 gap-space-md" role="radiogroup">
+<label class="group relative flex items-center gap-space-md p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all cursor-pointer select-none">
+<input class="peer sr-only" name="modeloTrabalho" type="radio" value="Presencial"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-on-surface peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">apartment</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Presencial</span>
+<span class="font-body-sm text-body-sm text-outline">Atuação 100% no escritório físico</span>
+</div>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+<label class="group relative flex items-center gap-space-md p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all cursor-pointer select-none">
+<input checked="" class="peer sr-only" name="modeloTrabalho" type="radio" value="Hibrido"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-on-surface peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">corporate_fare</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Híbrido</span>
+<span class="font-body-sm text-body-sm text-outline">Escala flexível (2x escritório, 3x remoto)</span>
+</div>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+<label class="group relative flex items-center gap-space-md p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all cursor-pointer select-none">
+<input class="peer sr-only" name="modeloTrabalho" type="radio" value="Remoto"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-on-surface peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">home_work</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">100% Remoto</span>
+<span class="font-body-sm text-body-sm text-outline">Qualquer localidade no território nacional</span>
+</div>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+</div>
+</div>
+<!-- Tipo de Contrato -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="tipoContrato">
+<span>Tipo de Contrato</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<select class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer" id="tipoContrato" name="tipoContrato">
+<option selected="" value="clt">CLT Efetivo</option>
+<option value="pj">Pessoa Jurídica (PJ)</option>
+<option value="estagio">Estágio Corporativo</option>
+<option value="temporario">Temporário</option>
+<option value="menor_aprendiz">Jovem / Menor Aprendiz</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-3 pointer-events-none text-title-md">contract</span>
+</div>
+</div>
+<!-- Localidade / Cidade - UF -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="localidade">
+<span>Localidade Principal (Cidade - UF)</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all" id="localidade" name="localidade" placeholder="Ex.: São Paulo - SP" type="text" value="São Paulo - SP"/>
+<span class="material-symbols-outlined text-outline absolute right-3 pointer-events-none text-title-md">pin_drop</span>
+</div>
+</div>
+<!-- Faixa Salarial / Remuneração + Toggle Switch -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant" for="faixaSalarial">Remuneração Base</label>
+<!-- Switch 'Exibir salário publicamente' -->
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<span class="font-label-sm text-label-sm text-outline">Exibir vaga</span>
+<div class="relative inline-flex items-center">
+<input checked="" class="sr-only peer" id="publicSalary" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[1px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-3.5 after:w-3.5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</label>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-title-md text-title-md text-outline">R$</span>
+<input class="w-full h-11 pl-10 pr-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all" id="faixaSalarial" name="faixaSalarial" placeholder="Ex.: 8.000,00 - 10.000,00" type="text" value="8.500,00 - 11.000,00"/>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: DETALHES & DESCRIÇÃO DA VAGA -->
+<section class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-xl relative overflow-hidden">
+<div class="flex items-start justify-between pb-space-lg mb-space-lg bg-gradient-to-r from-surface-container-low to-transparent -mx-space-xl -mt-space-xl px-space-xl pt-space-xl">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container/50 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-headline-sm">description</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface">2. Detalhes &amp; Descrição da Vaga</h2>
+<span class="font-body-sm text-body-sm text-outline">Narrativa da oportunidade, responsabilidades, competências e benefícios</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-primary/10 text-primary font-semibold">Engajamento Alto</span>
+</div>
+<div class="flex flex-col gap-space-lg">
+<!-- Resumo executivo / Pitch da vaga -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center justify-between" for="resumoPitch">
+<span class="flex items-center gap-1">Resumo Executivo / Pitch de Impacto <span class="text-error font-bold">*</span></span>
+<span class="text-outline font-label-sm text-label-sm" id="pitchCounter">178 / 300 caracteres</span>
+</label>
+<textarea class="w-full p-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all resize-none" id="resumoPitch" placeholder="Apresente um resumo dinâmico e cativante sobre a missão desta vaga e o impacto dela na organização..." rows="3">Buscamos um(a) Analista de Gente &amp; Gestão Sênior para liderar nossos programas de atração de lideranças estratégicas e consolidar trilhas de desenvolvimento alinhadas às metas de governança corporativa de 2025.</textarea>
+</div>
+<!-- Atividades e Responsabilidades (Rich Editor Simulado) -->
+<div class="flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span>Atividades &amp; Responsabilidades Principais</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="rounded-2xl bg-surface-container-low overflow-hidden shadow-inner">
+<!-- Barra de Ferramentas Rica -->
+<div class="flex flex-wrap items-center gap-1 p-space-xs bg-surface-container-high/60">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-lowest text-on-surface-variant transition-colors" title="Negrito" type="button">
+<span class="material-symbols-outlined text-title-md font-bold">format_bold</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-lowest text-on-surface-variant transition-colors" title="Itálico" type="button">
+<span class="material-symbols-outlined text-title-md">format_italic</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-lowest text-on-surface-variant transition-colors" title="Sublinhado" type="button">
+<span class="material-symbols-outlined text-title-md">format_underlined</span>
+</button>
+<div class="h-5 w-px bg-surface-container mx-1"></div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container-lowest text-primary transition-colors" title="Lista de Marcadores" type="button">
+<span class="material-symbols-outlined text-title-md">format_list_bulleted</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-lowest text-on-surface-variant transition-colors" title="Lista Numerada" type="button">
+<span class="material-symbols-outlined text-title-md">format_list_numbered</span>
+</button>
+<div class="h-5 w-px bg-surface-container mx-1"></div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-lowest text-on-surface-variant transition-colors" title="Inserir Link" type="button">
+<span class="material-symbols-outlined text-title-md">link</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-lowest text-on-surface-variant transition-colors" title="Desfazer" type="button">
+<span class="material-symbols-outlined text-title-md">undo</span>
+</button>
+</div>
+<!-- Área de edição -->
+<div class="min-h-[140px] p-space-md font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-colors" contenteditable="true">
+<p class="font-semibold mb-2">Principais atribuições da posição:</p>
+<ul class="list-disc pl-5 space-y-1">
+<li>Estruturar e executar processos seletivos ponta a ponta (end-to-end) para cargos corporativos e de liderança sênior;</li>
+<li>Gerenciar o relacionamento e alinhamento de perfil com gestores de linha (Hiring Managers);</li>
+<li>Conduzir análises de People Analytics sobre tempo de fechamento (Time-to-Hire) e qualidade da contratação;</li>
+<li>Auxiliar na formulação de planos de onboarding imersivo e avaliação do período de experiência;</li>
+<li>Desenvolver parcerias estratégicas com polos universitários e plataformas especializadas de recrutamento.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Tags Grid: Requisitos Obrigatórios & Diferenciais -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Requisitos Obrigatórios -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-2xl">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-title-md">check_circle</span>
+<span>Requisitos &amp; Qualificações Obrigatórias</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Pressione Enter</span>
+</div>
+<div class="flex flex-wrap gap-space-xs p-space-xs min-h-[96px] bg-surface-container-lowest rounded-xl items-start" id="tagsContainerObrigatorios">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md">
+                Graduação Completa em RH ou Psicologia
+                <button class="hover:text-error transition-colors leading-none" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-body-md">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md">
+                Experiência prévia em R&amp;S de liderança (5+ anos)
+                <button class="hover:text-error transition-colors leading-none" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-body-md">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md">
+                Metodologias Ágeis de Recrutamento
+                <button class="hover:text-error transition-colors leading-none" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-body-md">close</span>
+</button>
+</span>
+<input class="flex-1 min-w-[150px] h-8 bg-transparent text-body-sm font-body-sm focus:outline-none px-2" id="inputReqObrigatorio" onkeydown="if(event.key==='Enter'){event.preventDefault(); addTag(this, 'tagsContainerObrigatorios', 'primary');}" placeholder="+ Adicionar requisito..." type="text"/>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Critérios determinantes para aprovação na triagem automatizada.</span>
+</div>
+<!-- Diferenciais / Desejáveis -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-2xl">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-title-md">star</span>
+<span>Diferenciais / Competências Desejáveis</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Pressione Enter</span>
+</div>
+<div class="flex flex-wrap gap-space-xs p-space-xs min-h-[96px] bg-surface-container-lowest rounded-xl items-start" id="tagsContainerDiferenciais">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md">
+                Pós-graduação em Gestão Estratégica
+                <button class="hover:text-error transition-colors leading-none" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-body-md">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md">
+                Inglês Avançado para Entrevistas
+                <button class="hover:text-error transition-colors leading-none" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-body-md">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md">
+                Certificação DISC / Assessment
+                <button class="hover:text-error transition-colors leading-none" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-body-md">close</span>
+</button>
+</span>
+<input class="flex-1 min-w-[150px] h-8 bg-transparent text-body-sm font-body-sm focus:outline-none px-2" id="inputReqDiferencial" onkeydown="if(event.key==='Enter'){event.preventDefault(); addTag(this, 'tagsContainerDiferenciais', 'secondary');}" placeholder="+ Adicionar diferencial..." type="text"/>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Qualificações não eliminatórias que somam pontuação no ranking.</span>
+</div>
+</div>
+<!-- Benefícios Oferecidos (Checkboxes com ícones) -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant font-semibold flex items-center justify-between">
+<span>Pacote de Benefícios Oferecidos</span>
+<span class="font-label-sm text-label-sm text-primary font-normal cursor-pointer hover:underline" onclick="toggleAllBenefits(true)">Marcar Todos</span>
+</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm">
+<!-- Vale Refeição -->
+<label class="relative flex flex-col items-center justify-center p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-all text-center gap-2 group">
+<input checked="" class="peer sr-only" name="beneficios" type="checkbox" value="VR"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">restaurant</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Vale Refeição / Alimentação</span>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+<!-- Plano de Saúde -->
+<label class="relative flex flex-col items-center justify-center p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-all text-center gap-2 group">
+<input checked="" class="peer sr-only" name="beneficios" type="checkbox" value="Saude"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">medical_services</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Plano de Saúde &amp; Odonto</span>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+<!-- Seguro de Vida -->
+<label class="relative flex flex-col items-center justify-center p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-all text-center gap-2 group">
+<input checked="" class="peer sr-only" name="beneficios" type="checkbox" value="Seguro"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">security</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Seguro de Vida em Grupo</span>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+<!-- Gympass -->
+<label class="relative flex flex-col items-center justify-center p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-all text-center gap-2 group">
+<input checked="" class="peer sr-only" name="beneficios" type="checkbox" value="Gympass"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">fitness_center</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Gympass &amp; Bem-Estar</span>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+<!-- Auxílio Home Office -->
+<label class="relative flex flex-col items-center justify-center p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-all text-center gap-2 group">
+<input checked="" class="peer sr-only" name="beneficios" type="checkbox" value="HomeOffice"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">devices</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Auxílio Home Office</span>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+<!-- PLR -->
+<label class="relative flex flex-col items-center justify-center p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-all text-center gap-2 group">
+<input class="peer sr-only" name="beneficios" type="checkbox" value="PLR"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-outline group-hover:text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="material-symbols-outlined text-title-lg">paid</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">PLR / Bônus Anual</span>
+<div class="absolute inset-0 rounded-2xl pointer-events-none peer-checked:ring-2 peer-checked:ring-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CONFIGURAÇÕES DA VAGA & PUBLICAÇÃO -->
+<section class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-xl relative overflow-hidden">
+<div class="flex items-start justify-between pb-space-lg mb-space-lg bg-gradient-to-r from-surface-container-low to-transparent -mx-space-xl -mt-space-xl px-space-xl pt-space-xl">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">settings_suggest</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface">3. Configurações Operacionais &amp; Publicação</h2>
+<span class="font-body-sm text-body-sm text-outline">Prazos de inscrição, volumetria de vagas e nível de senioridade exigido</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-semibold">Parâmetros</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- Data limite para inscrições -->
+<div class="col-span-12 md:col-span-3 flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="dataLimite">
+<span>Prazo Final para Inscrições</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer" id="dataLimite" name="dataLimite" type="date" value="2025-04-30"/>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Fechamento automático às 23:59.</span>
+</div>
+<!-- Quantidade de Vagas -->
+<div class="col-span-12 md:col-span-3 flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="quantidadeVagas">
+<span>Quantidade de Vagas</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all" id="quantidadeVagas" max="50" min="1" name="quantidadeVagas" type="number" value="2"/>
+<span class="material-symbols-outlined text-outline absolute right-3 pointer-events-none text-title-md">groups</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Posições autorizadas pelo Financeiro.</span>
+</div>
+<!-- Nível de Experiência -->
+<div class="col-span-12 md:col-span-3 flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="nivelExperiencia">
+<span>Nível de Experiência</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<select class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer" id="nivelExperiencia" name="nivelExperiencia">
+<option value="estagiario">Estagiário</option>
+<option value="junior">Júnior</option>
+<option value="pleno">Pleno</option>
+<option selected="" value="senior">Sênior</option>
+<option value="especialista">Especialista / Consultor</option>
+<option value="lideranca">Liderança / Gestão</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-3 pointer-events-none text-title-md">grade</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Senioridade estrutural.</span>
+</div>
+<!-- Status Inicial da Vaga -->
+<div class="col-span-12 md:col-span-3 flex flex-col gap-space-xxs">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1" for="statusInicial">
+<span>Estado da Publicação</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<select class="w-full h-11 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 transition-all cursor-pointer" id="statusInicial" name="statusInicial">
+<option selected="" value="publicada">Publicada Imediatamente</option>
+<option value="rascunho">Salvar como Rascunho</option>
+<option value="agendada">Agendada para Data Futura</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-3 pointer-events-none text-title-md">publish</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Visibilidade na carreira externa.</span>
+</div>
+</div>
+</section>
+<!-- FOOTER ACTIONS: BARRA DE AÇÃO MODERNA INTEGRADA -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container inline-block"></span>
+<span>Autossalvamento corporativo ativo há 2 minutos.</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm w-full sm:w-auto justify-end">
+<!-- Salvar como Rascunho (Outline) -->
+<button class="flex items-center justify-center gap-2 px-space-lg py-2.5 rounded-xl text-secondary hover:bg-surface-container-high transition-all font-title-md text-title-md" id="btnDraft" type="button">
+<span class="material-symbols-outlined text-title-md">save_as</span>
+<span>Salvar como Rascunho</span>
+</button>
+<!-- Pré-visualizar Vaga (Secundário) -->
+<button class="flex items-center justify-center gap-2 px-space-lg py-2.5 rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all font-title-md text-title-md" id="btnPreview" type="button">
+<span class="material-symbols-outlined text-title-md">visibility</span>
+<span>Pré-visualizar Vaga</span>
+</button>
+<!-- Publicar Vaga Agora (Primário de Destaque) -->
+<button class="flex items-center justify-center gap-2 px-space-xl py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container shadow-md hover:shadow-lg transition-all font-title-md text-title-md" id="btnSubmit" type="submit">
+<span class="material-symbols-outlined text-title-md">rocket_launch</span>
+<span>Publicar Vaga Agora</span>
+</button>
+</div>
+</div>
+</form>
+<!-- MODAL DE PRÉ-VISUALIZAÇÃO RÁPIDA -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm hidden" id="previewModal" role="dialog">
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl max-w-2xl w-full max-h-[921px] overflow-y-auto p-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-sm">visibility</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pré-visualização da Vaga</h3>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container-high text-outline transition-colors" id="closePreview" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm py-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase font-bold w-max" id="previewSetor">Gente &amp; Gestão</span>
+<h2 class="font-headline-md text-headline-md text-on-surface" id="previewTitle">Analista de Recursos Humanos Sênior</h2>
+<div class="flex flex-wrap gap-x-space-md gap-y-1 text-outline font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-body-md text-primary">pin_drop</span> <span id="previewLocation">São Paulo - SP</span></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-body-md text-primary">contract</span> <span id="previewContract">CLT Efetivo</span></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-body-md text-primary">corporate_fare</span> <span id="previewModel">Híbrido</span></span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-body-md text-primary">payments</span> <span id="previewSalary">R$ 8.500,00 - 11.000,00</span></span>
+</div>
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low">
+<h4 class="font-title-md text-title-md text-on-surface mb-1">Resumo da Missão</h4>
+<p class="font-body-md text-body-md text-on-surface-variant" id="previewPitchText"></p>
+</div>
+</div>
+<div class="flex justify-end gap-space-sm pt-space-sm">
+<button class="px-space-lg py-2 rounded-xl bg-surface-container-high text-on-surface font-title-md text-title-md hover:bg-surface-container-highest transition-colors" id="closePreviewBtn" type="button">Fechar Pré-visualização</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Tag addition function
+  function addTag(inputElement, containerId, colorType) {
+    const val = inputElement.value.trim();
+    if (!val) return;
+
+    const container = document.getElementById(containerId);
+    const tag = document.createElement('span');
+    
+    if (colorType === 'primary') {
+      tag.className = 'inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md animate-fade-in';
+    } else {
+      tag.className = 'inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md animate-fade-in';
+    }
+
+    tag.innerHTML = `
+      ${val}
+      <button type="button" class="hover:text-error transition-colors leading-none" onclick="this.parentElement.remove()">
+        <span class="material-symbols-outlined text-body-md">close</span>
+      </button>
+    `;
+
+    container.insertBefore(tag, inputElement);
+    inputElement.value = '';
+  }
+
+  // Toggle All Benefits
+  function toggleAllBenefits(state) {
+    const checkboxes = document.querySelectorAll('input[name="beneficios"]');
+    checkboxes.forEach(cb => cb.checked = state);
+  }
+
+  // Character Counter for Pitch
+  const pitchText = document.getElementById('resumoPitch');
+  const counter = document.getElementById('pitchCounter');
+  if (pitchText && counter) {
+    pitchText.addEventListener('input', () => {
+      counter.textContent = `${pitchText.value.length} / 300 caracteres`;
+    });
+  }
+
+  // Preview Modal Interactive Logic
+  const previewModal = document.getElementById('previewModal');
+  const btnPreview = document.getElementById('btnPreview');
+  const closePreview = document.getElementById('closePreview');
+  const closePreviewBtn = document.getElementById('closePreviewBtn');
+
+  function openPreview() {
+    document.getElementById('previewTitle').textContent = document.getElementById('cargoTitulo').value || 'Cargo Não Definido';
+    const deptSelect = document.getElementById('departamento');
+    document.getElementById('previewSetor').textContent = deptSelect.options[deptSelect.selectedIndex].text;
+    document.getElementById('previewLocation').textContent = document.getElementById('localidade').value || 'Brasil';
+    
+    const contSelect = document.getElementById('tipoContrato');
+    document.getElementById('previewContract').textContent = contSelect.options[contSelect.selectedIndex].text;
+    
+    const selectedModel = document.querySelector('input[name="modeloTrabalho"]:checked');
+    document.getElementById('previewModel').textContent = selectedModel ? selectedModel.value : 'A Combinar';
+    
+    document.getElementById('previewSalary').textContent = 'R$ ' + (document.getElementById('faixaSalarial').value || 'Confidencial');
+    document.getElementById('previewPitchText').textContent = document.getElementById('resumoPitch').value;
+
+    previewModal.classList.remove('hidden');
+  }
+
+  function hidePreview() {
+    previewModal.classList.add('hidden');
+  }
+
+  if (btnPreview) btnPreview.addEventListener('click', openPreview);
+  if (closePreview) closePreview.addEventListener('click', hidePreview);
+  if (closePreviewBtn) closePreviewBtn.addEventListener('click', hidePreview);
+
+  // Submit Feedback Simulation
+  const form = document.getElementById('jobForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('btnSubmit');
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-title-md">progress_activity</span> <span>Publicando Vaga...</span>`;
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.innerHTML = `<span class="material-symbols-outlined text-title-md">check_circle</span> <span>Vaga Publicada com Sucesso!</span>`;
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-primary-container');
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.disabled = false;
+          btn.classList.remove('bg-primary-container');
+          btn.classList.add('bg-primary');
+        }, 3000);
+      }, 1200);
+    });
+  }
+
+  // Draft Simulation
+  const btnDraft = document.getElementById('btnDraft');
+  if (btnDraft) {
+    btnDraft.addEventListener('click', () => {
+      const originalHTML = btnDraft.innerHTML;
+      btnDraft.innerHTML = `<span class="material-symbols-outlined text-title-md">check</span> <span>Rascunho Salvo!</span>`;
+      setTimeout(() => {
+        btnDraft.innerHTML = originalHTML;
+      }, 2000);
+    });
+  }
+</script></main></div></body></html>
