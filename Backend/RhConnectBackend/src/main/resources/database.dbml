@@ -1,0 +1,315 @@
+
+Table usuario {
+  id uuid [pk, default: `gen_random_uuid()`]
+  nome_completo varchar(255) [not null]
+  email varchar(255) [not null, unique]
+  cpf varchar(14) [not null, unique]
+  telefone_whatsapp varchar(15) [not null]
+  senha_hash varchar(255) [not null]
+  perfil varchar(50) [not null] // CANDIDATO | COLABORADOR | ADMIN
+  objetivo_rh_connect varchar(255) [not null]
+  ativo boolean [not null, default: true]
+  criado_em timestamp [not null, default: `now()`]
+  atualizado_em timestamp [not null, default: `now()`]
+
+  Note: 'Usuário de autenticação e acesso ao sistema'
+}
+
+Table candidato {
+  id uuid [pk, default: `gen_random_uuid()`]
+  usuario_id uuid [not null, unique, ref: > usuario.id]
+  data_nascimento date [not null]
+  genero varchar(50) // Mulher cis, Homem cis, Mulher trans, Homem trans, Não-binário, Prefiro não declarar
+  pcd boolean [default: false]
+  cidade varchar(100) [not null]
+  uf char(2) [not null]
+  email_profissional varchar(255) [not null]
+  area_interesse varchar(255) [not null]
+  nivel_senioridade varchar(50) [not null]
+  expectativa_salarial varchar(50) [not null]
+  modalidade_trabalho_preferida varchar(50) [not null]
+  resumo_carreira text
+  linkedin_url varchar(500)
+  portfolio_url varchar(500)
+  curriculo_arquivo_url varchar(500)
+  criado_em timestamp [not null, default: `now()`]
+  atualizado_em timestamp [not null, default: `now()`]
+
+  Note: 'Dados complementares do perfil de candidato'
+}
+
+Table curriculo {
+  id uuid [pk, default: `gen_random_uuid()`]
+  candidato_id uuid [not null, unique, ref: > candidato.id]
+  resumo_profissional text
+  criado_em timestamp [not null, default: `now()`]
+  atualizado_em timestamp [not null, default: `now()`]
+
+  Note: 'Currículo estruturado do candidato'
+}
+
+Table experiencia_profissional {
+  id uuid [pk, default: `gen_random_uuid()`]
+  curriculo_id uuid [not null, ref: > curriculo.id]
+  cargo varchar(255) [not null]
+  empresa varchar(255) [not null]
+  periodo varchar(100) [not null]
+  descricao text
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Experiências profissionais do candidato'
+}
+
+Table formacao_academica {
+  id uuid [pk, default: `gen_random_uuid()`]
+  curriculo_id uuid [not null, ref: > curriculo.id]
+  curso varchar(255) [not null]
+  instituicao varchar(255) [not null]
+  nivel varchar(100) [not null]
+  periodo varchar(100)
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Formação acadêmica do candidato'
+}
+
+Table curso_certificacao {
+  id uuid [pk, default: `gen_random_uuid()`]
+  curriculo_id uuid [not null, ref: > curriculo.id]
+  nome varchar(255) [not null]
+  instituicao varchar(255)
+  ano integer
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Cursos e certificações do candidato'
+}
+
+Table competencia {
+  id uuid [pk, default: `gen_random_uuid()`]
+  curriculo_id uuid [not null, ref: > curriculo.id]
+  nome varchar(255) [not null]
+  nivel varchar(50)
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Competências e habilidades do candidato'
+}
+
+Table idioma {
+  id uuid [pk, default: `gen_random_uuid()`]
+  curriculo_id uuid [not null, ref: > curriculo.id]
+  idioma varchar(100) [not null]
+  nivel varchar(50) [not null]
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Idiomas do candidato'
+}
+
+Table vaga {
+  id uuid [pk, default: `gen_random_uuid()`]
+  titulo varchar(255) [not null]
+  descricao text [not null]
+  responsabilidades text [not null]
+  requisitos_obrigatorios text [not null]
+  diferenciais text
+  beneficios text [not null]
+  etapas_processo text [not null]
+  campus varchar(255) [not null]
+  area varchar(255) [not null]
+  tipo_contrato varchar(100) [not null]
+  modalidade_trabalho varchar(100) [not null]
+  numero_edital varchar(50) [not null, unique]
+  status varchar(50) [not null, default: 'RASCUNHO'] // RASCUNHO | PUBLICADA | EM_PROCESSO | ENCERRADA
+  criado_por uuid [not null, ref: > usuario.id]
+  criado_em timestamp [not null, default: `now()`]
+  atualizado_em timestamp [not null, default: `now()`]
+
+  Note: 'Vagas e publicações de emprego'
+}
+
+Table candidatura {
+  id uuid [pk, default: `gen_random_uuid()`]
+  candidato_id uuid [not null, ref: > candidato.id]
+  vaga_id uuid [not null, ref: > vaga.id]
+  protocolo varchar(50) [not null, unique]
+  status varchar(50) [not null, default: 'NOVOS_INSCRITOS'] // NOVOS_INSCRITOS | TRIAGEM | ENTREVISTA_RH | ESTUDO_CASO | ENTREVISTA_LIDERANCA | PROPOSTA
+  data_candidatura timestamp [not null, default: `now()`]
+  atualizado_em timestamp [not null, default: `now()`]
+
+  Note: 'Registro de candidatura de um candidato a uma vaga'
+}
+
+Table curso_corporativo {
+  id uuid [pk, default: `gen_random_uuid()`]
+  titulo varchar(255) [not null]
+  descricao text [not null]
+  area_conhecimento varchar(255) [not null]
+  modalidade varchar(100) [not null] // EAD_SINCRONO | PRESENCIAL | HIBRIDO | AUTOINSTRUCIONAL
+  nivel_proficiencia varchar(100) [not null]
+  instrutor varchar(255) [not null]
+  ementa text [not null]
+  metodologia text [not null]
+  corpo_docente text
+  configuracoes_turma jsonb [not null]
+  material_didatico_url varchar(500)
+  status varchar(50) [not null, default: 'RASCUNHO'] // RASCUNHO | PUBLICADO | EM_ANDAMENTO | CONCLUIDO
+  criado_por uuid [not null, ref: > usuario.id]
+  criado_em timestamp [not null, default: `now()`]
+  atualizado_em timestamp [not null, default: `now()`]
+
+  Note: 'Cursos corporativos do catálogo'
+}
+
+Table inscricao_curso {
+  id uuid [pk, default: `gen_random_uuid()`]
+  curso_id uuid [not null, ref: > curso_corporativo.id]
+  candidato_id uuid [not null, ref: > candidato.id]
+  email_corporativo varchar(255) [not null]
+  identificador_corporativo varchar(50) [not null] // Matrícula ou CPF
+  gestor_aprovador varchar(255) [not null]
+  status varchar(50) [not null, default: 'PENDENTE_APROVACAO'] // PENDENTE_APROVACAO | APROVADA | EM_ANDAMENTO | CONCLUIDA
+  progresso integer [default: 0]
+  codigo_inscricao varchar(50) [not null, unique]
+  data_inscricao timestamp [not null, default: `now()`]
+
+  Note: 'Inscrição de candidato/colaborador em curso'
+}
+
+Table noticia {
+  id uuid [pk, default: `gen_random_uuid()`]
+  titulo varchar(255) [not null]
+  corpo text [not null]
+  imagem_capa_url varchar(500)
+  tipo varchar(50) [not null] // ARTIGO | PORTARIA | AVISO
+  status varchar(50) [not null, default: 'RASCUNHO'] // RASCUNHO | PUBLICADA | ARQUIVADA
+  criado_por uuid [not null, ref: > usuario.id]
+  criado_em timestamp [not null, default: `now()`]
+  atualizado_em timestamp [not null, default: `now()`]
+
+  Note: 'Notícias, comunicados e portarias'
+}
+
+Table anexo_noticia {
+  id uuid [pk, default: `gen_random_uuid()`]
+  noticia_id uuid [not null, ref: > noticia.id]
+  topico varchar(255) [not null]
+  data date [not null]
+  status varchar(100) [not null]
+  arquivo_url varchar(500) [not null]
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Anexos e documentos de notícias'
+}
+
+Table noticia_tag {
+  id uuid [pk, default: `gen_random_uuid()`]
+  noticia_id uuid [not null, ref: > noticia.id]
+  tag_id uuid [not null, ref: > categoria.id]
+
+  Note: 'Relação N:N entre notícias e tags'
+}
+
+Table categoria {
+  id uuid [pk, default: `gen_random_uuid()`]
+  nome varchar(255) [not null]
+  tipo varchar(50) [not null] // VAGAS | CURSOS
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Categorias e tags de classificação'
+}
+
+Table vaga_categoria {
+  id uuid [pk, default: `gen_random_uuid()`]
+  vaga_id uuid [not null, ref: > vaga.id]
+  categoria_id uuid [not null, ref: > categoria.id]
+
+  Note: 'Relação N:N entre vagas e categorias'
+}
+
+Table curso_categoria {
+  id uuid [pk, default: `gen_random_uuid()`]
+  curso_id uuid [not null, ref: > curso_corporativo.id]
+  categoria_id uuid [not null, ref: > categoria.id]
+
+  Note: 'Relação N:N entre cursos e categorias'
+}
+
+Table configuracao_sistema {
+  id uuid [pk, default: `gen_random_uuid()`]
+  nome_empresa varchar(255) [not null]
+  logo_url varchar(500)
+  notificacao_email_imediata boolean [not null, default: true]
+  feedback_automatico boolean [not null, default: true]
+  conformidade_lgpd text
+  atualizado_em timestamp [not null, default: `now()`]
+
+  Note: 'Configurações globais do sistema'
+}
+
+Table contato_ouvidoria {
+  id uuid [pk, default: `gen_random_uuid()`]
+  nome_completo varchar(255) [not null]
+  email_institucional varchar(255) [not null]
+  setor_destino varchar(100) [not null] // DP_FOLHA | BENEFICIOS | RECRUTAMENTO | TREINAMENTO | OUVIDORIA
+  matricula varchar(50)
+  assunto varchar(255) [not null]
+  mensagem text [not null]
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Mensagens enviadas via formulário de ouvidoria'
+}
+
+Table newsletter_inscricao {
+  id uuid [pk, default: `gen_random_uuid()`]
+  email varchar(255) [not null, unique]
+  criado_em timestamp [not null, default: `now()`]
+
+  Note: 'Inscritos na newsletter de notícias'
+}
+
+// ============================================================
+// RELACIONAMENTOS
+// ============================================================
+
+// Candidato extende Usuario (1:1)
+Ref: candidato.usuario_id > usuario.id
+
+// Currículo pertence ao Candidato (1:1)
+Ref: curriculo.candidato_id > candidato.id
+
+// Sub-entidades do currículo (1:N)
+Ref: experiencia_profissional.curriculo_id > curriculo.id
+Ref: formacao_academica.curriculo_id > curriculo.id
+Ref: curso_certificacao.curriculo_id > curriculo.id
+Ref: competencia.curriculo_id > curriculo.id
+Ref: idioma.curriculo_id > curriculo.id
+
+// Vaga criada por um usuário (N:1)
+Ref: vaga.criado_por > usuario.id
+
+// Candidatura: Candidato ↔ Vaga (N:N via tabela associativa)
+Ref: candidatura.candidato_id > candidato.id
+Ref: candidatura.vaga_id > vaga.id
+
+// Curso criado por um usuário (N:1)
+Ref: curso_corporativo.criado_por > usuario.id
+
+// Inscrição: Candidato ↔ Curso (N:N via tabela associativa)
+Ref: inscricao_curso.curso_id > curso_corporativo.id
+Ref: inscricao_curso.candidato_id > candidato.id
+
+// Notícias criadas por um usuário (N:1)
+Ref: noticia.criado_por > usuario.id
+
+// Anexos de notícia (1:N)
+Ref: anexo_noticia.noticia_id > noticia.id
+
+// Tags de notícia (N:N via tabela associativa)
+Ref: noticia_tag.noticia_id > noticia.id
+Ref: noticia_tag.tag_id > categoria.id
+
+// Categorias de vaga (N:N via tabela associativa)
+Ref: vaga_categoria.vaga_id > vaga.id
+Ref: vaga_categoria.categoria_id > categoria.id
+
+// Categorias de curso (N:N via tabela associativa)
+Ref: curso_categoria.curso_id > curso_corporativo.id
+Ref: curso_categoria.categoria_id > categoria.id

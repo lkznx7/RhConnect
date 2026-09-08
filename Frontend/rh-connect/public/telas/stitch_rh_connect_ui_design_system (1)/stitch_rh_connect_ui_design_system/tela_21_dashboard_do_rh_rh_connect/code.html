@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#c3d8fe", "inverse-primary": "#6bd7da", "on-tertiary-fixed-variant": "#2e4962", "surface-tint": "#00696c", "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f4f6", "primary-fixed": "#89f3f6", "on-error": "#ffffff", "error-container": "#ffdad6", "on-primary-container": "#f3ffff", "on-tertiary-container": "#fdfcff", "primary-fixed-dim": "#6bd7da", "on-secondary-fixed": "#031c38", "error": "#ba1a1a", "secondary": "#4b5f7f", "on-surface-variant": "#3d4949", "primary": "#006769", "on-primary-fixed": "#002021", "on-secondary-container": "#4a5e7e", "on-surface": "#191c1e", "on-primary-fixed-variant": "#004f51", "inverse-on-surface": "#eff1f3", "on-secondary": "#ffffff", "surface-container-high": "#e6e8ea", "on-tertiary-fixed": "#001d32", "on-tertiary": "#ffffff", "surface-dim": "#d8dadc", "inverse-surface": "#2d3133", "surface-container": "#eceef0", "tertiary": "#445e78", "surface-container-highest": "#e0e3e5", "on-secondary-fixed-variant": "#334766", "background": "#f7f9fb", "secondary-fixed": "#d5e3ff", "tertiary-fixed": "#cee5ff", "surface-bright": "#f7f9fb", "primary-container": "#008285", "outline-variant": "#bcc9c9", "on-background": "#191c1e", "on-error-container": "#93000a", "on-primary": "#ffffff", "surface-variant": "#e0e3e5", "tertiary-fixed-dim": "#aec9e7", "secondary-fixed-dim": "#b3c7ec", "outline": "#6d7979", "tertiary-container": "#5c7792", "surface": "#f7f9fb" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-2xl": "3rem", "gutter-mobile": "1rem", "margin-desktop": "3rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "space-3xl": "4rem", "space-xl": "2rem", "margin-tablet": "2rem", "margin-mobile": "1rem", "space-xxs": "0.25rem", "space-sm": "0.75rem", "space-md": "1rem" }, "fontFamily": { "headline-lg": [ "Hanken Grotesk" ], "headline-lg-mobile": [ "Hanken Grotesk" ], "label-md": [ "DM Sans" ], "headline-sm": [ "Hanken Grotesk" ], "title-lg": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "body-md": [ "DM Sans" ], "body-sm": [ "DM Sans" ], "headline-md": [ "Hanken Grotesk" ], "title-md": [ "DM Sans" ], "label-sm": [ "DM Sans" ], "display": [ "Hanken Grotesk" ] }, "fontSize": { "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">RC</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight">RH Connect</span><span class="font-label-sm text-label-sm text-secondary leading-none">Gestão Corporativa</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-title-md"><a aria-current="page" class="px-space-md py-space-xs rounded-xl transition-colors bg-primary-container text-on-primary-container font-title-md" data-path="visao-geral" href="#">Visão Geral</a><a class="px-space-md py-space-xs rounded-xl font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="vagas-e-processos" href="#">Vagas &amp; Processos</a><a class="px-space-md py-space-xs rounded-xl font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#">Banco de Talentos</a><a class="px-space-md py-space-xs rounded-xl font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cursos-e-treinamentos" href="#">Cursos &amp; Treinamentos</a><a class="px-space-md py-space-xs rounded-xl font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="relatorios" href="#">Relatórios</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xxs rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Sistemas Operacionais 100%</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notificações" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span></button><button aria-label="Pesquisar" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined">search</span></button><button aria-label="Ajuda &amp; Suporte" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined">help_outline</span></button></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xxs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-title-md text-on-surface leading-tight">Juliana Ramos</span><span class="font-label-sm text-label-sm text-secondary leading-none">Diretora de RH</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 hidden lg:flex flex-col justify-between py-space-lg px-space-md"><div class="flex flex-col gap-space-xs"><span class="px-space-md pb-space-xs font-label-sm text-label-sm text-secondary uppercase tracking-wider">Navegação do Módulo</span><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-primary-container text-on-primary-container font-title-md"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-colors bg-primary-container text-on-primary-container font-title-md" data-path="visao-geral" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Visão Geral</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="vagas-e-processos" href="#"><span class="material-symbols-outlined text-[20px]">assignment_ind</span>Vagas &amp; Processos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#"><span class="material-symbols-outlined text-[20px]">badge</span>Banco de Talentos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cursos-e-treinamentos" href="#"><span class="material-symbols-outlined text-[20px]">school</span>Cursos &amp; Treinamentos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="relatorios" href="#"><span class="material-symbols-outlined text-[20px]">insights</span>Relatórios</a></nav></div><div class="flex flex-col gap-space-xs pt-space-lg border-t border-surface-container"><nav class="flex flex-col gap-space-xxs"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-[20px]">tune</span>Configurações</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="auditoria-e-compliance" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span>Conformidade &amp; LGPD</a></nav><div class="mt-space-md p-space-md rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">Ambiente Seguro</span><span class="font-body-sm text-body-sm text-secondary">Criptografia TLS 1.3</span></div><span class="material-symbols-outlined text-primary text-[20px]">lock</span></div></div></aside><div class="lg:pl-64"><main class="w-full pt-16 px-space-md lg:px-space-xl py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full gap-space-xl">
+<!-- Sub-cabeçalho de Boas-Vindas & Ações Estratégicas -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-secondary mb-space-xxs">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="font-label-md text-label-md capitalize" id="live-date-str">Quarta-feira, 24 de Outubro de 2024</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary opacity-60"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Ciclo Q4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Visão Geral de Gente &amp; Gestão</h1>
+<p class="font-body-md text-body-md text-secondary mt-space-xxs">Monitoramento executivo de recrutamento, retenção e satisfação corporativa em tempo real.</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="group flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md hover:bg-surface-container transition-all text-on-surface" type="button">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">campaign</span>
+<span class="font-title-md text-title-md font-medium">+ Novo Comunicado</span>
+</button>
+<button class="group flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-primary text-on-primary shadow-sm hover:shadow-md hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined group-hover:rotate-90 transition-transform">add</span>
+<span class="font-title-md text-title-md font-medium">+ Nova Vaga</span>
+</button>
+</div>
+</section>
+<!-- Grade de KPIs e Métricas -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Vagas Abertas -->
+<div class="relative overflow-hidden p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary">Total de Vagas Abertas</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display text-display text-on-surface font-bold tracking-tight">24</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">posições</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">work_outline</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">18 ativas</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">6 em triagem final</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-xs overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<!-- Card 2: Candidaturas do Mês -->
+<div class="relative overflow-hidden p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary">Candidaturas do Mês</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display text-display text-on-surface font-bold tracking-tight">1.480</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">group_add</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs">
+<span class="flex items-center text-primary font-title-md text-title-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+          +14.2%
+        </span>
+<span class="font-body-sm text-body-sm text-secondary">vs mês anterior</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-xs overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<!-- Card 3: SLA Fechamento -->
+<div class="relative overflow-hidden p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary">Tempo Médio de Fechamento</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display text-display text-on-surface font-bold tracking-tight">18</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">dias</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs">
+<span class="flex items-center text-primary font-title-md text-title-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+          -3 dias
+        </span>
+<span class="font-body-sm text-body-sm text-secondary">abaixo da meta estipulada</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-xs overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<!-- Card 4: Colaboradores & eNPS -->
+<div class="relative overflow-hidden p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary">Colaboradores &amp; eNPS</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display text-display text-on-surface font-bold tracking-tight">1.420</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">sentiment_satisfied</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-xxs rounded-lg bg-surface-container font-label-sm text-label-sm font-bold text-primary">eNPS +78</span>
+<span class="font-body-sm text-body-sm text-secondary">Zona de Excelência</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-xs overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</section>
+<!-- Seção Central: Funil de Recrutamento & Atalhos Rápidos -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Visualização de Funil de Recrutamento (2 Colunas no desktop) -->
+<div class="lg:col-span-2 p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Funil de Recrutamento</h2>
+<span class="px-space-xs py-space-xxs rounded-lg bg-surface-container font-label-sm text-label-sm text-secondary">30 dias</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-space-xxs">Evolução e conversão de candidatos por estágio seletivo</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-space-xs rounded-xl bg-surface-container-low font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">Taxas (%)</button>
+<button class="px-space-sm py-space-xs rounded-xl bg-primary text-on-primary font-label-md text-label-md" type="button">Absoluto</button>
+</div>
+</div>
+<!-- Funil Diagramático com SVG e Barras Métricas -->
+<div class="space-y-space-sm">
+<!-- Nível 1: Inscrições -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+              1. Inscrições Totais
+            </span>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md text-on-surface font-bold">1.480</span>
+<span class="text-secondary font-label-sm text-label-sm">100%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-4 rounded-xl overflow-hidden">
+<div class="h-full rounded-xl bg-secondary transition-all" style="width: 100%"></div>
+</div>
+</div>
+<!-- Nível 2: Triagem -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+              2. Triagem Curricular Aprovada
+            </span>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md text-on-surface font-bold">532</span>
+<span class="text-secondary font-label-sm text-label-sm">35.9%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-4 rounded-xl overflow-hidden">
+<div class="h-full rounded-xl bg-tertiary transition-all" style="width: 35.9%"></div>
+</div>
+</div>
+<!-- Nível 3: Entrevista RH -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+              3. Entrevista RH &amp; Fit Cultural
+            </span>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md text-on-surface font-bold">186</span>
+<span class="text-secondary font-label-sm text-label-sm">12.5%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-4 rounded-xl overflow-hidden">
+<div class="h-full rounded-xl bg-primary-container transition-all" style="width: 12.5%"></div>
+</div>
+</div>
+<!-- Nível 4: Avaliação Técnica -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+              4. Avaliação Técnica &amp; Desafio
+            </span>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md text-on-surface font-bold">64</span>
+<span class="text-secondary font-label-sm text-label-sm">4.3%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-4 rounded-xl overflow-hidden">
+<div class="h-full rounded-xl bg-primary transition-all" style="width: 4.3%"></div>
+</div>
+</div>
+<!-- Nível 5: Proposta Final -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-space-xs text-on-surface font-semibold">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-variant"></span>
+              5. Propostas / Contratações Efetivadas
+            </span>
+<div class="flex items-center gap-space-md">
+<span class="font-title-md text-title-md text-primary font-bold">28</span>
+<span class="text-primary font-label-sm text-label-sm font-semibold">1.8%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-4 rounded-xl overflow-hidden">
+<div class="h-full rounded-xl bg-primary-fixed-variant transition-all" style="width: 1.8%"></div>
+</div>
+</div>
+</div>
+<!-- Resumo Estratégico do Funil -->
+<div class="mt-space-lg p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Eficiência da Triagem automatizada reduziu o tempo de espera em <strong>42%</strong>.</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline whitespace-nowrap" href="#">Ver Detalhes do Pipeline →</a>
+</div>
+</div>
+<!-- Painel Lateral: Ações Rápidas & Destaques de Módulo -->
+<div class="flex flex-col gap-space-md">
+<!-- Card Atalhos Rápidos -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Atalhos Operacionais</h3>
+<span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">Acesso rápido aos fluxos corporativos prioritários.</p>
+<div class="flex flex-col gap-space-xs">
+<!-- Atalho 1: Banco de Talentos -->
+<a class="group flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-fixed group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-medium">Banco de Talentos</span>
+<span class="font-body-sm text-body-sm text-secondary">3.412 perfis indexados</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Atalho 2: Inscrições em Cursos -->
+<a class="group flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-medium">Academia Corporativa</span>
+<span class="font-body-sm text-body-sm text-secondary">8 turmas ativas neste mês</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Atalho 3: Exportar Relatórios -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-medium">Exportar Relatórios</span>
+<span class="font-body-sm text-body-sm text-secondary">Gente &amp; Desempenho</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs mt-space-xxs pt-space-xxs">
+<button class="flex items-center justify-center gap-space-xxs py-space-xs rounded-lg bg-surface-container-lowest hover:bg-surface-container font-label-sm text-label-sm text-on-surface shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">picture_as_pdf</span>
+                  Baixar PDF
+                </button>
+<button class="flex items-center justify-center gap-space-xxs py-space-xs rounded-lg bg-surface-container-lowest hover:bg-surface-container font-label-sm text-label-sm text-on-surface shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">table_chart</span>
+                  Planilha XLS
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Banner LGPD / Compliance -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Auditoria &amp; LGPD Ativas</span>
+<span class="font-body-sm text-body-sm text-secondary">Dados criptografados e anonimizados.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Seção Inferior Split: Processos Críticos (Tabela) & Últimas Candidaturas -->
+<section class="grid grid-cols-1 xl:grid-cols-3 gap-space-md">
+<!-- Tabela de Processos Seletivos Críticos (2 Colunas no XL) -->
+<div class="xl:col-span-2 p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Processos Seletivos Críticos</h3>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Vagas estratégicas com prazos próximos de fechamento</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="text-secondary hover:text-on-surface p-space-xxs rounded-lg hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">Ver todas (24)</a>
+</div>
+</div>
+<!-- Tabela Estruturada sem Bordas Rígidas -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-md text-label-md uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-xl">Vaga &amp; Especialidade</th>
+<th class="py-space-sm px-space-md">Departamento</th>
+<th class="py-space-sm px-space-md text-center">Inscritos</th>
+<th class="py-space-sm px-space-md">Prazo Limite</th>
+<th class="py-space-sm px-space-md rounded-r-xl text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 space-y-space-xxs">
+<!-- Linha 1 -->
+<tr class="group hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-title-md text-title-md text-on-surface font-medium">
+                  Tech Lead Full Stack
+                  <span class="block font-body-sm text-body-sm text-secondary">Nível Sênior • Remoto</span>
+</td>
+<td class="py-space-md px-space-md font-body-md text-body-md text-on-surface-variant">
+                  Engenharia &amp; TI
+                </td>
+<td class="py-space-md px-space-md text-center font-title-md text-title-md font-bold text-on-surface">
+                  142
+                </td>
+<td class="py-space-md px-space-md font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center gap-space-xxs text-error font-medium">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+                    27/Out (3 dias)
+                  </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-space-xxs px-space-sm py-space-xxs rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                    Urgência Alta
+                  </span>
+</td>
+</tr>
+<!-- Linha 2 -->
+<tr class="group hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-title-md text-title-md text-on-surface font-medium">
+                  Especialista em Remuneração &amp; Benefícios
+                  <span class="block font-body-sm text-body-sm text-secondary">Nível Pleno • Híbrido SP</span>
+</td>
+<td class="py-space-md px-space-md font-body-md text-body-md text-on-surface-variant">
+                  Recursos Humanos
+                </td>
+<td class="py-space-md px-space-md text-center font-title-md text-title-md font-bold text-on-surface">
+                  58
+                </td>
+<td class="py-space-md px-space-md font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center gap-space-xxs text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                    31/Out (7 dias)
+                  </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-space-xxs px-space-sm py-space-xxs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Em Entrevistas
+                  </span>
+</td>
+</tr>
+<!-- Linha 3 -->
+<tr class="group hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-title-md text-title-md text-on-surface font-medium">
+                  Gerente de Contas Estratégicas (B2B)
+                  <span class="block font-body-sm text-body-sm text-secondary">Nível Sênior • Presencial RJ</span>
+</td>
+<td class="py-space-md px-space-md font-body-md text-body-md text-on-surface-variant">
+                  Comercial &amp; Vendas
+                </td>
+<td class="py-space-md px-space-md text-center font-title-md text-title-md font-bold text-on-surface">
+                  89
+                </td>
+<td class="py-space-md px-space-md font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center gap-space-xxs text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                    04/Nov (11 dias)
+                  </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-space-xxs px-space-sm py-space-xxs rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Avaliação Técnica
+                  </span>
+</td>
+</tr>
+<!-- Linha 4 -->
+<tr class="group hover:bg-surface-container transition-colors">
+<td class="py-space-md px-space-md font-title-md text-title-md text-on-surface font-medium">
+                  Analista de Segurança da Informação
+                  <span class="block font-body-sm text-body-sm text-secondary">Nível Pleno • Remoto</span>
+</td>
+<td class="py-space-md px-space-md font-body-md text-body-md text-on-surface-variant">
+                  Governança &amp; TI
+                </td>
+<td class="py-space-md px-space-md text-center font-title-md text-title-md font-bold text-on-surface">
+                  34
+                </td>
+<td class="py-space-md px-space-md font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-center gap-space-xxs text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                    08/Nov (15 dias)
+                  </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-space-xxs px-space-sm py-space-xxs rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Triagem Inicial
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-body-sm text-secondary">
+<span>Mostrando 4 de 9 processos prioritários ativos</span>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Lista de Últimas Candidaturas Recebidas (1 Coluna) -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Últimas Candidaturas</h3>
+<span class="font-body-sm text-body-sm text-secondary">Atualizações em tempo real</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">person_search</span>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<!-- Candidato 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-11 h-11 rounded-full object-cover shrink-0" data-alt="Portrait photography of a professional Hispanic woman smiling confidently in a modern bright corporate office setting with soft teal lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYDzxNpnVGOfc4N_rTqqeCSctfzGWZPf5DLeqgGCfZYF_VcdYXwi1mToPKgbH9gzr3eIWBLu85aeiqoGJZdEnaO-O5jBad26Y3Q-6-NpZB78GsDVDjRcZxtBJEPrZIQW_Aif2TlCcpU3VQ4qWzD9YfDdTVh9OhKl0rdeC9_NVP89o1mahyo_XeJN_1GYEBDLofEy6SB5qB85_fL-skj7lhRFuSN6Y_cJVnQokrYo7zJKv7LMsR2w_2"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Mariana Albuquerque</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Tech Lead Full Stack</span>
+<div class="flex items-center gap-space-xxs mt-space-xxs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm font-bold text-primary">Match 94%</span>
+</div>
+</div>
+</div>
+<button class="ml-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-lowest hover:bg-primary hover:text-on-primary font-label-md text-label-md text-on-surface shadow-sm transition-colors whitespace-nowrap" type="button">
+              Avaliar
+            </button>
+</div>
+<!-- Candidato 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-11 h-11 rounded-full object-cover shrink-0" data-alt="Professional studio portrait of an African-descendant young man wearing glasses and a crisp navy button-up shirt, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr6MsTAdnF7QWWZCMSQPgjY73nHG7bpMEIV8oBTbLX2QLI5c0EM9pBVGKlPwqYgRTMl6h90vL2SNVRIpb88KC9vV9mik0o5nfX2tc4SkHRy3Rh5KifU-pnC4a4jYSFj5by1Qt96zPWr5-ABT7lP6ve_lynHn6eMeLbtzhPKm9coCBSUB3IYw8UTYGnDHoPjaHRVRAHuHQ_m3tHk67khkheb0WipR6PNkQ0lc49KoD3mujyRXpKp6uE"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Lucas Vasconcelos</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Esp. Remuneração</span>
+<div class="flex items-center gap-space-xxs mt-space-xxs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm font-bold text-primary">Match 88%</span>
+</div>
+</div>
+</div>
+<button class="ml-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-lowest hover:bg-primary hover:text-on-primary font-label-md text-label-md text-on-surface shadow-sm transition-colors whitespace-nowrap" type="button">
+              Avaliar
+            </button>
+</div>
+<!-- Candidato 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-11 h-11 rounded-full object-cover shrink-0" data-alt="Close up portrait of an East Asian professional woman with sleek styling in an executive modern workspace with soft natural depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-9CiNIN9jLSg6EoD7JVp3LUOEOxBAakYXeZ22wmOMoE1EawW7b6ibvl_POTtQ8DZumnmWLceod1D5yTXk-Ska9koPtug4mTXfsFsYTc8io03mj9afkML9uBhRL4A7Kyn5QPDBfPaIZhpcikHlMt_VgzelgCdq2bfGpxzIX4OcEsiu1yWrZywl76NF-N6oWlAS806646FBmVQOUEDedK4aFq6WNO7ZKGQG8Vc9HdqRpdoCSi_WmRlk"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Camila Zhang</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Gerente de Contas B2B</span>
+<div class="flex items-center gap-space-xxs mt-space-xxs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container">Match 91%</span>
+</div>
+</div>
+</div>
+<button class="ml-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-lowest hover:bg-primary hover:text-on-primary font-label-md text-label-md text-on-surface shadow-sm transition-colors whitespace-nowrap" type="button">
+              Avaliar
+            </button>
+</div>
+<!-- Candidato 4 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-secondary font-headline-sm font-bold shrink-0">
+                RA
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Rodrigo Azevedo</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Segurança da Info</span>
+<div class="flex items-center gap-space-xxs mt-space-xxs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">Match 79%</span>
+</div>
+</div>
+</div>
+<button class="ml-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-lowest hover:bg-primary hover:text-on-primary font-label-md text-label-md text-on-surface shadow-sm transition-colors whitespace-nowrap" type="button">
+              Avaliar
+            </button>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-center">
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-space-xxs" href="#">
+          Acessar Fila Completa de Triagem
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Script Inline para Atualização de Data Dinâmica e Micro-interações -->
+<script>
+    (function() {
+      const dateEl = document.getElementById('live-date-str');
+      if (dateEl) {
+        const now = new Date();
+        const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        dateEl.textContent = now.toLocaleDateString('pt-BR', options);
+      }
+    })();
+  </script>
+</div></main></div></body></html>

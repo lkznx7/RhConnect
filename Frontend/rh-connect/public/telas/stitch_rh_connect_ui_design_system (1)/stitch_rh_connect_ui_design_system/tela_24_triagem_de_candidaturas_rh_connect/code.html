@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#c3d8fe", "inverse-primary": "#6bd7da", "on-tertiary-fixed-variant": "#2e4962", "surface-tint": "#00696c", "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f4f6", "primary-fixed": "#89f3f6", "on-error": "#ffffff", "error-container": "#ffdad6", "on-primary-container": "#f3ffff", "on-tertiary-container": "#fdfcff", "primary-fixed-dim": "#6bd7da", "on-secondary-fixed": "#031c38", "error": "#ba1a1a", "secondary": "#4b5f7f", "on-surface-variant": "#3d4949", "primary": "#006769", "on-primary-fixed": "#002021", "on-secondary-container": "#4a5e7e", "on-surface": "#191c1e", "on-primary-fixed-variant": "#004f51", "inverse-on-surface": "#eff1f3", "on-secondary": "#ffffff", "surface-container-high": "#e6e8ea", "on-tertiary-fixed": "#001d32", "on-tertiary": "#ffffff", "surface-dim": "#d8dadc", "inverse-surface": "#2d3133", "surface-container": "#eceef0", "tertiary": "#445e78", "surface-container-highest": "#e0e3e5", "on-secondary-fixed-variant": "#334766", "background": "#f7f9fb", "secondary-fixed": "#d5e3ff", "tertiary-fixed": "#cee5ff", "surface-bright": "#f7f9fb", "primary-container": "#008285", "outline-variant": "#bcc9c9", "on-background": "#191c1e", "on-error-container": "#93000a", "on-primary": "#ffffff", "surface-variant": "#e0e3e5", "tertiary-fixed-dim": "#aec9e7", "secondary-fixed-dim": "#b3c7ec", "outline": "#6d7979", "tertiary-container": "#5c7792", "surface": "#f7f9fb" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-2xl": "3rem", "gutter-mobile": "1rem", "margin-desktop": "3rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "space-3xl": "4rem", "space-xl": "2rem", "margin-tablet": "2rem", "margin-mobile": "1rem", "space-xxs": "0.25rem", "space-sm": "0.75rem", "space-md": "1rem" }, "fontFamily": { "headline-lg": [ "Hanken Grotesk" ], "headline-lg-mobile": [ "Hanken Grotesk" ], "label-md": [ "DM Sans" ], "headline-sm": [ "Hanken Grotesk" ], "title-lg": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "body-md": [ "DM Sans" ], "body-sm": [ "DM Sans" ], "headline-md": [ "Hanken Grotesk" ], "title-md": [ "DM Sans" ], "label-sm": [ "DM Sans" ], "display": [ "Hanken Grotesk" ] }, "fontSize": { "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">RC</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight">RH Connect</span><span class="font-label-sm text-label-sm text-secondary leading-none">Gestão Corporativa</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-title-md"><a class="px-space-md py-space-xs rounded-xl font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="visao-geral" href="#">Visão Geral</a><a aria-current="page" class="px-space-md py-space-xs rounded-xl transition-colors bg-primary-container text-on-primary-container font-title-md" data-path="vagas-e-processos" href="#">Vagas &amp; Processos</a><a class="px-space-md py-space-xs rounded-xl font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#">Banco de Talentos</a><a class="px-space-md py-space-xs rounded-xl font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cursos-e-treinamentos" href="#">Cursos &amp; Treinamentos</a><a class="px-space-md py-space-xs rounded-xl font-title-md text-title-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="relatorios" href="#">Relatórios</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xxs rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Sistemas Operacionais 100%</span></div><div class="flex items-center gap-space-xs"><button aria-label="Notificações" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span></button><button aria-label="Pesquisar" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined">search</span></button><button aria-label="Ajuda &amp; Suporte" class="w-9 h-9 rounded-xl flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined">help_outline</span></button></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xxs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-title-md text-on-surface leading-tight">Juliana Ramos</span><span class="font-label-sm text-label-sm text-secondary leading-none">Diretora de RH</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 hidden lg:flex flex-col justify-between py-space-lg px-space-md"><div class="flex flex-col gap-space-xs"><span class="px-space-md pb-space-xs font-label-sm text-label-sm text-secondary uppercase tracking-wider">Navegação do Módulo</span><nav class="flex flex-col gap-space-xxs" data-active-classes="bg-primary-container text-on-primary-container font-title-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="visao-geral" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Visão Geral</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl transition-colors bg-primary-container text-on-primary-container font-title-md" data-path="vagas-e-processos" href="#"><span class="material-symbols-outlined text-[20px]">assignment_ind</span>Vagas &amp; Processos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#"><span class="material-symbols-outlined text-[20px]">badge</span>Banco de Talentos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cursos-e-treinamentos" href="#"><span class="material-symbols-outlined text-[20px]">school</span>Cursos &amp; Treinamentos</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="relatorios" href="#"><span class="material-symbols-outlined text-[20px]">insights</span>Relatórios</a></nav></div><div class="flex flex-col gap-space-xs pt-space-lg border-t border-surface-container"><nav class="flex flex-col gap-space-xxs"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-[20px]">tune</span>Configurações</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="auditoria-e-compliance" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span>Conformidade &amp; LGPD</a></nav><div class="mt-space-md p-space-md rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">Ambiente Seguro</span><span class="font-body-sm text-body-sm text-secondary">Criptografia TLS 1.3</span></div><span class="material-symbols-outlined text-primary text-[20px]">lock</span></div></div></aside><div class="lg:pl-64"><main class="w-full pt-16 px-space-md lg:px-space-xl py-space-lg bg-background min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg relative z-10">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Processo Ativo
+          </span>
+<span class="text-outline font-body-sm text-body-sm">·</span>
+<span class="text-secondary font-label-sm text-label-sm">Recrutamento Estratégico · Vaga Aberta</span>
+</div>
+<div class="flex items-baseline gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Analista de Recursos Humanos Pleno (DHO)
+          </h1>
+<span class="font-label-md text-label-md px-space-xs py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed">
+            Edital #2026-RH04
+          </span>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-3xl">
+          Foco em Desenvolvimento Humano e Organizacional, onboarding e trilhas de aprendizagem. Unidade Matriz — São Paulo (Híbrido).
+        </p>
+</div>
+<div class="flex items-center gap-space-xs self-start xl:self-center">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-title-md text-title-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">tune</span>
+          Configurar Vaga
+        </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-primary text-on-primary font-title-md text-title-md hover:bg-primary-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+          Adicionar Candidato
+        </button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-lg pt-space-md">
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">48</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Inscritos no Total</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">filter_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary font-semibold">14</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Em Triagem Ativa</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">video_chat</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-tertiary font-semibold">8</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Em Entrevista</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">handshake</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">3</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Em Fase de Proposta</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-xl w-fit">
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-title-md text-title-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">view_kanban</span>
+        Quadro Kanban
+      </button>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 rounded-lg text-secondary hover:text-on-surface font-title-md text-title-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+        Lista / Tabela
+      </button>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm flex-1 lg:justify-end">
+<div class="relative min-w-[240px] max-w-sm flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px] pointer-events-none">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-low focus:bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface outline-none transition-all shadow-inner focus:shadow-none" placeholder="Buscar candidato por nome ou formação..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<button class="h-10 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">stars</span>
+            Score Fit: <span class="font-semibold text-on-surface">&gt; 80%</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<button class="h-10 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+          Mais Filtros
+        </button>
+<div class="h-6 w-px bg-surface-container-highest mx-1"></div>
+<button class="h-10 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-dim text-on-surface font-title-md text-title-md flex items-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+          Ações em Massa
+        </button>
+</div>
+</div>
+</div>
+<div class="w-full overflow-x-auto pb-space-lg">
+<div class="flex items-start gap-space-md min-w-[1720px]">
+<div class="w-72 flex-shrink-0 flex flex-col gap-space-md">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Novos Inscritos</h2>
+</div>
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm font-semibold text-secondary">
+            16
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Close up professional portrait of a Brazilian young professional woman named Camila Viana smiling confident in office background with soft neutral lighting and warm teal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlHopV4514kB_Eu87E5Kc8tW5FP4YLUna-9UvjqNcidP-PBR1NbR19XXWcieqoaJX1QZ0vSnTgxSYJJHhFOIbZqjSbNhTtU8RMBCfzSoknuJB9dKB2tfkhbKB_ztCSUQkBgYKzV_5ctZM6m3W4Upt861bzgPQhftzDq6hCDUkOT0KKgVKKIqdXFU8nbeBI_G54LBh-jKah-8Gjl82gpGeEULKhexezZFSnU8bD4HniSlgLzhH2uZAY"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Camila Viana</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Ass. de Treinamento</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px]">drag_indicator</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span> Psicologia Organizacional
+              </span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">business</span> Totvs Brasil (2 anos)
+              </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Há 2h
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">
+                Prioritário
+              </span>
+</div>
+</div>
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Portrait of an afro-brazilian young man Rodrigo Rocha dressed in smart casual corporate shirt smiling calmly with daylight soft depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh2yLPNglHM4bNIc8V4sga1Q39GNPC4pQn5h0h6KWBK8j9_c_JPPJNKKr4uzGx4URMyYyMoQCLmWJccqNTQR9ythpf24OqKlONhouNtmj-i38VXPdrCMAVZN70B9d_kxp8XAgddwsgOLZhm1VqrLJz85VQCkyW5qfamvdcCWvCiT5E2yJBNntXwqxHchwl9CU0XO1tmOJOzZ6Ni_NiyQ-lFPPhbWt4lJrQaD2FR-8lAF-FlA9Bw-BL"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Rodrigo Rocha</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Analista RH Jr.</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px]">drag_indicator</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span> Admin. com Gestão de Pessoas
+              </span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">business</span> Grupo Fleury (1.5 anos)
+              </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Há 5h
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+                Indicação Interna
+              </span>
+</div>
+</div>
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Corporate headshot of Mariana Albuquerque modern professional woman with clean studio background wearing navy blazer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9DwMc8Is9lvJdQgScJ0OE_THRHBUmlhh6L1NuZuvslfDScpg9Niu2s3TEAumDt9L5VloxlY-xU-zZs1meIsRK98yk0IVgTXRf5QS3j4TxUuHI_lKsE7cgmjpDJFHH488i0WsrpZQVhha2SB9TGSXhU-YGMOpW1wEjRkY3xfye3uAgaO37E7mQXhc-bFjtsFdxd_-O0pVq9hyRgdEKXkJKHHBM0BzqAExm3xbJCOoQhQfqLfD8oziw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Mariana Albuquerque</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Consultora DHO Jr.</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px]">drag_indicator</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span> Pedagogia Corporativa (USP)
+              </span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">business</span> Natura &amp; Co (2 anos)
+              </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Ontem
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">
+                LinkedIn
+              </span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-72 flex-shrink-0 flex flex-col gap-space-md">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Triagem Curricular</h2>
+</div>
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-semibold">
+            14
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-title-md text-title-md text-on-primary-fixed font-semibold">
+                  TS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Thiago Santos</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Analista RH Pleno</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+                94% Fit
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Especialista em Gestão por Competências e avaliação 360°. Vivência com LMS Canvas e metodologias ágeis de D&amp;I.
+            </p>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 py-1.5 rounded-lg bg-surface-container-low hover:bg-error-container text-on-surface-variant hover:text-on-error-container font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+                Descartar
+              </button>
+<button class="flex-1 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+                Aprovar
+              </button>
+</div>
+</div>
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center font-title-md text-title-md text-on-tertiary-fixed font-semibold">
+                  BC
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Beatriz Castro</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Consultora RH Sênior</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+                88% Fit
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Forte bagagem em liderança transformacional, pesquisas de engajamento Gallup e desenho de carreira em Y.
+            </p>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 py-1.5 rounded-lg bg-surface-container-low hover:bg-error-container text-on-surface-variant hover:text-on-error-container font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+                Descartar
+              </button>
+<button class="flex-1 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+                Aprovar
+              </button>
+</div>
+</div>
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-title-md text-title-md text-on-secondary-fixed font-semibold">
+                  GF
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Gustavo Fonseca</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Analista DHO Pleno</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">
+                81% Fit
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Experiência com gamificação de treinamentos operacionais e métricas de Kirkpatrick até nível 3.
+            </p>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 py-1.5 rounded-lg bg-surface-container-low hover:bg-error-container text-on-surface-variant hover:text-on-error-container font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+                Descartar
+              </button>
+<button class="flex-1 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+                Aprovar
+              </button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-72 flex-shrink-0 flex flex-col gap-space-md">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Entrevista com RH</h2>
+</div>
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm font-semibold">
+            8
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-title-md text-title-md font-semibold">
+                  LP
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Larissa Prado</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">São Paulo — SP</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold">
+                91% Fit
+              </span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">video_camera_front</span>
+                Amanhã · 14:30 às 15:15
+              </div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Plataforma: MS Teams</span>
+<span class="font-medium text-on-surface-variant">Resp: Juliana R.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">link</span> Link Criado
+              </span>
+<button class="text-secondary hover:text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_calendar</span> Reagendar
+              </button>
+</div>
+</div>
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-title-md text-title-md font-semibold">
+                  FM
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Felipe Mendes</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Campinas — SP</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold">
+                85% Fit
+              </span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-tertiary">video_camera_front</span>
+                Hoje · 16:00 às 16:45
+              </div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Plataforma: Google Meet</span>
+<span class="font-medium text-on-surface-variant">Resp: Marcela T.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span> Em 45 min
+              </span>
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-sm" type="button">
+                Acessar Sala
+              </button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-72 flex-shrink-0 flex flex-col gap-space-md">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Estudo de Caso</h2>
+</div>
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm font-semibold text-secondary">
+            5
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim text-on-primary-fixed flex items-center justify-center font-title-md text-title-md font-semibold">
+                  AN
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Aline Nogueira</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Plano Trilha Liderança</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px]">drag_indicator</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Status de Envio:</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                  Entregue no prazo
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span> Trilha_Lideranca_RH.pdf
+              </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Restam 48h aval.
+              </span>
+<button class="text-primary hover:text-primary-container font-label-md text-label-md font-semibold flex items-center gap-1 transition-colors" type="button">
+                Avaliar Case
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-title-md text-title-md font-semibold">
+                  CL
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Caio Lourenço</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Redesenho de Onboarding</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px]">drag_indicator</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Status de Envio:</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium">
+                  Em avaliação técnica
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">draw</span> Parecer do comitê em aberto
+              </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">grading</span> 2/3 avaliações
+              </span>
+<button class="text-secondary hover:text-on-surface font-label-md text-label-md font-medium flex items-center gap-1 transition-colors" type="button">
+                Ver Pareceres
+              </button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-72 flex-shrink-0 flex flex-col gap-space-md">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-fixed-variant"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Entrevista com Liderança</h2>
+</div>
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm font-semibold text-secondary">
+            3
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-title-md text-title-md font-semibold">
+                  RM
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Renata Meireles</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Líder DHO &amp; Cult.</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+                96% Fit
+              </span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-secondary">Avaliador Executivo:</span>
+<span class="font-title-md text-title-md text-on-surface">Carlos Eduardo (Head Gente &amp; Gestão)</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1 font-medium mt-1">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span> Parecer Altamente Recomendado
+              </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-secondary">Realizada em 24/Out</span>
+<button class="px-space-sm py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-container font-label-md text-label-md font-semibold transition-colors" type="button">
+                Mover p/ Proposta
+              </button>
+</div>
+</div>
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-title-md text-title-md font-semibold">
+                  DO
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Danilo Oliveira</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Especialista Educação</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">
+                87% Fit
+              </span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-secondary">Status da Reunião:</span>
+<span class="font-title-md text-title-md text-on-surface">Agendada para 28/Out · 10:00</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Aguardando feedback
+              </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-secondary">Presencial Matriz</span>
+<button class="text-secondary hover:text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+                Ver Pauta
+              </button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-72 flex-shrink-0 flex flex-col gap-space-md">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Proposta / Contratação</h2>
+</div>
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-semibold">
+            2
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-title-md text-title-md font-bold">
+                  JS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Juliana Siqueira</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Proposta #2026-081</span>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Emissão:</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                  Proposta Aceita
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>Início previsto:</span>
+<span class="font-semibold text-on-surface">17/Nov/2026</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-4/5"></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary text-right">Admissão: 80% concluída</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="text-secondary hover:text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Ver Carta
+              </button>
+<button class="px-space-sm py-1 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors shadow-sm" type="button">
+                Gerar Kit Admissão
+              </button>
+</div>
+</div>
+<div class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-grab flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-title-md text-title-md font-semibold">
+                  GA
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Gabriel Andrade</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Proposta #2026-084</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[18px]">drag_indicator</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Emissão:</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+                  Aguardando Assinatura
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>Prazo de resposta:</span>
+<span class="font-semibold text-on-surface">Restam 24 horas</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="text-secondary hover:text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span> Reenviar
+              </button>
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-high hover:bg-surface-dim text-on-surface font-label-md text-label-md transition-colors" type="button">
+                Detalhes
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Tempo Médio de Fechamento</span>
+<span class="font-title-lg text-title-lg text-on-surface font-semibold">18 dias corridos</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container text-primary font-medium">-4 dias vs. meta</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">auto_graph</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Acurácia do Fit Cultural (IA)</span>
+<span class="font-title-lg text-title-lg text-on-surface font-semibold">91.4% de adesão</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container text-on-surface-variant font-medium">Algoritmo v4.2</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Compliance &amp; Auditoria</span>
+<span class="font-title-lg text-title-lg text-on-surface font-semibold">100% em conformidade LGPD</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container text-primary font-medium">Logs Seguros</span>
+</div>
+</div>
+</div></main></div></body></html>

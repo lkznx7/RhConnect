@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#bcc9c9", "on-secondary-fixed-variant": "#334766", "on-tertiary-fixed-variant": "#2e4962", "on-background": "#191c1e", "on-primary-container": "#f3ffff", "primary-fixed-dim": "#6bd7da", "on-secondary-container": "#4a5e7e", "on-primary": "#ffffff", "secondary-container": "#c3d8fe", "on-tertiary-container": "#fdfcff", "surface": "#f7f9fb", "inverse-surface": "#2d3133", "error-container": "#ffdad6", "inverse-on-surface": "#eff1f3", "background": "#f7f9fb", "on-secondary": "#ffffff", "on-surface-variant": "#3d4949", "outline": "#6d7979", "surface-dim": "#d8dadc", "surface-container": "#eceef0", "primary-container": "#008285", "on-tertiary": "#ffffff", "on-secondary-fixed": "#031c38", "on-error-container": "#93000a", "surface-container-high": "#e6e8ea", "on-primary-fixed": "#002021", "tertiary": "#445e78", "on-surface": "#191c1e", "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f4f6", "error": "#ba1a1a", "tertiary-fixed-dim": "#aec9e7", "secondary-fixed-dim": "#b3c7ec", "on-error": "#ffffff", "inverse-primary": "#6bd7da", "primary-fixed": "#89f3f6", "surface-container-highest": "#e0e3e5", "surface-tint": "#00696c", "primary": "#006769", "secondary": "#4b5f7f", "on-primary-fixed-variant": "#004f51", "tertiary-container": "#5c7792", "on-tertiary-fixed": "#001d32", "secondary-fixed": "#d5e3ff", "surface-bright": "#f7f9fb", "tertiary-fixed": "#cee5ff", "surface-variant": "#e0e3e5" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-3xl": "4rem", "margin-tablet": "2rem", "space-2xl": "3rem", "margin-mobile": "1rem", "gutter-desktop": "1.5rem", "space-xs": "0.5rem", "space-xxs": "0.25rem", "margin-desktop": "3rem", "space-sm": "0.75rem" }, "fontFamily": { "label-md": [ "DM Sans" ], "display": [ "Hanken Grotesk" ], "body-sm": [ "DM Sans" ], "headline-lg": [ "Hanken Grotesk" ], "title-md": [ "DM Sans" ], "title-lg": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "headline-lg-mobile": [ "Hanken Grotesk" ], "body-md": [ "DM Sans" ], "headline-sm": [ "Hanken Grotesk" ], "headline-md": [ "Hanken Grotesk" ], "label-sm": [ "DM Sans" ] }, "fontSize": { "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(16,42,67,0.05)]"><div class="h-28 w-full px-space-lg lg:px-margin-desktop flex flex-col justify-between"><div class="h-16 flex items-center justify-between"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold shadow-[0_2px_4px_rgba(0,103,105,0.2)]">RC</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">RH Connect</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Portal do Candidato</span></div></div><nav class="hidden md:flex items-center gap-space-lg pl-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="vagas-abertas" href="#">Vagas</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalogo-cursos" href="#">Cursos</a></nav></div><div class="flex items-center gap-space-md"><button aria-label="Notificações" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-8 w-[1px] bg-surface-container-high hidden sm:block"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden sm:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">Lucas Mendes</span><span class="font-label-sm text-label-sm text-primary leading-tight font-medium">Candidato / Aluno</span></div><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-fixed-dim ring-2 ring-surface-container-lowest"></span></div></div></div></div><div class="h-12 flex items-center justify-between overflow-x-auto"><nav class="flex items-center gap-space-xs pb-space-xxs" data-active-classes="bg-primary-container text-on-primary-container font-medium"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="visao-geral" href="#">Visão Geral</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="meu-perfil" href="#">Meu Perfil</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="meu-curriculo" href="#">Meu Currículo</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="minhas-candidaturas" href="#">Minhas Candidaturas</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all whitespace-nowrap" data-path="minhas-inscricoes" href="#">Minhas Inscrições</a></nav></div></div></header><main class="w-full pt-28 bg-surface min-h-[calc(100vh-140px)] px-space-lg lg:px-margin-desktop py-space-xl"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Banner / Editorial Action Bar -->
+<div class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Meu Currículo Profissional</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Última atualização: há 3 dias
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Mantenha seus dados sincronizados para potencializar a compatibilidade algorítmica com as vagas abertas.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-dim font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+        Visualizar Prévia em PDF
+      </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container shadow-sm font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+        Atualizar Documento Anexo
+      </button>
+</div>
+</div>
+<!-- Main Grid: Sidebar Profile File + Core Curricular Sections -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Document File Spotlight & Quick Stats (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Primary PDF Attachment Box -->
+<div class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center font-headline-sm">
+<span class="material-symbols-outlined text-[28px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface leading-snug">Currículo Master</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PDF Validado pelo Sistema</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-primary-fixed-dim/30 text-on-primary-fixed-variant font-label-sm text-label-sm">
+            Principal
+          </span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[210px]" title="Curriculo_Lucas_Mendes_2026.pdf">
+              Curriculo_Lucas_Mendes_2026.pdf
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.4 MB</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-full rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xxs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+              ATS Score 94%
+            </span>
+<span>Versão 4.2</span>
+</div>
+</div>
+<!-- Quick File Actions -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xxs">
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface text-center" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="font-label-sm text-label-sm mt-1">Baixar</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface text-center" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync</span>
+<span class="font-label-sm text-label-sm mt-1">Substituir</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container hover:bg-error-container text-on-surface hover:text-error transition-colors text-center" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span class="font-label-sm text-label-sm mt-1">Remover</span>
+</button>
+</div>
+</div>
+<!-- ATS Match Index / Visual Metric -->
+<div class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Compatibilidade do Perfil</span>
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+</div>
+<!-- Metric Visualization -->
+<div class="flex items-center gap-space-md">
+<div class="relative w-20 h-20 flex-shrink-0">
+<svg class="w-20 h-20 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface leading-none">92%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Índice</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xxs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Excelente Atração</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Seu currículo contempla 18 termos-chave demandados por vagas de DHO e People Analytics.</span>
+</div>
+</div>
+<div class="bg-secondary-fixed/40 rounded-xl p-space-sm text-on-secondary-fixed-variant flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+<span class="font-body-sm text-body-sm">Dica: Adicione certificação recente em People Analytics para atingir 98%.</span>
+</div>
+</div>
+<!-- Editorial Quote / Candidate Mission -->
+<div class="w-full bg-primary-container text-on-primary-container rounded-full p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed-dim">Filosofia Profissional</span>
+<p class="font-title-md text-title-md font-normal leading-relaxed italic text-on-primary">
+            "Transformar indicadores organizacionais em jornadas humanas de alto impacto, aliando rigor analítico à empatia corporativa."
+          </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold font-label-sm">
+            LM
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-primary">Lucas Mendes</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Gestão Estratégica &amp; DHO</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Curricular Sections (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Section 1: Resumo Profissional -->
+<section class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">1. Resumo Profissional</h2>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+            Editar
+          </button>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md text-on-surface font-body-md text-body-md leading-relaxed">
+          Profissional com mais de 6 anos de trajetória consolidada na condução estratégica de Recursos Humanos e Governança Corporativa. Forte atuação em Desenvolvimento Humano e Organizacional (DHO), diagnóstico de clima, implantação de ciclos contínuos de avaliação 360° e estruturação de People Analytics para predição de turnover e absenteísmo. Experiência de ponta a ponta na atração de talentos de alta complexidade e gestão de programas de estágio/trainee com foco em diversidade e inclusão.
+        </div>
+<div class="flex flex-wrap items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">insights</span>
+            Foco: People Analytics &amp; Retenção
+          </span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Modelo de Atuação: Híbrido ou Remoto</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Disponibilidade: Imediata</span>
+</div>
+</section>
+<!-- Section 2: Experiências Profissionais (Timeline) -->
+<section class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">work_history</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">2. Experiências Profissionais</h2>
+</div>
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+            Adicionar Cargo
+          </button>
+</div>
+<div class="flex flex-col gap-space-lg relative pl-2">
+<!-- Experience Item 1 (Atual) -->
+<div class="relative pl-space-lg">
+<!-- Timeline Marker -->
+<div class="absolute left-0 top-1 w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<div class="absolute left-[6px] top-5 bottom-0 w-0.5 bg-surface-container-high"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Analista de DHO Sênior</h3>
+<span class="font-body-md text-body-md text-primary font-medium">Grupo Nexus Global • São Paulo, SP (Híbrido)</span>
+</div>
+<span class="self-start sm:self-auto px-space-sm py-0.5 rounded-full bg-primary-fixed-dim/40 text-on-primary-fixed-variant font-label-sm text-label-sm">
+                  Mar 2023 – Atual (1 ano 8 meses)
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xxs leading-relaxed">
+                Liderança no redesenho do programa de onboarding executivo e gestão de trilhas de liderança situacional. Responsável pela governança de métricas de People Analytics integradas via Power BI, reduzindo o turnover do primeiro ano em 28%.
+              </p>
+<!-- Technologies / Skills Used -->
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Power BI</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Avaliação 360°</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Gestão de OKRs</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">ATS Kenoby/Senior</span>
+</div>
+</div>
+</div>
+<!-- Experience Item 2 -->
+<div class="relative pl-space-lg">
+<!-- Timeline Marker -->
+<div class="absolute left-0 top-1 w-3.5 h-3.5 rounded-full bg-surface-dim ring-4 ring-surface-container"></div>
+<div class="absolute left-[6px] top-5 bottom-0 w-0.5 bg-surface-container-high"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Especialista em Recrutamento &amp; Seleção</h3>
+<span class="font-body-md text-body-md text-secondary font-medium">Vanguard Soluções Digitais • Campinas, SP</span>
+</div>
+<span class="self-start sm:self-auto px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Jan 2021 – Fev 2023 (2 anos 2 meses)
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xxs leading-relaxed">
+                Gestão integral de vagas de Tecnologia e Operações Críticas. Implementação de funil de contratação estruturado no ATS Gupy com SLA médio de fechamento reduzido de 42 para 25 dias.
+              </p>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">ATS Gupy</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Hunting Ativo</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Entrevistas por Competência</span>
+</div>
+</div>
+</div>
+<!-- Experience Item 3 -->
+<div class="relative pl-space-lg">
+<!-- Timeline Marker -->
+<div class="absolute left-0 top-1 w-3.5 h-3.5 rounded-full bg-surface-dim ring-4 ring-surface-container"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Analista de Recursos Humanos Jr.</h3>
+<span class="font-body-md text-body-md text-secondary font-medium">Aliança Serviços Corporativos • São Paulo, SP</span>
+</div>
+<span class="self-start sm:self-auto px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                  Ago 2018 – Dez 2020 (2 anos 5 meses)
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xxs leading-relaxed">
+                Suporte à integração de novos colaboradores, controle de indicadores de turnover e absenteísmo, e aplicação de testes psicométricos e entrevistas de desligamento.
+              </p>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Legislação Trabalhista</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Onboarding</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">Excel Avançado</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Formação Acadêmica -->
+<section class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">3. Formação Acadêmica</h2>
+</div>
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+            Adicionar Formação
+          </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Degree 1 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wide">Pós-Graduação Lato Sensu</span>
+<h4 class="font-title-md text-title-md text-on-surface">Gestão Estratégica de Pessoas</h4>
+<span class="font-body-md text-body-md text-on-surface-variant">Universidade de São Paulo (USP)</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Concluído em 2022</span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Diploma Verificado
+              </span>
+</div>
+</div>
+<!-- Degree 2 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wide">Graduação • Bacharelado</span>
+<h4 class="font-title-md text-title-md text-on-surface">Psicologia Organizacional</h4>
+<span class="font-body-md text-body-md text-on-surface-variant">Universidade Presbiteriana Mackenzie</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Concluído em 2018</span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Diploma Verificado
+              </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Cursos e Certificações -->
+<section class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">4. Cursos e Certificações</h2>
+</div>
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+            Adicionar Certificação
+          </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Cert 1 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">Certificação DISC &amp; MBTI</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Metodologia Comportamental Aplicada</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-space-xs">Emitido em Nov 2023 • Sem Expiração</span>
+</div>
+<!-- Cert 2 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">People Analytics Executivo</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RH Connect Academy</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-space-xs">Emitido em Jul 2023 • Carga 80h</span>
+</div>
+<!-- Cert 3 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between gap-space-xs">
+<div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">Formação em Business Partner</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instituto de Governança RH</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-space-xs">Emitido em Fev 2022 • Carga 60h</span>
+</div>
+</div>
+</section>
+<!-- Section 5: Competências e Habilidades (Interactive Tags) -->
+<section class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">stars</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">5. Competências e Habilidades</h2>
+</div>
+<button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+            Gerenciar Tags
+          </button>
+</div>
+<!-- Hard Skills Group -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+            Hard Skills &amp; Ferramentas
+          </span>
+<div class="flex flex-wrap gap-space-xs">
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-md text-label-md text-on-surface" type="button">
+<span>Power BI</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-md text-label-md text-on-surface" type="button">
+<span>ATS Gupy</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-md text-label-md text-on-surface" type="button">
+<span>Legislação Trabalhista</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-md text-label-md text-on-surface" type="button">
+<span>SQL Básico</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-md text-label-md text-on-surface" type="button">
+<span>OKRs &amp; KPIs</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container hover:bg-surface-dim text-on-surface-variant font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+              Nova Habilidade
+            </button>
+</div>
+</div>
+<!-- Soft Skills Group -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+            Soft Skills &amp; Liderança
+          </span>
+<div class="flex flex-wrap gap-space-xs">
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-secondary-fixed/50 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors font-label-md text-label-md text-on-secondary-container" type="button">
+<span>Liderança Humanizada</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-secondary-fixed/50 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors font-label-md text-label-md text-on-secondary-container" type="button">
+<span>Comunicação Não-Violenta</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-secondary-fixed/50 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors font-label-md text-label-md text-on-secondary-container" type="button">
+<span>Gestão de Conflitos</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+<button class="group inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-secondary-fixed/50 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors font-label-md text-label-md text-on-secondary-container" type="button">
+<span>Visão Sistêmica</span>
+<span class="material-symbols-outlined text-[14px] opacity-40 group-hover:opacity-100">close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 6: Idiomas -->
+<section class="w-full bg-surface-container-lowest rounded-full p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">6. Idiomas</h2>
+</div>
+<button class="inline-flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+            Adicionar Idioma
+          </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- English -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Inglês</span>
+<span class="px-space-xs py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">
+                Avançado • C1
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Capacidade de conduzir apresentações corporativas, relatórios executivos e mediação de dinâmicas globais.
+            </p>
+<div class="flex items-center gap-1 pt-space-xxs">
+<div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-primary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+<!-- Spanish -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Espanhol</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">
+                Intermediário • B1
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Compreensão assertiva de documentação técnica, conversação profissional moderada e trocas interpessoais.
+            </p>
+<div class="flex items-center gap-1 pt-space-xxs">
+<div class="h-1.5 flex-1 bg-secondary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-secondary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-secondary rounded-full"></div>
+<div class="h-1.5 flex-1 bg-surface-container-highest rounded-full"></div>
+<div class="h-1.5 flex-1 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Persistent Bottom Action Bar -->
+<div class="sticky bottom-4 w-full bg-surface-container-lowest/95 backdrop-blur-md rounded-full p-space-md shadow-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm pl-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Todas as alterações são sincronizadas com suas candidaturas ativas.</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-space-xs px-space-lg py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+        Exportar para Candidatura
+      </button>
+<button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-space-xs px-space-xl py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container shadow-md font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+        Salvar Alterações do Currículo
+      </button>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_-1px_6px_rgba(16,42,67,0.03)]"><div class="w-full px-space-lg lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-headline-sm text-[12px] font-bold">RC</div><span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 RH Connect Governança &amp; Pessoas. Todos os direitos reservados.</span></div><div class="flex flex-wrap items-center gap-space-lg"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Conformidade LGPD</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidade de Dados</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Termos de Uso</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Suporte ao Candidato</a></div></div></footer></body></html>

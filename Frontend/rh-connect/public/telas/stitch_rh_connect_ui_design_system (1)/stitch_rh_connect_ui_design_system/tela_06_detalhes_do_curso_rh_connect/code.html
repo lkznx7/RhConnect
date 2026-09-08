@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"on-primary-fixed-variant":"#004f51","outline-variant":"#bcc9c9","inverse-primary":"#6bd7da","on-primary-fixed":"#002021","outline":"#6d7979","surface-container":"#eceef0","surface-dim":"#d8dadc","on-primary":"#ffffff","tertiary-fixed":"#cee5ff","on-secondary-fixed-variant":"#334766","on-secondary-container":"#4a5e7e","surface-tint":"#00696c","inverse-on-surface":"#eff1f3","secondary-container":"#c3d8fe","secondary-fixed-dim":"#b3c7ec","on-tertiary":"#ffffff","primary-container":"#008285","surface-container-low":"#f2f4f6","on-secondary":"#ffffff","on-error":"#ffffff","on-error-container":"#93000a","surface-variant":"#e0e3e5","background":"#f7f9fb","tertiary-container":"#5c7792","on-tertiary-container":"#fdfcff","surface-container-high":"#e6e8ea","inverse-surface":"#2d3133","on-surface-variant":"#3d4949","on-secondary-fixed":"#031c38","secondary-fixed":"#d5e3ff","tertiary":"#445e78","on-surface":"#191c1e","primary":"#006769","on-tertiary-fixed":"#001d32","surface":"#f7f9fb","surface-bright":"#f7f9fb","surface-container-highest":"#e0e3e5","primary-fixed-dim":"#6bd7da","error":"#ba1a1a","tertiary-fixed-dim":"#aec9e7","on-background":"#191c1e","primary-fixed":"#89f3f6","secondary":"#4b5f7f","error-container":"#ffdad6","on-primary-container":"#f3ffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#2e4962"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"3rem","space-lg":"1.5rem","space-2xl":"3rem","gutter-mobile":"1rem","margin-tablet":"2rem","space-3xl":"4rem","space-sm":"0.75rem","space-xs":"0.5rem","gutter-desktop":"1.5rem","space-xxs":"0.25rem","space-md":"1rem","space-xl":"2rem","margin-mobile":"1rem"},"fontFamily":{"title-md":["DM Sans"],"headline-lg":["Hanken Grotesk"],"label-sm":["DM Sans"],"headline-lg-mobile":["Hanken Grotesk"],"body-sm":["DM Sans"],"body-lg":["DM Sans"],"body-md":["DM Sans"],"label-md":["DM Sans"],"headline-sm":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"title-lg":["DM Sans"],"display":["Hanken Grotesk"]},"fontSize":{"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs" data-path="inicio" href="#"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-[0_1px_3px_0_rgba(16,42,67,0.04)]"><span class="material-symbols-outlined text-2xl">diversity_3</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">RH<span class="text-primary">Connect</span></span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase leading-none mt-1">Portal de Pessoas</span></div></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-title-md"><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-o-rh" href="#">Sobre o RH</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="oportunidades" href="#">Oportunidades</a><a aria-current="page" class="transition-colors text-primary font-title-md" data-path="cursos" href="#">Cursos</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="noticias" href="#">Notícias</a><a class="font-title-md text-title-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#">Banco de Talentos</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center font-label-md text-label-md px-space-md py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" data-path="cadastrar-curriculo" href="#">Cadastrar Currículo</a><a class="inline-flex items-center justify-center font-label-md text-label-md px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary transition-all shadow-[0_1px_3px_0_rgba(16,42,67,0.04)]" data-path="acessar-portal" href="#">Acessar Portal</a><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wkh8KYo23Nu0JTXwc9XM7_WFoTzhlx272Iehy0R149GXayYOv68YyK29MWhbsIJ9yUZsEjFFDC2Mk2TXbLVWU1dQfR6W7nTprZkggHKFl9Fu71XAsGnwqcKyBi3fDnIf4Nu81xuvb3EvynI67jXGNcQ-fSyGFjJzlgVT0FGAnSA1XTBLR9QwIg_nQvkhfTEHp_R9V1N_An1yWQq6JlbFqUF8nfsNFy1M2r2b1NTnaB1b7prHu3gHjuhGKXltoAidCPfHaKErzlrQ"/></div></div></div></header><main class="w-full pt-20 bg-background flex-grow"><div class="flex flex-col w-full">
+<!-- BREADCRUMB STRIP -->
+<div class="w-full bg-surface-container-lowest shadow-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-sm flex items-center justify-between text-on-surface-variant">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="inicio" href="#">
+<span class="material-symbols-outlined text-base">home</span>
+          Início
+        </a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" data-path="cursos" href="#">Cursos</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-title-md truncate max-w-xs md:max-w-md">Liderança Estratégica &amp; Gestão Humanizada</span>
+</nav>
+<div class="hidden sm:flex items-center gap-2 font-label-sm text-label-sm text-primary bg-secondary-container/40 px-3 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        Trilha Executiva 2024.2
+      </div>
+</div>
+</div>
+<!-- COURSE HERO INTRO -->
+<section class="w-full bg-gradient-to-b from-surface-container-lowest via-surface to-background pt-space-xl pb-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Hero Details -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Certificação Executiva
+            </span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+              Turma T-09 • Governança de Pessoas
+            </span>
+<span class="px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+              8 Vagas Disponíveis
+            </span>
+</div>
+<h1 class="font-display text-display text-on-surface leading-tight tracking-tight">
+            Liderança Estratégica &amp; Gestão Humanizada de Equipes
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Desenvolva inteligência relacional, resiliência tática e capacidade de construir equipes de alto desempenho sob princípios éticos, segurança psicológica e alcance preditivo de metas corporativas.
+          </p>
+<!-- Metric Highlights Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-xs">
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-xl">schedule</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Carga Horária</span>
+</div>
+<span class="font-title-lg text-title-lg text-on-surface">48 Horas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Encontros síncronos</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-xl">cast_for_education</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Modalidade</span>
+</div>
+<span class="font-title-lg text-title-lg text-on-surface">EAD Síncrono</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">MS Teams Executivo</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-xl">event</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Período de Aulas</span>
+</div>
+<span class="font-title-lg text-title-lg text-on-surface">02 Dez — 28 Jan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ter &amp; Qui • 19h às 21h</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-xl">workspace_premium</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Credenciamento</span>
+</div>
+<span class="font-title-lg text-title-lg text-on-surface">MEC &amp; RH Org</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Válido p/ Progressão</span>
+</div>
+</div>
+</div>
+<!-- Right Side: Course Graphic Showcase -->
+<div class="lg:col-span-4 relative">
+<div class="relative w-full h-80 rounded-2xl overflow-hidden shadow-xl bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A modern collaborative executive meeting room with diverse managers analyzing strategic organizational charts on digital screens, clean corporate lighting, soft teal and deep slate blue tones, minimal high-end atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF2iBmJFYuLYHiByB15ioWUuTouLhZxRq2z4-MbHAzMwoDJk-NevI5AxHIVEqAOQnRfo4XKN034yw97i91Y5P9cgZxUvUh-3Ky-mbQuBcYViPFYOUBCCH0SxDt5_urd_ENyWYjyeKoQhMdhGIAHKMyOXk6-BIK8Ly6BHBgM5xv7rM95EKM3KvQcrfFvLEe6_BRiJFB39ibjgtvCSu8yLdcE6GzmfThesQn42RJd_E9x75Z3AdDTmBf"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-md">
+<span class="material-symbols-outlined text-xl">play_arrow</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md leading-tight text-on-primary">Vídeo Teaser Oficial</span>
+<span class="font-body-sm text-body-sm opacity-90 text-on-primary">Apresentação da Diretoria (2m 15s)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-lowest/20 backdrop-blur-md text-on-primary">HD</span>
+</div>
+</div>
+<!-- Subtle Trust Badge -->
+<div class="mt-space-sm p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-lg">star_rate</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-title-md text-title-md text-on-surface">
+                4.96 <span class="text-outline text-xs">/ 5.0</span>
+<div class="flex text-amber-500 ml-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avaliado por 420+ gestores formados</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN DUAL COLUMN WORKSPACE -->
+<div class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT / MAIN CONTENT AREA (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-2xl">
+<!-- SECTION 1: SOBRE O CURSO E COMPETÊNCIAS -->
+<section class="bg-surface-container-lowest p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Sobre o Curso &amp; Objetivos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Propósito acadêmico corporativo e impactos no ecossistema de negócios</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase px-3 py-1 bg-surface-container rounded-full text-on-surface-variant font-semibold">
+              Ciclo Contínuo
+            </span>
+</div>
+<div class="font-body-lg text-body-lg text-on-surface-variant space-y-space-sm leading-relaxed">
+<p>
+              As transformações no ambiente corporativo contemporâneo exigem que a liderança vá além do comando e controle técnico. Este programa avançado foi arquitetado pela Escola Corporativa RH Connect para capacitar líderes em posições de tomada de decisão com ferramental prático de segurança psicológica, governança inclusiva e orquestração de entregas de alto impacto.
+            </p>
+<p>
+              Durante 48 horas de imersão síncrona orientada a estudos de caso reais de nossa organização, os participantes vivenciarão dinâmicas de calibragem de equipe, mitigação de atritos interpessoais e formulação de metas com o modelo OKR aliado a escuta ativa empática.
+            </p>
+</div>
+<!-- Competências Desenvolvidas -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface">Competências Estratégicas Desenvolvidas</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">verified_user</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Segurança Psicológica Ativa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Criação de atmosferas propícias à inovação sem medo de punição por erros calculados.</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">sync_alt</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Feedback Construtivo 360°</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aplicação do modelo SBI (Situação-Comportamento-Impacto) com regularidade mensal.</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">handshake</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Comunicação Não-Violenta (CNV)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Desescalonamento tático de crises e condução de conversas difíceis sem atrito de vínculo.</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">monitoring</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block">Gestão por OKRs Humanizados</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Alinhamento de indicadores operacionais sem sobrecarga física ou fadiga crônica da equipe.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: EMENTA E MÓDULOS (ACORDEOM TIMELINE) -->
+<section class="bg-surface-container-lowest p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Ementa &amp; Módulos Programáticos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Estrutura cronológica dividida em 4 eixos estruturantes de aprendizagem</p>
+</div>
+</div>
+<button class="font-label-md text-label-md px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors flex items-center gap-1" id="toggleAllBtn" onclick="toggleAllModules()">
+<span class="material-symbols-outlined text-base">unfold_more</span>
+              Expandir Todos
+            </button>
+</div>
+<!-- Modulos Interactive Timeline -->
+<div class="flex flex-col gap-space-sm" id="accordion-container">
+<!-- Modulo 1 -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container transition-colors" onclick="toggleModule('mod1')">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-title-md text-title-md flex items-center justify-center shrink-0">1</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Módulo 1: Fundamentos de Cultura e Segurança Psicológica</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Horas • 3 Aulas • Casos Amy Edmondson &amp; Google Project Aristotle</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-mod1">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md pt-space-xs flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant" id="content-mod1">
+<p class="text-sm">Exploração analítica sobre vulnerabilidade da liderança, confiança interpessoal em times distribuídos e arquitetura de um ambiente sem retaliação intelectual.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-2 text-xs font-label-md">
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Diagnóstico de time
+                  </div>
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Protocolo de erro seguro
+                  </div>
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Dinâmica de vulnerabilidade
+                  </div>
+</div>
+</div>
+</div>
+<!-- Modulo 2 -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container transition-colors" onclick="toggleModule('mod2')">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-title-md text-title-md flex items-center justify-center shrink-0">2</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Módulo 2: Feedback Contínuo e Governança com OKRs</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Horas • 3 Aulas • Rituais 1:1, Calibração de Desempenho e Metas</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-mod2">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md pt-space-xs flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant" id="content-mod2">
+<p class="text-sm">Implementação pragmática de reuniões one-on-one com cadência semanal, alinhamento de entregáveis através de Key Results transparentes e erradicação do microgerenciamento.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-2 text-xs font-label-md">
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Roteiros para 1-on-1s
+                  </div>
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Matriz 9-Box atualizada
+                  </div>
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> OKRs vs. SLAs internos
+                  </div>
+</div>
+</div>
+</div>
+<!-- Modulo 3 -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container transition-colors" onclick="toggleModule('mod3')">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-title-md text-title-md flex items-center justify-center shrink-0">3</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Módulo 3: Comunicação Não-Violenta e Mediação de Conflitos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Horas • 3 Aulas • Psicologia Organizacional e Desescalada</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-mod3">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md pt-space-xs flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant" id="content-mod3">
+<p class="text-sm">Desenvolvimento dos quatro passos de Marshall Rosenberg: observação neutra, sentimento desarmado, necessidade identificada e pedido explícito negociável.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-2 text-xs font-label-md">
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Roleplay de atrito crítico
+                  </div>
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Mediação interdepartamental
+                  </div>
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Canal de Ouvidoria interna
+                  </div>
+</div>
+</div>
+</div>
+<!-- Modulo 4 -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
+<button class="w-full text-left p-space-md flex items-center justify-between hover:bg-surface-container transition-colors" onclick="toggleModule('mod4')">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-title-md text-title-md flex items-center justify-center shrink-0">4</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Módulo 4: Projeto Prático de Gestão &amp; Bancada Final</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Horas • Elaboração e Apresentação de Plano Real de Transformação</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="icon-mod4">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md pt-space-xs flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant" id="content-mod4">
+<p class="text-sm">Mentoria individual e coletiva para que cada líder estruture o 'Plano de Intervenção de Equipe 2025', auditado pela banca examinadora de DHO Corporativo.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-2 text-xs font-label-md">
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Pitching para diretoria
+                  </div>
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Canvas de Clima Organizacional
+                  </div>
+<div class="p-2 bg-surface-container-lowest rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Certificado registrado
+                  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: METODOLOGIA E AVALIAÇÃO -->
+<section class="bg-surface-container-lowest p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">fact_check</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Metodologia &amp; Critérios Avaliativos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Requisitos regulamentares para emissão do diploma e convalidação funcional</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Frequência Obrigatória</span>
+<span class="material-symbols-outlined text-primary">pin_invoke</span>
+</div>
+<div class="font-display text-display text-on-surface leading-none my-1">75%</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Presença síncrona obrigatória nas salas Zoom/Teams com câmera ativa para validação de presença.</p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Nota de Aprovação</span>
+<span class="material-symbols-outlined text-primary">grade</span>
+</div>
+<div class="font-display text-display text-on-surface leading-none my-1">7.0+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Média ponderada entre quizzes por módulo (40%) e apresentação do Projeto de Gestão (60%).</p>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Certificação Digital</span>
+<span class="material-symbols-outlined text-primary">qr_code_2</span>
+</div>
+<div class="font-display text-display text-on-surface leading-none my-1">LGPD</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Emissão de certificado assinado digitalmente com hash criptográfico e validação via LinkedIn.</p>
+</div>
+</div>
+<!-- Metodologia Pedagógica Info -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">tips_and_updates</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Metodologia 'Learning by Doing' (Andragogia Ativa)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Todas as sessões contam com 45 minutos de fundamentação conceitual seguidos de 75 minutos dedicados à resolução de dilemas gerenciais em salas temáticas (breakout rooms) supervisionadas pelo corpo docente.
+              </p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: CORPO DOCENTE / INSTRUTORES -->
+<section class="bg-surface-container-lowest p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">co_present</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Corpo Docente Especializado</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Líderes de mercado com vivência prática em gestão de mudanças e RH estratégico</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Docente 1 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-md">
+<img class="w-full h-full object-cover" data-alt="Professional studio portrait of an experienced corporate female executive in her forties with warm approachable smile, wearing tailored business attire, neutral crisp studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkSuR0GWXzJVatnTqdA0o3WhpWRx83HzM0udca08Y_lh1VNYK4gm1e_EjxbRaeK3DeDPIkHR-kjIQ4mmV0yQJIHnNJw3Li-UOaUwAom_KSfEt9-jFz9OzdOwzdYhEaP7aCvt0YEs0wbqqC314UUigJZbvGQQhPy3baEblvUaMjse7u2pnMMSUskFXGw3Qo4NtjqtPUAa_3db_8BdPo7qHQp7VXEmaPr5SfITZm76olAEjypfDZgrtx"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-lg text-title-lg text-on-surface">Dra. Helena Valente</span>
+<span class="material-symbols-outlined text-primary text-base" title="Instrutor Verificado">verified</span>
+</div>
+<span class="font-label-md text-label-md text-primary">Doutora em Psicologia Social • USP</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Head de DHO no RH Connect</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Mais de 18 anos conduzindo transformação de liderança em corporações multinacionais. Autora do livro 'Segurança Psicológica em Times Híbridos' e consultora de governança cultural.
+              </p>
+<div class="flex items-center gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-xs font-label-md text-on-surface-variant">24 Artigos Publicados</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-xs font-label-md text-on-surface-variant">Coach ICF Master</span>
+</div>
+</div>
+<!-- Docente 2 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-md">
+<img class="w-full h-full object-cover" data-alt="Professional male corporate executive in his late thirties with modern spectacles, navy blue blazer, confident and empathetic posture, clean minimalist office setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuMhh59FQ8YWl6U0Q_3tvSTGOCBT9u6EmYmJVU9VpYyJdPYgDG9PX8NsT-hL0zr3jwiXmWzqHE1UvCVcmrgfDTRR6gIu7in9Wn4JZ0ogWTNQtNhyazdIc1OO4WRJcjCKzErKuGAhsEn1X45vYRoKt48XcuiwutGmemT0cWCXB1FsR20YgN9mp7iQIXtEHjrwQIVHDsq15f_qjZAQ89AmUvTWWX1YWNYw-gk7ZXKMCwrKN_x9Z1Q0MZ"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-title-lg text-title-lg text-on-surface">Prof. Carlos Eduardo Rios</span>
+<span class="material-symbols-outlined text-primary text-base" title="Instrutor Verificado">verified</span>
+</div>
+<span class="font-label-md text-label-md text-primary">M.Sc. em Administração • FGV</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Especialista em Gestão de Crises e OKRs</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Ex-diretor de Operações de Pessoas no Vale do Silício. Especialista em desenho de governança ágil e metodologias não-confrontacionais de feedback para equipes de alta pressão.
+              </p>
+<div class="flex items-center gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-xs font-label-md text-on-surface-variant">Certificação Scaled Agile</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-xs font-label-md text-on-surface-variant">Docente FGV</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: FLOATING ENROLLMENT SIDEBAR CARD (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md lg:sticky lg:top-24">
+<!-- Subscription Summary Box -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-xl flex flex-col gap-space-md">
+<!-- Urgency & Deadline Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5 text-on-error-container bg-error-container/60 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm">alarm</span>
+<span class="font-label-sm text-label-sm font-semibold">Inscrições até 25 de Novembro</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Turma 09</span>
+</div>
+<!-- Capacity Meter -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Capacidade da Turma</span>
+<span class="text-primary font-bold">22 / 30 matriculados</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 73.3%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline flex items-center gap-1 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
+              Apenas <strong>8 vagas restantes</strong> para aprovação imediata
+            </span>
+</div>
+<!-- Cost / Corporate Grant -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Subvenção RH Connect</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">100% Subsidiado</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">R$ 0,00</span>
+<span class="font-body-sm text-body-sm text-outline-variant line-through">R$ 3.850,00</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Custo integral coberto pelo Fundo de Desenvolvimento de Talentos da empresa.
+            </span>
+</div>
+<!-- Primary CTA Action Button -->
+<button class="w-full py-3.5 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group" onclick="openEnrollmentModal()">
+<span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">app_registration</span>
+            Inscrever-se no Curso
+          </button>
+<!-- Quick Prerequisites Checklist -->
+<div class="flex flex-col gap-space-xs pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-title-md text-title-md text-on-surface mb-1">Pré-requisitos Mandatórios:</span>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check</span>
+<span>Tempo de casa mínimo de 6 meses no quadro funcional.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check</span>
+<span>Posição de Coordenação, Liderança ou Especialista Sênior.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check</span>
+<span>Anuência expressa da gestão imediata (solicitada no formulário).</span>
+</div>
+</div>
+<!-- Academic Manager Signature -->
+<div class="pt-space-sm mt-space-xs bg-surface-container/50 p-space-md rounded-xl flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-xl">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Gestor Acadêmico Responsável</span>
+<span class="font-title-md text-title-md text-on-surface">Coordenação de DHO</span>
+<span class="font-body-sm text-body-sm text-outline">gestao.talentos@rhconnect.corp</span>
+</div>
+</div>
+</div>
+<!-- Secondary Support Widget -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">help_outline</span>
+<span class="font-body-sm text-body-sm">Dúvidas sobre o cronograma?</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">Fale com DHO</a>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 5: CURSOS RELACIONADOS E TRILHAS COMPLEMENTARES -->
+<section class="w-full bg-surface-container-low py-space-2xl mt-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Trilhas de Aprendizagem</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Cursos Relacionados &amp; Trilhas Complementares</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Aprofunde seu plano de carreira contínua com módulos alinhados à sua função.</p>
+</div>
+<a class="font-title-md text-title-md text-primary hover:text-primary-container flex items-center gap-1 transition-colors" data-path="cursos" href="#">
+          Ver Catálogo Completo
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Related Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="h-44 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Analytical business workspace with graphs on tablet and modern minimal notebook, crisp natural lighting, deep navy and teal accents representing people analytics and data driven decisions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWdzuWluQ0sZipt2k13zPx9x-lN6R5KZfkktwkH78H3BpuFVpiCsVh9jKpYJoPIGc2AJjI8Xe4m6clYl6jR_xF06rvJizaArpz8fSuv4gqGylxxic-HUloE57iwvWExwZvwxaSrYtBeVC11G6lOjf9UFkWYMfenMrn_ShosvmmxP1gBkoqHRdohWsdpvEa5r_ApIwAGBVf0nW8017UVI7bzZj3rwVX86BMZke-wE0zS1LblBINVgex"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              36 Horas
+            </span>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-grow gap-space-md">
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Especialização Estratégica</span>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">
+                People Analytics &amp; Tomada de Decisão Baseada em Dados
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Aprenda a analisar turnover preditivo, absenteísmo e índices de clima utilizando dashboards executivos de RH.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Inscrições Abertas</span>
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="h-44 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Two professionals sitting in a calm modern office lounge engaged in active listening mentoring session, natural sunlight, soft wood tones and indoor plants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYvjeQBOc23l6BXywx7TYflBDkqh1Nw7B7wkRZ1SKALbp6Dnb5DilUmqyG4ym_VSxRUeaEoUdMyBQf3Vo2azvMsVmoZ0qKSGQOo45k0wg0_7IC6TTlDM7wOLYuxVmwtA06xPtQyZG7oAu0rytJd9bdSy_jegBJZd7UXwA39ncGiZYyGoTtOvurnumHSiF3QxdXPKodOQDhGKvDJtxzTyziuo-qxX0e20sZqTXpenqSM53HbJVk3P48"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              24 Horas
+            </span>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-grow gap-space-md">
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Desenvolvimento Humano</span>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">
+                Mentoria Corporativa &amp; Formação de Sucessores
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Metodologia para transferir conhecimento crítico entre gerações e acelerar a maturidade de novos analistas.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">Turma Noturna</span>
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group">
+<div class="h-44 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High level corporate board meeting room with glass walls, strategic diagrams on whiteboard, executives collaborating respectfully on ethics and compliance policy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdWxlt6c7369Sqbs9D_y06Uk-o-6PZriJHFrE_ta3Kt5htVyRtqLuReb5GAE1Tze1zzFaPudMg_6DULxXCpDca9uyDKmfRE8cWcst-9zS8mbDWhhFNFKxeM60BF-qwVCEdg6yULVGVY-HCYd2TvyShkrd-9oh3qxvWFbwvJyj5f4PpqTbpe-brse2SbRcmQIICeVfrNEuLJZYk3IE2RcKvXOon6UnfaJQ_i9JaCBpZXlKKl06OqyoH"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-semibold">
+              40 Horas
+            </span>
+</div>
+<div class="p-space-lg flex flex-col justify-between flex-grow gap-space-md">
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Governança &amp; Compliance</span>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">
+                ESG, Diversidade &amp; Inclusão nas Relações de Trabalho
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Políticas de equidade salarial, conformidade com a legislação trabalhista e criação de comitês de afinidade.
+              </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline font-semibold">Início em Janeiro</span>
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MODAL DE INSCRIÇÃO INTERNA (VIA MATRÍCULA FUNCIONAL OU CPF) -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-margin-mobile" id="enrollmentModal">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-xl">how_to_reg</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Inscrição no Programa Executivo</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Liderança Estratégica • Turma 09</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeEnrollmentModal()">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Modal Body Form -->
+<form class="p-space-lg flex flex-col gap-space-md" id="enrollmentForm" onsubmit="handleEnrollmentSubmit(event)">
+<div class="flex flex-col gap-space-md" id="modalFormContent">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="authType">Identificador Corporativo</label>
+<div class="grid grid-cols-2 gap-2 mb-1">
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container text-xs font-label-md text-on-surface">
+<input checked="" class="text-primary accent-primary" name="idType" onchange="toggleIdPlaceholder(this.value)" type="radio" value="matricula"/>
+                Matrícula Funcional
+              </label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container text-xs font-label-md text-on-surface">
+<input class="text-primary accent-primary" name="idType" onchange="toggleIdPlaceholder(this.value)" type="radio" value="cpf"/>
+                CPF do Colaborador
+              </label>
+</div>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline-variant font-body-md shadow-sm outline-none focus:ring-2 focus:ring-primary/20" id="idInput" placeholder="Ex: MAT-984321" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="corporateEmail">E-mail Corporativo</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline-variant font-body-md shadow-sm outline-none focus:ring-2 focus:ring-primary/20" id="corporateEmail" placeholder="nome.sobrenome@connect.corp" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="managerSelect">Gestor Imediato para Aprovação de Fluxo</label>
+<select class="w-full h-11 px-3.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md shadow-sm outline-none focus:ring-2 focus:ring-primary/20" id="managerSelect" required="">
+<option value="">Selecione sua diretoria/liderança...</option>
+<option value="1">Mariana Rios • Gerência de Operações</option>
+<option value="2">Rodrigo Sampaio • Diretoria de Tecnologia</option>
+<option value="3">Patrícia Fonseca • Gerência de Governança</option>
+<option value="4">Outro gestor (validação via matrícula)</option>
+</select>
+</div>
+<label class="flex items-start gap-2.5 cursor-pointer text-on-surface-variant font-body-sm text-body-sm pt-1">
+<input class="mt-1 accent-primary w-4 h-4 rounded" required="" type="checkbox"/>
+<span>Declaro ciência do compromisso de frequência mínima de 75% e disponibilidade nas terças e quintas-feiras (19h às 21h).</span>
+</label>
+<!-- Buttons -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="closeEnrollmentModal()" type="button">
+              Cancelar
+            </button>
+<button class="px-space-lg py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md shadow-md transition-all flex items-center gap-1.5" type="submit">
+              Confirmar Solicitação
+              <span class="material-symbols-outlined text-base">send</span>
+</button>
+</div>
+</div>
+<!-- Success Feedback State -->
+<div class="hidden flex-col items-center justify-center text-center py-space-lg gap-space-md" id="modalSuccessContent">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary animate-bounce">
+<span class="material-symbols-outlined text-4xl">task_alt</span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Solicitação Registrada com Sucesso!</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+              Sua pré-matrícula foi enviada para validação automática da gerência de DHO. Você receberá o link da sala Teams e o material de nivelamento no seu e-mail funcional.
+            </p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl text-xs font-label-md text-outline">
+            Protocolo: <strong>#REQ-2024-T09-88421</strong> • Notificação disparada
+          </div>
+<button class="px-space-xl py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-colors mt-2" onclick="closeEnrollmentModal()" type="button">
+            Concluir e Voltar
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- CLIENT-SIDE INTERACTION LOGIC -->
+<script>
+    function toggleModule(modId) {
+      const content = document.getElementById('content-' + modId);
+      const icon = document.getElementById('icon-' + modId);
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    let allExpanded = false;
+    function toggleAllModules() {
+      const modules = ['mod1', 'mod2', 'mod3', 'mod4'];
+      const btn = document.getElementById('toggleAllBtn');
+      allExpanded = !allExpanded;
+
+      modules.forEach(m => {
+        const content = document.getElementById('content-' + m);
+        const icon = document.getElementById('icon-' + m);
+        if (allExpanded) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          icon.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      btn.innerHTML = allExpanded 
+        ? '<span class="material-symbols-outlined text-base">unfold_less</span> Recolher Todos' 
+        : '<span class="material-symbols-outlined text-base">unfold_more</span> Expandir Todos';
+    }
+
+    function openEnrollmentModal() {
+      const modal = document.getElementById('enrollmentModal');
+      const formContent = document.getElementById('modalFormContent');
+      const successContent = document.getElementById('modalSuccessContent');
+      
+      formContent.classList.remove('hidden');
+      successContent.classList.add('hidden');
+      modal.classList.remove('hidden');
+    }
+
+    function closeEnrollmentModal() {
+      document.getElementById('enrollmentModal').classList.add('hidden');
+    }
+
+    function toggleIdPlaceholder(type) {
+      const input = document.getElementById('idInput');
+      if (type === 'cpf') {
+        input.placeholder = '000.000.000-00';
+      } else {
+        input.placeholder = 'Ex: MAT-984321';
+      }
+    }
+
+    function handleEnrollmentSubmit(e) {
+      e.preventDefault();
+      document.getElementById('modalFormContent').classList.add('hidden');
+      document.getElementById('modalSuccessContent').classList.remove('hidden');
+      document.getElementById('modalSuccessContent').classList.add('flex');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl mb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-xl">diversity_3</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">RH<span class="text-primary">Connect</span></span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Plataforma integrada de governança de pessoas, atração de talentos e desenvolvimento organizacional. Estimulando conexões sólidas e humanizadas.</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="w-3 h-3 rounded-full bg-primary"></span><span class="font-label-md text-label-md text-on-surface-variant">Sistemas Operacionais • 100% Conformes</span></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Links Rápidos</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">Início</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-o-rh" href="#">Sobre o RH</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="oportunidades" href="#">Oportunidades</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="cursos" href="#">Cursos &amp; Treinamentos</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="banco-de-talentos" href="#">Banco de Talentos</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Governança &amp; Apoio</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ouvidoria" href="#">Canal de Ouvidoria</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="codigo-de-etica" href="#">Código de Ética</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="politica-lgpd" href="#">Privacidade &amp; LGPD</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contato" href="#">Fale com o RH</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface">Central de Atendimento</h3><div class="flex flex-col gap-space-xs"><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">support_agent</span><div class="flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold">Atendimento ao Colaborador</span><span class="font-body-sm text-body-sm">0800 724 5000</span></div></div><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">mail</span><div class="flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-semibold">E-mail Institucional</span><span class="font-body-sm text-body-sm">atendimento.rh@connect.corp</span></div></div><div class="flex items-start gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-lg mt-0.5 text-primary">schedule</span><div class="flex flex-col"><span class="font-body-sm text-body-sm">Seg a Sex: 08h às 18h</span></div></div></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant bg-surface-container-high/40 rounded-xl p-space-lg"><div class="font-body-sm text-body-sm">© 2024 Portal RH Connect. Todos os direitos reservados. Conformidade Geral de Proteção de Dados (Lei nº 13.709/2018).</div><div class="flex items-center gap-space-lg"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="termos-de-uso" href="#">Termos de Uso</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="politica-lgpd" href="#">Segurança LGPD</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ouvidoria" href="#">Ouvidoria Anônima</a></div></div></div></footer></body></html>
